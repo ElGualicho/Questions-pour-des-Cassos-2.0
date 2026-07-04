@@ -1,0 +1,842 @@
+[
+  {
+    "id": "pop-001",
+    "category": "Pop culture déglinguée",
+    "difficulty": "simple",
+    "question": "Dans South Park, quel gamin meurt tellement souvent que c'est presque devenu son CDI ?",
+    "choices": [
+      "Kyle",
+      "Cartman",
+      "Kenny",
+      "Stan"
+    ],
+    "answerIndex": 2,
+    "explanation": "Kenny meurt de manière récurrente dans les premières saisons de South Park."
+  },
+  {
+    "id": "pop-002",
+    "category": "Pop culture déglinguée",
+    "difficulty": "simple",
+    "question": "Dans Shrek, quel animal parle beaucoup trop, casse les oreilles de tout le monde, mais reste attachant comme un pote relou ?",
+    "choices": [
+      "Un chat",
+      "Un âne",
+      "Un dragon",
+      "Un rat"
+    ],
+    "answerIndex": 1,
+    "explanation": "L'Âne accompagne Shrek et parle à peu près autant qu'un groupe WhatsApp familial."
+  },
+  {
+    "id": "pop-003",
+    "category": "Pop culture déglinguée",
+    "difficulty": "simple",
+    "question": "Dans Le Seigneur des anneaux, comment Gollum appelle-t-il l'anneau avec une intensité clairement pas saine ?",
+    "choices": [
+      "Mon bijou",
+      "Mon précieux",
+      "Mon bébé",
+      "Mon petit cercle"
+    ],
+    "answerIndex": 1,
+    "explanation": "Gollum appelle l'Anneau Unique “mon précieux”."
+  },
+  {
+    "id": "pop-004",
+    "category": "Pop culture déglinguée",
+    "difficulty": "simple",
+    "question": "Dans Pokémon, quel poisson éclaté au sol finit par devenir un dragon de daron énervé ?",
+    "choices": [
+      "Poissirène",
+      "Magicarpe",
+      "Barpau",
+      "Remoraid"
+    ],
+    "answerIndex": 1,
+    "explanation": "Magicarpe évolue en Léviator."
+  },
+  {
+    "id": "pop-005",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Dans The Boys, quel super-héros blond, drapé dans le patriotisme américain, donne globalement envie de supprimer les super-pouvoirs de l'humanité ?",
+    "choices": [
+      "A-Train",
+      "Homelander",
+      "The Deep",
+      "Soldier Boy"
+    ],
+    "answerIndex": 1,
+    "explanation": "Homelander est la parodie cauchemardesque du super-héros américain parfait."
+  },
+  {
+    "id": "pop-006",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Dans Fight Club, quelle est la première règle du Fight Club, que tout le monde répète donc en la violant direct ?",
+    "choices": [
+      "Toujours venir torse nu",
+      "Ne pas parler du Fight Club",
+      "Ne jamais frapper le visage",
+      "Payer sa cotisation"
+    ],
+    "answerIndex": 1,
+    "explanation": "La première règle est de ne pas parler du Fight Club."
+  },
+  {
+    "id": "pop-007",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Dans Kill Bill, avec quelle arme Beatrix Kiddo découpe globalement les problèmes administratifs de sa vie ?",
+    "choices": [
+      "Un katana",
+      "Une tronçonneuse",
+      "Un nunchaku",
+      "Un revolver doré"
+    ],
+    "answerIndex": 0,
+    "explanation": "Beatrix Kiddo utilise notamment un katana forgé par Hattori Hanzō."
+  },
+  {
+    "id": "pop-008",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Dans The Office version US, quel manager transforme chaque réunion en malaise professionnel indemnisable ?",
+    "choices": [
+      "Jim Halpert",
+      "Dwight Schrute",
+      "Michael Scott",
+      "Kevin Malone"
+    ],
+    "answerIndex": 2,
+    "explanation": "Michael Scott dirige Dunder Mifflin Scranton avec une compétence émotionnelle approximative."
+  },
+  {
+    "id": "pop-009",
+    "category": "Pop culture déglinguée",
+    "difficulty": "hardcore",
+    "question": "Dans Death Note, quel objet permet à Light Yagami de tuer quelqu'un simplement en écrivant son nom, ambiance papeterie démoniaque ?",
+    "choices": [
+      "Un carnet",
+      "Un miroir",
+      "Une montre",
+      "Un masque"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le Death Note est un carnet surnaturel."
+  },
+  {
+    "id": "pop-010",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Quel film met en scène un présentateur météo coincé dans la même journée, avec une marmotte en guest-star existentielle ?",
+    "choices": [
+      "Un jour sans fin",
+      "Retour vers le futur",
+      "The Truman Show",
+      "Big Fish"
+    ],
+    "answerIndex": 0,
+    "explanation": "Un jour sans fin est connu pour sa boucle temporelle autour du Jour de la marmotte."
+  },
+  {
+    "id": "tox-001",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "simple",
+    "question": "Dans Trainspotting, quelle drogue tire les personnages vers le fond avec la délicatesse d'un escalator cassé ?",
+    "choices": [
+      "Cocaïne",
+      "Héroïne",
+      "MDMA",
+      "Kétamine"
+    ],
+    "answerIndex": 1,
+    "explanation": "Trainspotting suit notamment des personnages dépendants à l'héroïne."
+  },
+  {
+    "id": "tox-002",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "moyen",
+    "question": "Quel film connu en France sous le titre Las Vegas Parano suit un trip hallucinatoire beaucoup trop chargé à Las Vegas ?",
+    "choices": [
+      "Requiem for a Dream",
+      "Very Bad Trip",
+      "Fear and Loathing in Las Vegas",
+      "Pulp Fiction"
+    ],
+    "answerIndex": 2,
+    "explanation": "Las Vegas Parano est le titre français de Fear and Loathing in Las Vegas."
+  },
+  {
+    "id": "tox-003",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "simple",
+    "question": "Quelle molécule est principalement responsable de l'effet planant du cannabis, et pas juste de l'envie de commander des tacos ?",
+    "choices": [
+      "THC",
+      "CBD",
+      "LSD",
+      "MDMA"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le THC est le principal composé psychoactif du cannabis."
+  },
+  {
+    "id": "tox-004",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "simple",
+    "question": "Quel alcool mexicain est fabriqué à partir d'agave bleu, et finit parfois avec du sel, du citron et des décisions catastrophiques ?",
+    "choices": [
+      "Rhum",
+      "Vodka",
+      "Tequila",
+      "Gin"
+    ],
+    "answerIndex": 2,
+    "explanation": "La tequila est produite à partir d'agave bleu."
+  },
+  {
+    "id": "tox-005",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "simple",
+    "question": "Dans un mojito classique, quel alcool joue le rôle principal pendant que la menthe fait genre elle est là pour la fraîcheur ?",
+    "choices": [
+      "Rhum",
+      "Vodka",
+      "Whisky",
+      "Pastis"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le mojito classique est préparé avec du rhum."
+  },
+  {
+    "id": "tox-006",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "moyen",
+    "question": "Quel cocktail mélange vodka, ginger beer et citron vert, généralement servi dans un mug en cuivre pour faire chic alors qu'on est déjà éclaté ?",
+    "choices": [
+      "Moscow Mule",
+      "Bloody Mary",
+      "Old Fashioned",
+      "Spritz"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le Moscow Mule est traditionnellement servi dans un mug en cuivre."
+  },
+  {
+    "id": "tox-007",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "simple",
+    "question": "Comment appelle-t-on l'état du lendemain où ton crâne fait une réunion de chantier après une soirée trop ambitieuse ?",
+    "choices": [
+      "Une insolation",
+      "Une gueule de bois",
+      "Une crise de foi",
+      "Une mise à jour système"
+    ],
+    "answerIndex": 1,
+    "explanation": "La gueule de bois désigne les symptômes ressentis après une consommation excessive d'alcool."
+  },
+  {
+    "id": "tox-008",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "moyen",
+    "question": "Dans Breaking Bad, quel avocat véreux devient tellement culte qu'il gagne sa propre série ?",
+    "choices": [
+      "Saul Goodman",
+      "Gus Fring",
+      "Hank Schrader",
+      "Todd Alquist"
+    ],
+    "answerIndex": 0,
+    "explanation": "Saul Goodman est au centre du spin-off Better Call Saul."
+  },
+  {
+    "id": "tox-009",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "hardcore",
+    "question": "Quel terme désigne le fait de ne plus consommer une substance après une période d'addiction, soit le boss final du “j'arrête lundi” ?",
+    "choices": [
+      "Tolérance",
+      "Sobriété",
+      "Ivresse",
+      "Sevrage inversé"
+    ],
+    "answerIndex": 1,
+    "explanation": "La sobriété désigne l'état d'une personne qui ne consomme pas ou plus de substance intoxicante."
+  },
+  {
+    "id": "tox-010",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "moyen",
+    "question": "Quel alcool anisé du sud de la France se boit avec de l'eau et transforme instantanément une table en débat de PMU ?",
+    "choices": [
+      "Pastis",
+      "Gin",
+      "Cognac",
+      "Porto"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le pastis est un alcool anisé très associé au sud de la France."
+  },
+  {
+    "id": "body-001",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "simple",
+    "question": "Quel contraceptif masculin s'enfile avant le rapport, parce que “t'inquiète” n'a jamais été une méthode fiable ?",
+    "choices": [
+      "Le préservatif",
+      "Le stérilet",
+      "La pilule",
+      "Le thermomètre"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le préservatif aide à prévenir les IST et les grossesses non désirées."
+  },
+  {
+    "id": "body-002",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "simple",
+    "question": "Quel organe du plaisir féminin est souvent résumé à tort à un petit bouton, alors qu'il est bien plus étendu que le respect en soirée étudiante ?",
+    "choices": [
+      "Le clitoris",
+      "L'utérus",
+      "Le rein",
+      "L'appendice"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le clitoris possède une partie externe visible et des structures internes."
+  },
+  {
+    "id": "body-003",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "moyen",
+    "question": "Quelle urgence médicale peut arriver quand un testicule fait une rotation sur lui-même, ambiance câble USB démoniaque ?",
+    "choices": [
+      "Une torsion testiculaire",
+      "Une sinusite",
+      "Une tendinite",
+      "Une rage de dents"
+    ],
+    "answerIndex": 0,
+    "explanation": "La torsion testiculaire est une urgence médicale."
+  },
+  {
+    "id": "body-004",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "hardcore",
+    "question": "Quel nom technique désigne les érections nocturnes ou matinales involontaires, aussi appelées par le peuple “le chapiteau du réveil” ?",
+    "choices": [
+      "Tumescence pénienne nocturne",
+      "Migraine vasculaire",
+      "Réflexe rotulien",
+      "Luxation du sommeil"
+    ],
+    "answerIndex": 0,
+    "explanation": "La tumescence pénienne nocturne est un phénomène physiologique normal."
+  },
+  {
+    "id": "body-005",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "simple",
+    "question": "Comment appelle-t-on l'envoi de messages, photos ou sous-entendus sexuels par téléphone, soit le terrain miné du “oups mauvais destinataire” ?",
+    "choices": [
+      "Le phishing",
+      "Le sexting",
+      "Le streaming",
+      "Le composting"
+    ],
+    "answerIndex": 1,
+    "explanation": "Le sexting désigne l'échange de contenus sexuels par messagerie."
+  },
+  {
+    "id": "body-006",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "simple",
+    "question": "Quel ancien sigle MST a été largement remplacé par IST, parce que même les maladies ont droit à un rebranding ?",
+    "choices": [
+      "Infection sexuellement transmissible",
+      "Indice de sommeil tranquille",
+      "Institut spécial du tatouage",
+      "Interaction sociale temporaire"
+    ],
+    "answerIndex": 0,
+    "explanation": "IST signifie infection sexuellement transmissible."
+  },
+  {
+    "id": "body-007",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "moyen",
+    "question": "Quel objet réutilisable en silicone peut recueillir les règles et ressemble à un petit gobelet que personne ne veut confondre à l'apéro ?",
+    "choices": [
+      "Une cup menstruelle",
+      "Un diaphragme Wi-Fi",
+      "Un stérilet jetable",
+      "Un préservatif inversé"
+    ],
+    "answerIndex": 0,
+    "explanation": "La cup menstruelle est un dispositif réutilisable de protection périodique."
+  },
+  {
+    "id": "body-008",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "moyen",
+    "question": "Quel ensemble de muscles soutient les organes du bassin et peut être travaillé après un accouchement ou pour éviter les petites fuites de la honte ?",
+    "choices": [
+      "Le périnée",
+      "Le biceps",
+      "Le tympan",
+      "La clavicule"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le périnée correspond au plancher pelvien."
+  },
+  {
+    "id": "body-009",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "moyen",
+    "question": "Quel terme médical désigne un bleu, y compris celui laissé par un suçon de compétition mal placé avant un repas de famille ?",
+    "choices": [
+      "Une ecchymose",
+      "Une otite",
+      "Une mycose",
+      "Une scoliose"
+    ],
+    "answerIndex": 0,
+    "explanation": "Une ecchymose est une marque bleutée due à un saignement sous la peau."
+  },
+  {
+    "id": "body-010",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "hardcore",
+    "question": "Quel réflexe corporel consiste à contracter brusquement le diaphragme, produisant un bruit ridicule et impossible à assumer en réunion ?",
+    "choices": [
+      "Le hoquet",
+      "La syncope",
+      "La fièvre",
+      "Le strabisme"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le hoquet est lié à des contractions involontaires du diaphragme."
+  },
+  {
+    "id": "death-001",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quelle chanteuse du groupe The Cranberries a marqué les années 90 avec Zombie avant de mourir en 2018 ?",
+    "choices": [
+      "Dolores O'Riordan",
+      "Sinead O'Connor",
+      "Alanis Morissette",
+      "Shirley Manson"
+    ],
+    "answerIndex": 0,
+    "explanation": "Dolores O'Riordan était la chanteuse de The Cranberries."
+  },
+  {
+    "id": "death-002",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "simple",
+    "question": "Quel ancien Beatle a été assassiné devant le Dakota Building à New York en 1980 ?",
+    "choices": [
+      "Paul McCartney",
+      "John Lennon",
+      "George Harrison",
+      "Ringo Starr"
+    ],
+    "answerIndex": 1,
+    "explanation": "John Lennon a été assassiné à New York en décembre 1980."
+  },
+  {
+    "id": "death-003",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel chanteur de Nirvana a donné au monde Smells Like Teen Spirit avant de devenir une icône tragique du rock ?",
+    "choices": [
+      "Kurt Cobain",
+      "Eddie Vedder",
+      "Dave Grohl",
+      "Chris Cornell"
+    ],
+    "answerIndex": 0,
+    "explanation": "Kurt Cobain était le chanteur et guitariste de Nirvana."
+  },
+  {
+    "id": "death-004",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel DJ suédois, connu pour Wake Me Up, est mort en 2018, laissant les playlists de camping en PLS ?",
+    "choices": [
+      "Avicii",
+      "David Guetta",
+      "Martin Garrix",
+      "Calvin Harris"
+    ],
+    "answerIndex": 0,
+    "explanation": "Avicii, de son vrai nom Tim Bergling, est mort en 2018."
+  },
+  {
+    "id": "death-005",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "hardcore",
+    "question": "Quel album posthume de Mac Miller, sorti en 2020, complète Swimming comme une dernière boucle triste mais propre ?",
+    "choices": [
+      "Circles",
+      "Legends Never Die",
+      "Donda",
+      "Shoot for the Stars"
+    ],
+    "answerIndex": 0,
+    "explanation": "Circles est l'album posthume de Mac Miller sorti en 2020."
+  },
+  {
+    "id": "death-006",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "simple",
+    "question": "Quel groupe australien a continué après la mort de Bon Scott avec Brian Johnson au chant, preuve que le rock refuse parfois le CDI de la mort ?",
+    "choices": [
+      "AC/DC",
+      "Queen",
+      "Metallica",
+      "Oasis"
+    ],
+    "answerIndex": 0,
+    "explanation": "Brian Johnson devient chanteur d'AC/DC après la mort de Bon Scott."
+  },
+  {
+    "id": "death-007",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quelle chanson de Queen ressemble à une confession dramatique envoyée à sa mère après un énorme carnage émotionnel ?",
+    "choices": [
+      "Bohemian Rhapsody",
+      "Radio Ga Ga",
+      "Another One Bites the Dust",
+      "Killer Queen"
+    ],
+    "answerIndex": 0,
+    "explanation": "Bohemian Rhapsody commence notamment par une confession adressée à “Mama”."
+  },
+  {
+    "id": "death-008",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel rappeur français est associé au tube Mwaka Moon, souvent collé dans les soirées où personne ne connaît vraiment les paroles ?",
+    "choices": [
+      "Kalash",
+      "Niska",
+      "Ninho",
+      "Kaaris"
+    ],
+    "answerIndex": 0,
+    "explanation": "Mwaka Moon est un morceau de Kalash avec Damso."
+  },
+  {
+    "id": "death-009",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "hardcore",
+    "question": "Quel guitariste fait partie du fameux “club des 27” et a transformé la guitare électrique en sortilège avant de mourir en 1970 ?",
+    "choices": [
+      "Jimi Hendrix",
+      "Eric Clapton",
+      "Jimmy Page",
+      "Carlos Santana"
+    ],
+    "answerIndex": 0,
+    "explanation": "Jimi Hendrix est mort à 27 ans en 1970."
+  },
+  {
+    "id": "death-010",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel rappeur américain, connu pour Jocelyn Flores et Sad!, a été tué en Floride en 2018 ?",
+    "choices": [
+      "XXXTentacion",
+      "Lil Peep",
+      "Juice WRLD",
+      "Pop Smoke"
+    ],
+    "answerIndex": 0,
+    "explanation": "XXXTentacion a été tué en Floride en 2018."
+  },
+  {
+    "id": "weird-001",
+    "category": "Culture générale chelou",
+    "difficulty": "simple",
+    "question": "Quel animal australien fabrique des crottes en forme de cubes, comme s'il avait avalé Minecraft ?",
+    "choices": [
+      "Le wombat",
+      "Le koala",
+      "Le kangourou",
+      "L'ornithorynque"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le wombat est connu pour produire des excréments cubiques."
+  },
+  {
+    "id": "weird-002",
+    "category": "Culture générale chelou",
+    "difficulty": "simple",
+    "question": "Quel animal aquatique garde une tête de bébé toute sa vie et peut régénérer des parties de son corps, ambiance Pokémon médical ?",
+    "choices": [
+      "L'axolotl",
+      "Le homard",
+      "Le blobfish",
+      "Le lamantin"
+    ],
+    "answerIndex": 0,
+    "explanation": "L'axolotl est connu pour sa néoténie et ses capacités de régénération."
+  },
+  {
+    "id": "weird-003",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel ancien site pénitentiaire situé dans la baie de San Francisco a accueilli des criminels célèbres avant de devenir une visite touristique bien glauque ?",
+    "choices": [
+      "Alcatraz",
+      "Guantanamo",
+      "Rikers Island",
+      "Sing Sing"
+    ],
+    "answerIndex": 0,
+    "explanation": "Alcatraz est une ancienne prison située dans la baie de San Francisco."
+  },
+  {
+    "id": "weird-004",
+    "category": "Culture générale chelou",
+    "difficulty": "hardcore",
+    "question": "Quel lac camerounais a libéré en 1986 un nuage de CO2 meurtrier, prouvant qu'un lac peut aussi choisir la violence ?",
+    "choices": [
+      "Le lac Nyos",
+      "Le lac Victoria",
+      "Le lac Titicaca",
+      "Le lac Baïkal"
+    ],
+    "answerIndex": 0,
+    "explanation": "La catastrophe du lac Nyos est liée à un dégazage massif de dioxyde de carbone."
+  },
+  {
+    "id": "weird-005",
+    "category": "Culture générale chelou",
+    "difficulty": "hardcore",
+    "question": "Quelle bactérie est responsable de la peste, cette grande ambiance médiévale qui a ruiné plus de week-ends que la SNCF ?",
+    "choices": [
+      "Yersinia pestis",
+      "Escherichia coli",
+      "Staphylococcus aureus",
+      "Salmonella enterica"
+    ],
+    "answerIndex": 0,
+    "explanation": "Yersinia pestis est la bactérie responsable de la peste."
+  },
+  {
+    "id": "weird-006",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Comment appelle-t-on la peur ou le dégoût des petits trous groupés, genre nid d'abeille version cauchemar dermatologique ?",
+    "choices": [
+      "Trypophobie",
+      "Agoraphobie",
+      "Claustrophobie",
+      "Arachnophobie"
+    ],
+    "answerIndex": 0,
+    "explanation": "La trypophobie désigne le dégoût ou la peur des motifs de trous rapprochés."
+  },
+  {
+    "id": "weird-007",
+    "category": "Culture générale chelou",
+    "difficulty": "hardcore",
+    "question": "Quel mot désigne le fait de manger ses crottes de nez, information que personne n'avait demandé mais que le quiz impose ?",
+    "choices": [
+      "Mucophagie",
+      "Coprophagie",
+      "Onychophagie",
+      "Lithophagie"
+    ],
+    "answerIndex": 0,
+    "explanation": "La mucophagie désigne le fait de manger du mucus nasal."
+  },
+  {
+    "id": "weird-008",
+    "category": "Culture générale chelou",
+    "difficulty": "simple",
+    "question": "Quel insecte est réputé pouvoir survivre un certain temps sans tête, ce qui reste un projet de vie discutable ?",
+    "choices": [
+      "Le cafard",
+      "Le moustique",
+      "La fourmi",
+      "Le papillon"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le cafard est connu pour sa résistance extrême, y compris après décapitation pendant un temps limité."
+  },
+  {
+    "id": "weird-009",
+    "category": "Culture générale chelou",
+    "difficulty": "simple",
+    "question": "Quel liquide noir un poulpe ou une seiche peut projeter pour fuir, façon écran de fumée version fruits de mer ?",
+    "choices": [
+      "De l'encre",
+      "Du pétrole",
+      "Du venin",
+      "Du café"
+    ],
+    "answerIndex": 0,
+    "explanation": "Les céphalopodes peuvent projeter de l'encre pour se défendre ou s'échapper."
+  },
+  {
+    "id": "weird-010",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel animal pond des œufs, allaite ses petits et possède un bec, comme s'il avait été designé par un stagiaire fatigué ?",
+    "choices": [
+      "L'ornithorynque",
+      "Le castor",
+      "Le tatou",
+      "Le furet"
+    ],
+    "answerIndex": 0,
+    "explanation": "L'ornithorynque est un mammifère ovipare doté d'un bec."
+  },
+  {
+    "id": "net-001",
+    "category": "Internet, memes & numérique",
+    "difficulty": "simple",
+    "question": "Quel chien japonais est devenu le visage du meme Doge, avec son air de juger ton découvert bancaire ?",
+    "choices": [
+      "Shiba Inu",
+      "Akita Inu",
+      "Corgi",
+      "Husky"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le meme Doge utilise l'image d'un Shiba Inu."
+  },
+  {
+    "id": "net-002",
+    "category": "Internet, memes & numérique",
+    "difficulty": "simple",
+    "question": "Que signifie généralement une erreur 404 sur un site web, à part “bon courage frérot” ?",
+    "choices": [
+      "Page introuvable",
+      "Mot de passe faux",
+      "Virus détecté",
+      "Batterie faible"
+    ],
+    "answerIndex": 0,
+    "explanation": "Une erreur 404 indique généralement qu'une page est introuvable."
+  },
+  {
+    "id": "net-003",
+    "category": "Internet, memes & numérique",
+    "difficulty": "simple",
+    "question": "Sur Windows, quelle touche permet souvent de rafraîchir une page web, soit le bouton “allez bouge” du navigateur ?",
+    "choices": [
+      "F5",
+      "F1",
+      "Échap",
+      "Alt"
+    ],
+    "answerIndex": 0,
+    "explanation": "F5 sert généralement à actualiser une page dans un navigateur."
+  },
+  {
+    "id": "net-004",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Quel meme montre un vieux monsieur souriant qui a l'air heureux alors qu'il souffre intérieurement comme un lundi matin ?",
+    "choices": [
+      "Hide the Pain Harold",
+      "Bad Luck Brian",
+      "Success Kid",
+      "Disaster Girl"
+    ],
+    "answerIndex": 0,
+    "explanation": "Hide the Pain Harold est un meme basé sur un homme âgé au sourire crispé."
+  },
+  {
+    "id": "net-005",
+    "category": "Internet, memes & numérique",
+    "difficulty": "simple",
+    "question": "Quel format d'image est souvent utilisé quand on veut un visuel sans fond, parce que le vieux JPEG blanc autour c'est non ?",
+    "choices": [
+      "PNG",
+      "MP3",
+      "TXT",
+      "DOCX"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le PNG peut gérer la transparence."
+  },
+  {
+    "id": "net-006",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Comment appelle-t-on un faux compte ou programme qui agit automatiquement en ligne, souvent avec moins de subtilité qu'un oncle sur Facebook ?",
+    "choices": [
+      "Un bot",
+      "Un cookie",
+      "Un modem",
+      "Un pare-feu"
+    ],
+    "answerIndex": 0,
+    "explanation": "Un bot est un programme qui effectue des actions automatisées."
+  },
+  {
+    "id": "net-007",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "À quoi sert principalement un CAPTCHA, à part te demander de reconnaître des bus comme si tu passais le code ?",
+    "choices": [
+      "Distinguer humain et robot",
+      "Augmenter la luminosité",
+      "Compresser une vidéo",
+      "Créer un mot de passe"
+    ],
+    "answerIndex": 0,
+    "explanation": "Un CAPTCHA sert à vérifier qu'une action est réalisée par un humain plutôt qu'un bot."
+  },
+  {
+    "id": "net-008",
+    "category": "Internet, memes & numérique",
+    "difficulty": "simple",
+    "question": "Quel réseau social chinois est devenu le royaume des vidéos courtes, des danses, des dramas et des recettes à base de fromage fondu ?",
+    "choices": [
+      "TikTok",
+      "LinkedIn",
+      "Pinterest",
+      "Twitch"
+    ],
+    "answerIndex": 0,
+    "explanation": "TikTok est une plateforme de vidéos courtes appartenant à ByteDance."
+  },
+  {
+    "id": "net-009",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Comment appelle-t-on le fait de révéler la fin d'un film ou d'une série à quelqu'un, pratique passible d'exil social immédiat ?",
+    "choices": [
+      "Spoiler",
+      "Uploader",
+      "Scroller",
+      "Streamer"
+    ],
+    "answerIndex": 0,
+    "explanation": "Spoiler signifie révéler un élément important d'une intrigue."
+  },
+  {
+    "id": "net-010",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Quel terme désigne un appât numérique destiné à voler des identifiants, souvent déguisé en mail de banque écrit avec les pieds ?",
+    "choices": [
+      "Phishing",
+      "Streaming",
+      "Caching",
+      "Cropping"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le phishing consiste à piéger une personne pour récupérer des informations sensibles."
+  }
+]

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joueur | Questions pour des Cassos 2.0</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body class="player-view">
+    <main class="mobile-shell">
+      <header class="player-header">
+        <img src="/assets/themes/IMG_0304.JPG" alt="">
+        <span id="player-status">Connexion</span>
+      </header>
+
+      <section class="join-panel" id="join-panel">
+        <p class="eyebrow">Joueur</p>
+        <h1>Rejoins la partie</h1>
+        <form id="join-form">
+          <label for="join-code">Code</label>
+          <input id="join-code" name="code" autocomplete="one-time-code" inputmode="numeric" required>
+          <label for="player-name">Pseudo</label>
+          <input id="player-name" name="name" autocomplete="nickname" maxlength="24" required>
+          <button class="primary-action wide" type="submit">Entrer</button>
+        </form>
+      </section>
+
+      <section class="player-game hidden" id="player-game">
+        <div class="theme-strip compact" id="player-theme-strip"></div>
+        <div class="round-meta">
+          <span id="player-round-label">Lobby</span>
+          <span id="player-score">0 point</span>
+        </div>
+
+        <article class="question-block">
+          <p class="eyebrow" id="player-category">En attente</p>
+          <h1 id="player-question">La partie va commencer.</h1>
+        </article>
+
+        <div class="answer-stack" id="player-answers"></div>
+        <div class="feedback-panel hidden" id="feedback-panel"></div>
+        <div class="mini-leaderboard" id="mini-leaderboard"></div>
+      </section>
+
+      <p class="toast hidden" id="toast" role="status"></p>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/player.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Host | Questions pour des Cassos 2.0</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body class="host-view">
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/host" aria-label="Questions pour des Cassos 2.0">
+          <img src="/assets/themes/IMG_0304.JPG" alt="">
+        </a>
+        <div class="status-chip" id="host-status">Pas de partie</div>
+      </header>
+
+      <section class="hero-band">
+        <div>
+          <p class="eyebrow">Host</p>
+          <h1>Questions pour des Cassos 2.0</h1>
+        </div>
+        <button class="primary-action" id="create-game">Créer une partie</button>
+      </section>
+
+      <section class="layout-grid hidden" id="game-panel">
+        <aside class="side-panel">
+          <div class="code-box">
+            <span>Code</span>
+            <strong id="game-code">----</strong>
+            <button class="ghost-action" id="copy-link" type="button">Copier le lien</button>
+          </div>
+          <img class="qr-code" id="qr-code" alt="QR code de la partie">
+          <div class="settings-row">
+            <label for="question-count">Questions</label>
+            <select id="question-count">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="all">Toutes</option>
+            </select>
+          </div>
+          <button class="primary-action wide" id="start-game" type="button">Lancer</button>
+          <button class="secondary-action wide" id="reset-game" type="button">Réinitialiser</button>
+        </aside>
+
+        <section class="play-panel">
+          <div class="theme-strip" id="theme-strip"></div>
+
+          <div class="round-meta">
+            <span id="round-label">En attente</span>
+            <span id="responses-label">0 réponse</span>
+          </div>
+
+          <article class="question-block">
+            <p class="eyebrow" id="question-category">Lobby</p>
+            <h2 id="question-text">Crée la partie, partage le code, puis lance quand tout le monde est là.</h2>
+          </article>
+
+          <div class="answer-grid" id="host-answers"></div>
+
+          <div class="host-controls">
+            <button class="primary-action" id="reveal-answer" type="button">Révéler</button>
+            <button class="primary-action" id="next-question" type="button">Question suivante</button>
+          </div>
+        </section>
+
+        <aside class="side-panel">
+          <div class="section-title">
+            <h2>Joueurs</h2>
+            <span id="player-count">0</span>
+          </div>
+          <div class="player-list" id="player-list"></div>
+        </aside>
+      </section>
+
+      <section class="final-panel hidden" id="final-panel">
+        <p class="eyebrow">Classement final</p>
+        <h2>Fin de la dinguerie</h2>
+        <div class="leaderboard" id="leaderboard"></div>
+      </section>
+
+      <p class="toast hidden" id="toast" role="status"></p>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/shared.js"></script>
+    <script src="/js/host.js"></script>
+  </body>
+</html>
