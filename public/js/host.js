@@ -96,6 +96,7 @@ function receiveHostState(payload) {
 
 function render() {
   const hasGame = Boolean(hostState);
+  document.body.classList.toggle("game-active", hasGame);
   hostUI.setHidden(gamePanel, !hasGame);
   hostUI.setHidden(finalPanel, !hasGame || hostState.status !== "finished");
   createButton.disabled = hasGame;
@@ -132,8 +133,10 @@ function renderPlayers() {
       player.connected ? "pill" : "pill muted-pill",
       `${hostUI.pointsLabel(player.score)} · ${player.hasAnswered ? "répondu" : "attente"}`
     );
-    const remove = hostUI.createElement("button", "icon-action", "Retirer");
+    const remove = hostUI.createElement("button", "icon-action compact-action", "X");
     remove.type = "button";
+    remove.title = "Retirer";
+    remove.setAttribute("aria-label", `Retirer ${player.name}`);
     remove.addEventListener("click", () => {
       hostSocket.emit(
         "host:removePlayer",

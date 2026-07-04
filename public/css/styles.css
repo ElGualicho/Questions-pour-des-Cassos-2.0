@@ -48,15 +48,16 @@ button:disabled {
 
 .app-shell {
   width: min(1440px, 100%);
+  min-height: 100dvh;
   margin: 0 auto;
-  padding: 20px;
+  padding: clamp(10px, 1.7vh, 20px);
 }
 
 .mobile-shell {
   width: min(540px, 100%);
-  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
-  padding: 16px;
+  padding: clamp(10px, 2vh, 16px);
 }
 
 .topbar,
@@ -65,7 +66,7 @@ button:disabled {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  margin-bottom: 20px;
+  margin-bottom: clamp(10px, 1.8vh, 18px);
 }
 
 .brand,
@@ -134,7 +135,15 @@ button:disabled {
 }
 
 .hero-band h1 {
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(2rem, 5vw, 4.4rem);
+}
+
+.host-view.game-active .hero-band {
+  padding: clamp(14px, 2vh, 18px) 24px;
+}
+
+.host-view.game-active .hero-band h1 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
 }
 
 .join-panel h1 {
@@ -154,13 +163,13 @@ button:disabled {
 .layout-grid {
   display: grid;
   grid-template-columns: minmax(240px, 290px) minmax(0, 1fr) minmax(260px, 340px);
-  gap: 18px;
-  margin-top: 18px;
+  gap: clamp(12px, 1.6vw, 18px);
+  margin-top: clamp(12px, 1.8vh, 18px);
 }
 
 .side-panel,
 .play-panel {
-  padding: 18px;
+  padding: clamp(12px, 1.8vh, 18px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(21, 21, 29, 0.92);
@@ -173,9 +182,9 @@ button:disabled {
 
 .code-box {
   display: grid;
-  gap: 8px;
-  margin-bottom: 16px;
-  padding: 16px;
+  gap: 6px;
+  margin-bottom: clamp(10px, 1.6vh, 16px);
+  padding: clamp(12px, 1.8vh, 16px);
   border-radius: 8px;
   background: var(--panel-soft);
 }
@@ -189,15 +198,16 @@ button:disabled {
 }
 
 .code-box strong {
-  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
   line-height: 1;
 }
 
 .qr-code {
   display: block;
-  width: min(100%, 280px);
+  width: min(100%, 245px);
+  max-height: 25vh;
   aspect-ratio: 1;
-  margin: 0 auto 16px;
+  margin: 0 auto clamp(10px, 1.6vh, 16px);
   border-radius: 8px;
   background: #ffffff;
 }
@@ -255,21 +265,28 @@ form label {
   background: rgba(255, 255, 255, 0.06);
 }
 
+.compact-action {
+  width: 44px;
+  min-width: 44px;
+  padding: 0;
+}
+
 .wide {
   width: 100%;
 }
 
 .theme-strip {
-  min-height: 170px;
-  margin-bottom: 18px;
+  min-height: clamp(88px, 15vh, 132px);
+  margin-bottom: clamp(10px, 1.6vh, 16px);
   border-radius: 8px;
-  background-color: var(--panel-soft);
+  background-color: var(--theme-accent);
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, contain;
 }
 
 .theme-strip.compact {
-  min-height: 124px;
+  min-height: clamp(62px, 12vh, 92px);
 }
 
 .round-meta,
@@ -278,34 +295,41 @@ form label {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: clamp(8px, 1.4vh, 14px);
   color: var(--muted);
   font-weight: 800;
 }
 
 .question-block {
-  margin-bottom: 18px;
+  margin-bottom: clamp(10px, 1.6vh, 16px);
 }
 
-.question-block h1,
+.question-block h1 {
+  font-size: clamp(1.3rem, 5.2vw, 2rem);
+  line-height: 1.08;
+}
+
 .question-block h2 {
-  font-size: clamp(1.8rem, 5vw, 3.6rem);
+  font-size: clamp(1.6rem, 2.7vw, 2.55rem);
+  line-height: 1.08;
+  text-wrap: balance;
 }
 
 .answer-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: clamp(8px, 1.2vw, 12px);
 }
 
 .answer-card {
   display: grid;
-  gap: 10px;
-  min-height: 120px;
-  padding: 16px;
+  gap: 8px;
+  min-height: clamp(72px, 11vh, 96px);
+  padding: clamp(10px, 1.5vh, 14px);
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel-soft);
+  line-height: 1.15;
 }
 
 .answer-card.correct,
@@ -331,7 +355,7 @@ form label {
 .host-controls {
   display: flex;
   gap: 12px;
-  margin-top: 16px;
+  margin-top: clamp(10px, 1.6vh, 14px);
 }
 
 .player-list,
@@ -344,10 +368,10 @@ form label {
 .player-row,
 .leader-row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) minmax(92px, auto) auto;
   align-items: center;
   gap: 10px;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
@@ -357,25 +381,41 @@ form label {
   grid-template-columns: minmax(0, 1fr) auto;
 }
 
+.player-row > :first-child,
+.leader-row strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-row .pill,
+.leader-row span,
+.icon-action {
+  white-space: nowrap;
+}
+
 .player-game {
   display: grid;
-  gap: 14px;
+  gap: clamp(8px, 1.5vh, 14px);
 }
 
 .answer-stack {
   display: grid;
-  gap: 12px;
+  gap: clamp(7px, 1.2vh, 12px);
 }
 
 .answer-button {
   width: 100%;
-  min-height: 72px;
+  min-height: clamp(48px, 8.2vh, 68px);
   border: 1px solid var(--line);
   border-radius: 8px;
-  padding: 14px 16px;
+  padding: clamp(9px, 1.6vh, 14px) 14px;
   color: var(--text);
   background: var(--panel-soft);
+  font-size: clamp(0.88rem, 3.8vw, 1.03rem);
   font-weight: 900;
+  line-height: 1.14;
   text-align: left;
 }
 
@@ -391,10 +431,11 @@ form label {
 
 .feedback-panel {
   display: grid;
-  gap: 8px;
-  padding: 14px;
+  gap: 6px;
+  padding: clamp(10px, 1.5vh, 14px);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.07);
+  line-height: 1.18;
 }
 
 .feedback-panel p {
@@ -425,6 +466,11 @@ form label {
 }
 
 @media (max-width: 1040px) {
+  .app-shell {
+    height: auto;
+    overflow: visible;
+  }
+
   .layout-grid {
     grid-template-columns: 1fr;
   }
@@ -460,5 +506,68 @@ form label {
 
   .player-row {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px), (max-height: 760px) {
+  .player-view.in-game {
+    overflow: hidden;
+  }
+
+  .player-view.in-game .mobile-shell {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
+  .player-view.in-game .player-header {
+    margin-bottom: clamp(8px, 1.4vh, 12px);
+  }
+
+  .player-view.in-game .player-header img {
+    width: 132px;
+    height: 42px;
+  }
+
+  .player-view.in-game .player-header span {
+    min-height: 30px;
+    padding: 5px 10px;
+    font-size: 0.86rem;
+  }
+
+  .player-view.in-game .round-meta {
+    font-size: 0.86rem;
+  }
+
+  .player-view.in-game .eyebrow {
+    margin-bottom: 5px;
+    font-size: 0.72rem;
+  }
+
+  .player-view.status-question .mini-leaderboard,
+  .player-view.status-revealed .mini-leaderboard {
+    display: none;
+  }
+}
+
+@media (max-height: 840px) and (min-width: 1041px) {
+  .host-view.game-active .topbar {
+    margin-bottom: 8px;
+  }
+
+  .host-view.game-active .brand {
+    width: 154px;
+    height: 48px;
+  }
+
+  .host-view.game-active .hero-band {
+    padding: 12px 20px;
+  }
+
+  .host-view.game-active .hero-band h1 {
+    font-size: clamp(1.8rem, 3.4vw, 2.8rem);
+  }
+
+  .host-view.game-active .question-block h2 {
+    font-size: clamp(1.45rem, 2.35vw, 2.15rem);
   }
 }

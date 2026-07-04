@@ -48,7 +48,7 @@ window.CassosUI = (() => {
   }
 
   function pointsLabel(score) {
-    return `${score} point${score > 1 ? "s" : ""}`;
+    return `${score} pt${score > 1 ? "s" : ""}`;
   }
 
   function roundLabel(state) {

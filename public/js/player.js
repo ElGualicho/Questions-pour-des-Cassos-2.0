@@ -80,6 +80,11 @@ function submitAnswer(answerIndex) {
 
 function render() {
   const joined = Boolean(playerState && playerState.me);
+  document.body.classList.toggle("in-game", joined);
+  document.body.classList.toggle("status-lobby", joined && playerState.status === "lobby");
+  document.body.classList.toggle("status-question", joined && playerState.status === "question");
+  document.body.classList.toggle("status-revealed", joined && playerState.status === "revealed");
+  document.body.classList.toggle("status-finished", joined && playerState.status === "finished");
   playerUI.setHidden(joinPanel, joined);
   playerUI.setHidden(playerGame, !joined);
 
