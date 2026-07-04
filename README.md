@@ -38,3 +38,26 @@ Puis ouvrir :
 - `public/host.html` : interface host ;
 - `public/player.html` : interface joueur mobile ;
 - `public/assets/themes/` : visuels importes.
+
+## Déploiement Cloudflare
+
+Le projet peut être déployé de deux façons :
+
+- en serveur Node classique avec `npm start` ;
+- sur Cloudflare Workers avec assets statiques et Durable Object pour le temps réel.
+
+Pour Cloudflare, utiliser :
+
+```bash
+npm install
+npm run deploy:cloudflare
+```
+
+Le deploiement Cloudflare utilise Wrangler 4 et demande Node 22 ou plus.
+
+Dans l'interface Cloudflare, configurer le projet comme un deploy Workers/Wrangler :
+
+- commande d'installation : `npm install` ;
+- commande de deploiement : `npm run deploy:cloudflare`.
+
+La configuration est dans `wrangler.toml`. Le dossier statique est `public/`, et le Worker `worker/index.mjs` remplace le serveur Socket.IO par un WebSocket natif compatible Cloudflare.

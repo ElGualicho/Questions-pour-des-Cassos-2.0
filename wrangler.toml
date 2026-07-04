@@ -1,0 +1,16 @@
+name = "questions-pour-des-cassos-2"
+main = "worker/index.mjs"
+compatibility_date = "2026-07-04"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[durable_objects.bindings]]
+name = "GAME_ROOM"
+class_name = "GameRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["GameRoom"]

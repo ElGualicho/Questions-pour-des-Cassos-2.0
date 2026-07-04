@@ -1,4 +1,4 @@
-const playerSocket = io();
+const playerSocket = window.CassosRealtime.connect();
 const playerUI = window.CassosUI;
 let playerState = null;
 let playerToken = localStorage.getItem("cassos.playerToken") || "";

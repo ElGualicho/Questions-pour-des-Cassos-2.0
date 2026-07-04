@@ -33,7 +33,9 @@ test("game flow hides answers until reveal and scores once", () => {
   assert.equal(playerState.currentQuestion.answerIndex, undefined);
 
   const hostState = store.getHostState(game.code);
-  const correctIndex = hostState.currentQuestion.choices.indexOf("C");
+  const sourceQuestion = questions.find((question) => question.id === hostState.currentQuestion.id);
+  const correctAnswerText = sourceQuestion.choices[sourceQuestion.answerIndex];
+  const correctIndex = hostState.currentQuestion.choices.indexOf(correctAnswerText);
 
   store.submitAnswer(game.code, joined.player.token, correctIndex);
   store.revealAnswer(game.code);
@@ -42,7 +44,7 @@ test("game flow hides answers until reveal and scores once", () => {
   playerState = store.getPlayerState(game.code, joined.player.token);
   assert.equal(playerState.answerReveal.wasCorrect, true);
   assert.equal(playerState.me.score, 1);
-  assert.equal(playerState.currentQuestion.answerText, "C");
+  assert.equal(playerState.currentQuestion.answerText, correctAnswerText);
 });
 
 test("a player cannot answer twice during the same question", () => {

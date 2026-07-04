@@ -1,4 +1,4 @@
-const hostSocket = io();
+const hostSocket = window.CassosRealtime.connect();
 const hostUI = window.CassosUI;
 let hostState = null;
 let joinUrl = "";
