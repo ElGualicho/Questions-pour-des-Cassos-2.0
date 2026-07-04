@@ -44,7 +44,7 @@ window.CassosUI = (() => {
     if (!element || !theme) {
       return;
     }
-    element.style.backgroundImage = `linear-gradient(90deg, rgba(10,10,14,.18), rgba(10,10,14,.58)), url("${theme.image}")`;
+    element.style.backgroundImage = `url("${theme.image}")`;
   }
 
   function pointsLabel(score) {
