@@ -3,7 +3,7 @@
     "id": "pop-001",
     "category": "Pop culture déglinguée",
     "difficulty": "simple",
-    "question": "Dans South Park, quel gamin meurt tellement souvent que c'est presque devenu son CDI ?",
+    "question": "Dans South Park, quel personnage meurt de façon récurrente au fil des épisodes ?",
     "choices": [
       "Kyle",
       "Cartman",
@@ -17,7 +17,7 @@
     "id": "pop-002",
     "category": "Pop culture déglinguée",
     "difficulty": "simple",
-    "question": "Dans Shrek, quel animal parle beaucoup trop, casse les oreilles de tout le monde, mais reste attachant comme un pote relou ?",
+    "question": "Dans Shrek, quel animal accompagne Shrek et parle beaucoup ?",
     "choices": [
       "Un chat",
       "Un âne",
@@ -31,7 +31,7 @@
     "id": "pop-003",
     "category": "Pop culture déglinguée",
     "difficulty": "simple",
-    "question": "Dans Le Seigneur des anneaux, comment Gollum appelle-t-il l'anneau avec une intensité clairement pas saine ?",
+    "question": "Dans Le Seigneur des anneaux, comment Gollum appelle-t-il l'anneau ?",
     "choices": [
       "Mon bijou",
       "Mon précieux",
@@ -45,7 +45,7 @@
     "id": "pop-004",
     "category": "Pop culture déglinguée",
     "difficulty": "simple",
-    "question": "Dans Pokémon, quel poisson éclaté au sol finit par devenir un dragon de daron énervé ?",
+    "question": "Dans Pokémon, quel Pokémon poisson évolue en Léviator ?",
     "choices": [
       "Poissirène",
       "Magicarpe",
@@ -59,7 +59,7 @@
     "id": "pop-005",
     "category": "Pop culture déglinguée",
     "difficulty": "moyen",
-    "question": "Dans The Boys, quel super-héros blond, drapé dans le patriotisme américain, donne globalement envie de supprimer les super-pouvoirs de l'humanité ?",
+    "question": "Dans The Boys, quel super-héros blond incarne une figure patriotique américaine ?",
     "choices": [
       "A-Train",
       "Homelander",
@@ -73,7 +73,7 @@
     "id": "pop-006",
     "category": "Pop culture déglinguée",
     "difficulty": "moyen",
-    "question": "Dans Fight Club, quelle est la première règle du Fight Club, que tout le monde répète donc en la violant direct ?",
+    "question": "Dans Fight Club, quelle est la première règle du Fight Club ?",
     "choices": [
       "Toujours venir torse nu",
       "Ne pas parler du Fight Club",
@@ -87,7 +87,7 @@
     "id": "pop-007",
     "category": "Pop culture déglinguée",
     "difficulty": "moyen",
-    "question": "Dans Kill Bill, avec quelle arme Beatrix Kiddo découpe globalement les problèmes administratifs de sa vie ?",
+    "question": "Dans Kill Bill, quelle arme Beatrix Kiddo utilise-t-elle principalement ?",
     "choices": [
       "Un katana",
       "Une tronçonneuse",
@@ -101,7 +101,7 @@
     "id": "pop-008",
     "category": "Pop culture déglinguée",
     "difficulty": "moyen",
-    "question": "Dans The Office version US, quel manager transforme chaque réunion en malaise professionnel indemnisable ?",
+    "question": "Dans The Office version US, quel manager dirige la branche de Dunder Mifflin à Scranton ?",
     "choices": [
       "Jim Halpert",
       "Dwight Schrute",
@@ -115,7 +115,7 @@
     "id": "pop-009",
     "category": "Pop culture déglinguée",
     "difficulty": "hardcore",
-    "question": "Dans Death Note, quel objet permet à Light Yagami de tuer quelqu'un simplement en écrivant son nom, ambiance papeterie démoniaque ?",
+    "question": "Dans Death Note, quel objet permet à Light Yagami de tuer une personne en écrivant son nom ?",
     "choices": [
       "Un carnet",
       "Un miroir",
@@ -129,7 +129,7 @@
     "id": "pop-010",
     "category": "Pop culture déglinguée",
     "difficulty": "moyen",
-    "question": "Quel film met en scène un présentateur météo coincé dans la même journée, avec une marmotte en guest-star existentielle ?",
+    "question": "Quel film met en scène un présentateur météo revivant sans cesse la même journée ?",
     "choices": [
       "Un jour sans fin",
       "Retour vers le futur",
@@ -143,7 +143,7 @@
     "id": "tox-001",
     "category": "Alcool, drogues & fictions",
     "difficulty": "simple",
-    "question": "Dans Trainspotting, quelle drogue tire les personnages vers le fond avec la délicatesse d'un escalator cassé ?",
+    "question": "Dans Trainspotting, quelle drogue occupe une place centrale dans l'histoire des personnages ?",
     "choices": [
       "Cocaïne",
       "Héroïne",
@@ -157,7 +157,7 @@
     "id": "tox-002",
     "category": "Alcool, drogues & fictions",
     "difficulty": "moyen",
-    "question": "Quel film connu en France sous le titre Las Vegas Parano suit un trip hallucinatoire beaucoup trop chargé à Las Vegas ?",
+    "question": "Quel film, connu en France sous le titre Las Vegas Parano, suit un voyage hallucinatoire à Las Vegas ?",
     "choices": [
       "Requiem for a Dream",
       "Very Bad Trip",
@@ -171,7 +171,7 @@
     "id": "tox-003",
     "category": "Alcool, drogues & fictions",
     "difficulty": "simple",
-    "question": "Quelle molécule est principalement responsable de l'effet planant du cannabis, et pas juste de l'envie de commander des tacos ?",
+    "question": "Quelle molécule est principalement responsable des effets psychoactifs du cannabis ?",
     "choices": [
       "THC",
       "CBD",
@@ -185,7 +185,7 @@
     "id": "tox-004",
     "category": "Alcool, drogues & fictions",
     "difficulty": "simple",
-    "question": "Quel alcool mexicain est fabriqué à partir d'agave bleu, et finit parfois avec du sel, du citron et des décisions catastrophiques ?",
+    "question": "Quel alcool mexicain est fabriqué à partir d'agave bleu ?",
     "choices": [
       "Rhum",
       "Vodka",
@@ -199,7 +199,7 @@
     "id": "tox-005",
     "category": "Alcool, drogues & fictions",
     "difficulty": "simple",
-    "question": "Dans un mojito classique, quel alcool joue le rôle principal pendant que la menthe fait genre elle est là pour la fraîcheur ?",
+    "question": "Dans un mojito classique, quel alcool est utilisé ?",
     "choices": [
       "Rhum",
       "Vodka",
@@ -213,7 +213,7 @@
     "id": "tox-006",
     "category": "Alcool, drogues & fictions",
     "difficulty": "moyen",
-    "question": "Quel cocktail mélange vodka, ginger beer et citron vert, généralement servi dans un mug en cuivre pour faire chic alors qu'on est déjà éclaté ?",
+    "question": "Quel cocktail à base de vodka, ginger beer et citron vert est généralement servi dans un mug en cuivre ?",
     "choices": [
       "Moscow Mule",
       "Bloody Mary",
@@ -227,7 +227,7 @@
     "id": "tox-007",
     "category": "Alcool, drogues & fictions",
     "difficulty": "simple",
-    "question": "Comment appelle-t-on l'état du lendemain où ton crâne fait une réunion de chantier après une soirée trop ambitieuse ?",
+    "question": "Comment appelle-t-on l'état de malaise ressenti le lendemain d'une consommation excessive d'alcool ?",
     "choices": [
       "Une insolation",
       "Une gueule de bois",
@@ -241,7 +241,7 @@
     "id": "tox-008",
     "category": "Alcool, drogues & fictions",
     "difficulty": "moyen",
-    "question": "Dans Breaking Bad, quel avocat véreux devient tellement culte qu'il gagne sa propre série ?",
+    "question": "Dans Breaking Bad, quel avocat véreux devient ensuite le personnage principal de sa propre série ?",
     "choices": [
       "Saul Goodman",
       "Gus Fring",
@@ -255,7 +255,7 @@
     "id": "tox-009",
     "category": "Alcool, drogues & fictions",
     "difficulty": "hardcore",
-    "question": "Quel terme désigne le fait de ne plus consommer une substance après une période d'addiction, soit le boss final du “j'arrête lundi” ?",
+    "question": "Quel terme désigne le fait de ne plus consommer d'alcool ou de substances addictives ?",
     "choices": [
       "Tolérance",
       "Sobriété",
@@ -269,7 +269,7 @@
     "id": "tox-010",
     "category": "Alcool, drogues & fictions",
     "difficulty": "moyen",
-    "question": "Quel alcool anisé du sud de la France se boit avec de l'eau et transforme instantanément une table en débat de PMU ?",
+    "question": "Quel alcool anisé du sud de la France se boit généralement avec de l'eau ?",
     "choices": [
       "Pastis",
       "Gin",
@@ -283,7 +283,7 @@
     "id": "body-001",
     "category": "Corps, cul & malaise poli",
     "difficulty": "simple",
-    "question": "Quel contraceptif masculin s'enfile avant le rapport, parce que “t'inquiète” n'a jamais été une méthode fiable ?",
+    "question": "Quel contraceptif masculin se place sur le pénis avant un rapport sexuel ?",
     "choices": [
       "Le préservatif",
       "Le stérilet",
@@ -297,7 +297,7 @@
     "id": "body-002",
     "category": "Corps, cul & malaise poli",
     "difficulty": "simple",
-    "question": "Quel organe du plaisir féminin est souvent résumé à tort à un petit bouton, alors qu'il est bien plus étendu que le respect en soirée étudiante ?",
+    "question": "Quel organe du plaisir féminin est souvent résumé à tort à un petit bouton, alors qu'il est en réalité plus étendu ?",
     "choices": [
       "Le clitoris",
       "L'utérus",
@@ -311,7 +311,7 @@
     "id": "body-003",
     "category": "Corps, cul & malaise poli",
     "difficulty": "moyen",
-    "question": "Quelle urgence médicale peut arriver quand un testicule fait une rotation sur lui-même, ambiance câble USB démoniaque ?",
+    "question": "Quelle urgence médicale peut arriver lorsqu'un testicule effectue une rotation sur lui-même ?",
     "choices": [
       "Une torsion testiculaire",
       "Une sinusite",
@@ -325,7 +325,7 @@
     "id": "body-004",
     "category": "Corps, cul & malaise poli",
     "difficulty": "hardcore",
-    "question": "Quel nom technique désigne les érections nocturnes ou matinales involontaires, aussi appelées par le peuple “le chapiteau du réveil” ?",
+    "question": "Quel nom technique désigne les érections nocturnes ou matinales involontaires ?",
     "choices": [
       "Tumescence pénienne nocturne",
       "Migraine vasculaire",
@@ -339,7 +339,7 @@
     "id": "body-005",
     "category": "Corps, cul & malaise poli",
     "difficulty": "simple",
-    "question": "Comment appelle-t-on l'envoi de messages, photos ou sous-entendus sexuels par téléphone, soit le terrain miné du “oups mauvais destinataire” ?",
+    "question": "Comment appelle-t-on l'envoi de messages, photos ou sous-entendus sexuels par téléphone ?",
     "choices": [
       "Le phishing",
       "Le sexting",
@@ -353,7 +353,7 @@
     "id": "body-006",
     "category": "Corps, cul & malaise poli",
     "difficulty": "simple",
-    "question": "Quel ancien sigle MST a été largement remplacé par IST, parce que même les maladies ont droit à un rebranding ?",
+    "question": "Quelle expression a largement remplacé l'ancien sigle MST ?",
     "choices": [
       "Infection sexuellement transmissible",
       "Indice de sommeil tranquille",
@@ -367,7 +367,7 @@
     "id": "body-007",
     "category": "Corps, cul & malaise poli",
     "difficulty": "moyen",
-    "question": "Quel objet réutilisable en silicone peut recueillir les règles et ressemble à un petit gobelet que personne ne veut confondre à l'apéro ?",
+    "question": "Quel objet réutilisable en silicone permet de recueillir les règles ?",
     "choices": [
       "Une cup menstruelle",
       "Un diaphragme Wi-Fi",
@@ -381,7 +381,7 @@
     "id": "body-008",
     "category": "Corps, cul & malaise poli",
     "difficulty": "moyen",
-    "question": "Quel ensemble de muscles soutient les organes du bassin et peut être travaillé après un accouchement ou pour éviter les petites fuites de la honte ?",
+    "question": "Quel ensemble de muscles soutient les organes du bassin et peut être travaillé après un accouchement ?",
     "choices": [
       "Le périnée",
       "Le biceps",
@@ -395,7 +395,7 @@
     "id": "body-009",
     "category": "Corps, cul & malaise poli",
     "difficulty": "moyen",
-    "question": "Quel terme médical désigne un bleu, y compris celui laissé par un suçon de compétition mal placé avant un repas de famille ?",
+    "question": "Quel terme médical désigne un bleu ?",
     "choices": [
       "Une ecchymose",
       "Une otite",
@@ -409,7 +409,7 @@
     "id": "body-010",
     "category": "Corps, cul & malaise poli",
     "difficulty": "hardcore",
-    "question": "Quel réflexe corporel consiste à contracter brusquement le diaphragme, produisant un bruit ridicule et impossible à assumer en réunion ?",
+    "question": "Quel réflexe corporel consiste à contracter brusquement le diaphragme et produit un son caractéristique ?",
     "choices": [
       "Le hoquet",
       "La syncope",
@@ -423,7 +423,7 @@
     "id": "death-001",
     "category": "Mort, musique & destins claqués",
     "difficulty": "moyen",
-    "question": "Quelle chanteuse du groupe The Cranberries a marqué les années 90 avec Zombie avant de mourir en 2018 ?",
+    "question": "Quelle chanteuse du groupe The Cranberries, connue notamment pour Zombie, est morte en 2018 ?",
     "choices": [
       "Dolores O'Riordan",
       "Sinead O'Connor",
@@ -451,7 +451,7 @@
     "id": "death-003",
     "category": "Mort, musique & destins claqués",
     "difficulty": "moyen",
-    "question": "Quel chanteur de Nirvana a donné au monde Smells Like Teen Spirit avant de devenir une icône tragique du rock ?",
+    "question": "Quel chanteur de Nirvana, interprète de Smells Like Teen Spirit, est devenu une icône du rock ?",
     "choices": [
       "Kurt Cobain",
       "Eddie Vedder",
@@ -465,7 +465,7 @@
     "id": "death-004",
     "category": "Mort, musique & destins claqués",
     "difficulty": "moyen",
-    "question": "Quel DJ suédois, connu pour Wake Me Up, est mort en 2018, laissant les playlists de camping en PLS ?",
+    "question": "Quel DJ suédois, connu pour Wake Me Up, est mort en 2018 ?",
     "choices": [
       "Avicii",
       "David Guetta",
@@ -479,7 +479,7 @@
     "id": "death-005",
     "category": "Mort, musique & destins claqués",
     "difficulty": "hardcore",
-    "question": "Quel album posthume de Mac Miller, sorti en 2020, complète Swimming comme une dernière boucle triste mais propre ?",
+    "question": "Quel album posthume de Mac Miller, sorti en 2020, fait suite à Swimming ?",
     "choices": [
       "Circles",
       "Legends Never Die",
@@ -493,7 +493,7 @@
     "id": "death-006",
     "category": "Mort, musique & destins claqués",
     "difficulty": "simple",
-    "question": "Quel groupe australien a continué après la mort de Bon Scott avec Brian Johnson au chant, preuve que le rock refuse parfois le CDI de la mort ?",
+    "question": "Quel groupe australien a continué après la mort de Bon Scott avec Brian Johnson au chant ?",
     "choices": [
       "AC/DC",
       "Queen",
@@ -507,7 +507,7 @@
     "id": "death-007",
     "category": "Mort, musique & destins claqués",
     "difficulty": "moyen",
-    "question": "Quelle chanson de Queen ressemble à une confession dramatique envoyée à sa mère après un énorme carnage émotionnel ?",
+    "question": "Quelle chanson de Queen commence par une confession adressée à sa mère ?",
     "choices": [
       "Bohemian Rhapsody",
       "Radio Ga Ga",
@@ -521,7 +521,7 @@
     "id": "death-008",
     "category": "Mort, musique & destins claqués",
     "difficulty": "moyen",
-    "question": "Quel rappeur français est associé au tube Mwaka Moon, souvent collé dans les soirées où personne ne connaît vraiment les paroles ?",
+    "question": "Quel rappeur français est associé au tube Mwaka Moon ?",
     "choices": [
       "Kalash",
       "Niska",
@@ -535,7 +535,7 @@
     "id": "death-009",
     "category": "Mort, musique & destins claqués",
     "difficulty": "hardcore",
-    "question": "Quel guitariste fait partie du fameux “club des 27” et a transformé la guitare électrique en sortilège avant de mourir en 1970 ?",
+    "question": "Quel guitariste fait partie du club des 27 et est mort en 1970 ?",
     "choices": [
       "Jimi Hendrix",
       "Eric Clapton",
@@ -563,7 +563,7 @@
     "id": "weird-001",
     "category": "Culture générale chelou",
     "difficulty": "simple",
-    "question": "Quel animal australien fabrique des crottes en forme de cubes, comme s'il avait avalé Minecraft ?",
+    "question": "Quel animal australien produit des excréments en forme de cubes ?",
     "choices": [
       "Le wombat",
       "Le koala",
@@ -577,7 +577,7 @@
     "id": "weird-002",
     "category": "Culture générale chelou",
     "difficulty": "simple",
-    "question": "Quel animal aquatique garde une tête de bébé toute sa vie et peut régénérer des parties de son corps, ambiance Pokémon médical ?",
+    "question": "Quel animal aquatique conserve des caractéristiques juvéniles toute sa vie et peut régénérer certaines parties de son corps ?",
     "choices": [
       "L'axolotl",
       "Le homard",
@@ -591,7 +591,7 @@
     "id": "weird-003",
     "category": "Culture générale chelou",
     "difficulty": "moyen",
-    "question": "Quel ancien site pénitentiaire situé dans la baie de San Francisco a accueilli des criminels célèbres avant de devenir une visite touristique bien glauque ?",
+    "question": "Quel ancien site pénitentiaire situé dans la baie de San Francisco a accueilli des criminels célèbres avant de devenir un lieu touristique ?",
     "choices": [
       "Alcatraz",
       "Guantanamo",
@@ -605,7 +605,7 @@
     "id": "weird-004",
     "category": "Culture générale chelou",
     "difficulty": "hardcore",
-    "question": "Quel lac camerounais a libéré en 1986 un nuage de CO2 meurtrier, prouvant qu'un lac peut aussi choisir la violence ?",
+    "question": "Quel lac camerounais a libéré en 1986 un nuage de CO2 meurtrier ?",
     "choices": [
       "Le lac Nyos",
       "Le lac Victoria",
@@ -619,7 +619,7 @@
     "id": "weird-005",
     "category": "Culture générale chelou",
     "difficulty": "hardcore",
-    "question": "Quelle bactérie est responsable de la peste, cette grande ambiance médiévale qui a ruiné plus de week-ends que la SNCF ?",
+    "question": "Quelle bactérie est responsable de la peste ?",
     "choices": [
       "Yersinia pestis",
       "Escherichia coli",
@@ -633,7 +633,7 @@
     "id": "weird-006",
     "category": "Culture générale chelou",
     "difficulty": "moyen",
-    "question": "Comment appelle-t-on la peur ou le dégoût des petits trous groupés, genre nid d'abeille version cauchemar dermatologique ?",
+    "question": "Comment appelle-t-on la peur ou le dégoût des petits trous groupés ?",
     "choices": [
       "Trypophobie",
       "Agoraphobie",
@@ -647,7 +647,7 @@
     "id": "weird-007",
     "category": "Culture générale chelou",
     "difficulty": "hardcore",
-    "question": "Quel mot désigne le fait de manger ses crottes de nez, information que personne n'avait demandé mais que le quiz impose ?",
+    "question": "Quel mot désigne le fait de manger ses crottes de nez ?",
     "choices": [
       "Mucophagie",
       "Coprophagie",
@@ -661,7 +661,7 @@
     "id": "weird-008",
     "category": "Culture générale chelou",
     "difficulty": "simple",
-    "question": "Quel insecte est réputé pouvoir survivre un certain temps sans tête, ce qui reste un projet de vie discutable ?",
+    "question": "Quel insecte est réputé pouvoir survivre un certain temps sans tête ?",
     "choices": [
       "Le cafard",
       "Le moustique",
@@ -675,7 +675,7 @@
     "id": "weird-009",
     "category": "Culture générale chelou",
     "difficulty": "simple",
-    "question": "Quel liquide noir un poulpe ou une seiche peut projeter pour fuir, façon écran de fumée version fruits de mer ?",
+    "question": "Quel liquide noir un poulpe ou une seiche peut projeter pour fuir ?",
     "choices": [
       "De l'encre",
       "Du pétrole",
@@ -689,7 +689,7 @@
     "id": "weird-010",
     "category": "Culture générale chelou",
     "difficulty": "moyen",
-    "question": "Quel animal pond des œufs, allaite ses petits et possède un bec, comme s'il avait été designé par un stagiaire fatigué ?",
+    "question": "Quel animal pond des œufs, allaite ses petits et possède un bec ?",
     "choices": [
       "L'ornithorynque",
       "Le castor",
@@ -703,7 +703,7 @@
     "id": "net-001",
     "category": "Internet, memes & numérique",
     "difficulty": "simple",
-    "question": "Quel chien japonais est devenu le visage du meme Doge, avec son air de juger ton découvert bancaire ?",
+    "question": "Quel chien japonais est devenu le visage du meme Doge ?",
     "choices": [
       "Shiba Inu",
       "Akita Inu",
@@ -717,7 +717,7 @@
     "id": "net-002",
     "category": "Internet, memes & numérique",
     "difficulty": "simple",
-    "question": "Que signifie généralement une erreur 404 sur un site web, à part “bon courage frérot” ?",
+    "question": "Que signifie généralement une erreur 404 sur un site web ?",
     "choices": [
       "Page introuvable",
       "Mot de passe faux",
@@ -731,7 +731,7 @@
     "id": "net-003",
     "category": "Internet, memes & numérique",
     "difficulty": "simple",
-    "question": "Sur Windows, quelle touche permet souvent de rafraîchir une page web, soit le bouton “allez bouge” du navigateur ?",
+    "question": "Sur Windows, quelle touche permet souvent de rafraîchir une page web ?",
     "choices": [
       "F5",
       "F1",
@@ -745,7 +745,7 @@
     "id": "net-004",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "Quel meme montre un vieux monsieur souriant qui a l'air heureux alors qu'il souffre intérieurement comme un lundi matin ?",
+    "question": "Quel meme montre un homme âgé souriant alors que son expression semble cacher une douleur intérieure ?",
     "choices": [
       "Hide the Pain Harold",
       "Bad Luck Brian",
@@ -759,7 +759,7 @@
     "id": "net-005",
     "category": "Internet, memes & numérique",
     "difficulty": "simple",
-    "question": "Quel format d'image est souvent utilisé quand on veut un visuel sans fond, parce que le vieux JPEG blanc autour c'est non ?",
+    "question": "Quel format d'image est souvent utilisé pour un visuel avec fond transparent ?",
     "choices": [
       "PNG",
       "MP3",
@@ -773,7 +773,7 @@
     "id": "net-006",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "Comment appelle-t-on un faux compte ou programme qui agit automatiquement en ligne, souvent avec moins de subtilité qu'un oncle sur Facebook ?",
+    "question": "Comment appelle-t-on un faux compte ou programme qui agit automatiquement en ligne ?",
     "choices": [
       "Un bot",
       "Un cookie",
@@ -787,7 +787,7 @@
     "id": "net-007",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "À quoi sert principalement un CAPTCHA, à part te demander de reconnaître des bus comme si tu passais le code ?",
+    "question": "À quoi sert principalement un CAPTCHA ?",
     "choices": [
       "Distinguer humain et robot",
       "Augmenter la luminosité",
@@ -801,7 +801,7 @@
     "id": "net-008",
     "category": "Internet, memes & numérique",
     "difficulty": "simple",
-    "question": "Quel réseau social chinois est devenu le royaume des vidéos courtes, des danses, des dramas et des recettes à base de fromage fondu ?",
+    "question": "Quel réseau social chinois est devenu célèbre pour ses vidéos courtes ?",
     "choices": [
       "TikTok",
       "LinkedIn",
@@ -815,7 +815,7 @@
     "id": "net-009",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "Comment appelle-t-on le fait de révéler la fin d'un film ou d'une série à quelqu'un, pratique passible d'exil social immédiat ?",
+    "question": "Comment appelle-t-on le fait de révéler la fin d'un film ou d'une série à quelqu'un ?",
     "choices": [
       "Spoiler",
       "Uploader",
@@ -829,7 +829,7 @@
     "id": "net-010",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "Quel terme désigne un appât numérique destiné à voler des identifiants, souvent déguisé en mail de banque écrit avec les pieds ?",
+    "question": "Quel terme désigne un appât numérique destiné à voler des identifiants ?",
     "choices": [
       "Phishing",
       "Streaming",
