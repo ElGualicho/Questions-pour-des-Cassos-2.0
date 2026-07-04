@@ -43,7 +43,9 @@ test("game flow hides answers until reveal and scores once", () => {
 
   playerState = store.getPlayerState(game.code, joined.player.token);
   assert.equal(playerState.answerReveal.wasCorrect, true);
-  assert.equal(playerState.me.score, 1);
+  assert.equal(playerState.answerReveal.speedBonus, true);
+  assert.equal(playerState.answerReveal.pointsEarned, 2);
+  assert.equal(playerState.me.score, 2);
   assert.equal(playerState.currentQuestion.answerText, correctAnswerText);
 });
 
@@ -59,4 +61,66 @@ test("a player cannot answer twice during the same question", () => {
     () => store.submitAnswer(game.code, joined.player.token, 1),
     /Réponse déjà envoyée/
   );
+});
+
+test("the first correct answer gets the speed bonus", () => {
+  const store = createGameStore(questions);
+  const game = store.createGame("host-1");
+  const thomas = store.joinPlayer(game.code, "Thomas", null, "socket-1").player;
+  const alex = store.joinPlayer(game.code, "Alex", null, "socket-2").player;
+  const sam = store.joinPlayer(game.code, "Sam", null, "socket-3").player;
+
+  store.startGame(game.code, { questionCount: 10 });
+  const hostState = store.getHostState(game.code);
+  const sourceQuestion = questions.find((question) => question.id === hostState.currentQuestion.id);
+  const correctIndex = hostState.currentQuestion.choices.indexOf(sourceQuestion.choices[sourceQuestion.answerIndex]);
+  const wrongIndex = hostState.currentQuestion.choices.findIndex((_choice, index) => index !== correctIndex);
+
+  store.submitAnswer(game.code, thomas.token, wrongIndex);
+  store.submitAnswer(game.code, alex.token, correctIndex);
+  store.submitAnswer(game.code, sam.token, correctIndex);
+  store.revealAnswer(game.code);
+
+  const leaderboard = store.getHostState(game.code).leaderboard;
+  assert.equal(leaderboard.find((player) => player.name === "Alex").score, 2);
+  assert.equal(leaderboard.find((player) => player.name === "Sam").score, 1);
+  assert.equal(leaderboard.find((player) => player.name === "Thomas").score, 0);
+});
+
+test("the final bonus question uses player names and awards the most voted player", () => {
+  const store = createGameStore(questions);
+  const game = store.createGame("host-1");
+  const thomas = store.joinPlayer(game.code, "Thomas", null, "socket-1").player;
+  const alex = store.joinPlayer(game.code, "Alex", null, "socket-2").player;
+  const sam = store.joinPlayer(game.code, "Sam", null, "socket-3").player;
+
+  store.startGame(game.code, { questionCount: "all" });
+  for (let index = 0; index < questions.length; index += 1) {
+    store.revealAnswer(game.code);
+    store.nextQuestion(game.code);
+  }
+
+  let hostState = store.getHostState(game.code);
+  assert.equal(hostState.currentQuestion.type, "bonus");
+  assert.equal(hostState.currentQuestionNumber, 3);
+  assert.equal(hostState.totalQuestions, 3);
+  assert.deepEqual(hostState.currentQuestion.choices, ["Thomas", "Alex", "Sam"]);
+
+  const thomasIndex = hostState.currentQuestion.choices.indexOf("Thomas");
+  const alexIndex = hostState.currentQuestion.choices.indexOf("Alex");
+  store.submitAnswer(game.code, thomas.token, alexIndex);
+  store.submitAnswer(game.code, alex.token, alexIndex);
+  store.submitAnswer(game.code, sam.token, thomasIndex);
+  store.revealAnswer(game.code);
+
+  hostState = store.getHostState(game.code);
+  assert.equal(hostState.leaderboard.find((player) => player.name === "Alex").score, 2);
+  assert.equal(hostState.leaderboard.find((player) => player.name === "Thomas").score, 0);
+  assert.equal(hostState.leaderboard.find((player) => player.name === "Sam").score, 0);
+  assert.equal(hostState.answerDistribution.find((answer) => answer.choice === "Alex").correct, true);
+
+  const alexState = store.getPlayerState(game.code, alex.token);
+  assert.equal(alexState.answerReveal.type, "bonus");
+  assert.equal(alexState.answerReveal.bonusAwarded, true);
+  assert.equal(alexState.answerReveal.pointsEarned, 2);
 });

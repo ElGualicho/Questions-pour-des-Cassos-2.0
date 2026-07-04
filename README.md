@@ -23,7 +23,8 @@ Puis ouvrir :
 - questions a 4 choix ;
 - une seule reponse acceptee par joueur et par question ;
 - reveal de la bonne reponse ;
-- score simple : bonne reponse = 1 point ;
+- score : bonne reponse = 1 point, premiere bonne reponse = 2 points ;
+- question bonus finale avec vote entre joueurs : le nom le plus vote gagne 2 points ;
 - classement final ;
 - reset de partie ;
 - banque de 60 questions ;

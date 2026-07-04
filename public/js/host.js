@@ -160,11 +160,13 @@ function renderQuestion() {
     questionCategory.textContent = "Lobby";
     questionText.textContent = "Partage le code, laisse les joueurs entrer, puis lance la partie.";
     themeStrip.style.backgroundImage = "";
+    hostAnswers.classList.remove("many-answers");
     return;
   }
 
   hostUI.applyTheme(question.theme);
   hostUI.setThemeStrip(themeStrip, question.theme);
+  hostAnswers.classList.toggle("many-answers", question.type === "bonus");
   questionCategory.textContent = `${question.category} · ${question.difficulty}`;
   questionText.textContent = question.question;
 

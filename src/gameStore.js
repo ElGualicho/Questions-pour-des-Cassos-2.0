@@ -3,6 +3,12 @@ const { getThemeForCategory } = require("./themes");
 
 const DEFAULT_QUESTION_COUNT = 10;
 const VALID_COUNTS = new Set([10, 20, "all"]);
+const BONUS_QUESTION_ID = "bonus-daronne-finale";
+const BONUS_QUESTION_TEXT =
+  "De quel joueur la daronne m\u00e9rite-t-elle le titre de daronne la plus ind\u00e9fendable ?";
+const BONUS_QUESTION_EXPLANATION =
+  "Le joueur dont le nom re\u00e7oit le plus de votes remporte 2 points bonus.";
+const BONUS_THEME_CATEGORY = "Corps, cul & malaise poli";
 
 function createGameStore(rawQuestions) {
   const questions = validateQuestions(rawQuestions);
@@ -54,6 +60,7 @@ function createGameStore(rawQuestions) {
     const questionCount = parseQuestionCount(settings.questionCount);
     game.settings.questionCount = questionCount;
     game.deck = buildDeck(questions, questionCount);
+    game.deck.push(buildBonusQuestion(game));
     game.currentQuestionIndex = 0;
     resetRoundAnswers(game);
     game.status = "question";
@@ -73,6 +80,9 @@ function createGameStore(rawQuestions) {
     }
 
     game.currentQuestionIndex += 1;
+    if (isCurrentQuestionBonus(game)) {
+      game.deck[game.currentQuestionIndex] = buildBonusQuestion(game);
+    }
     resetRoundAnswers(game);
     game.status = "question";
     return game;
@@ -103,6 +113,9 @@ function createGameStore(rawQuestions) {
       player.hasAnswered = false;
       player.selectedAnswerIndex = null;
       player.lastAnswerCorrect = null;
+      player.lastAnswerPoints = 0;
+      player.lastSpeedBonus = false;
+      player.lastBonusAwarded = false;
     }
 
     return game;
@@ -121,7 +134,10 @@ function createGameStore(rawQuestions) {
       joinedAt: Date.now(),
       hasAnswered: false,
       selectedAnswerIndex: null,
-      lastAnswerCorrect: null
+      lastAnswerCorrect: null,
+      lastAnswerPoints: 0,
+      lastSpeedBonus: false,
+      lastBonusAwarded: false
     };
 
     player.name = cleanName;
@@ -146,7 +162,7 @@ function createGameStore(rawQuestions) {
     }
 
     const parsedAnswer = Number(answerIndex);
-    if (!Number.isInteger(parsedAnswer) || parsedAnswer < 0 || parsedAnswer > 3) {
+    if (!Number.isInteger(parsedAnswer) || parsedAnswer < 0 || parsedAnswer >= currentQuestion.choices.length) {
       throw new Error("Réponse invalide.");
     }
 
@@ -299,6 +315,28 @@ function prepareQuestion(question) {
   };
 }
 
+function buildBonusQuestion(game) {
+  const players = Array.from(game.players.values());
+  return {
+    id: BONUS_QUESTION_ID,
+    type: "bonus",
+    category: "Question bonus",
+    difficulty: "vote final",
+    question: BONUS_QUESTION_TEXT,
+    choices: players.map((player) => player.name),
+    choicePlayerTokens: players.map((player) => player.token),
+    answerIndex: null,
+    winningAnswerIndexes: [],
+    explanation: BONUS_QUESTION_EXPLANATION,
+    theme: getThemeForCategory(BONUS_THEME_CATEGORY)
+  };
+}
+
+function isCurrentQuestionBonus(game) {
+  const currentQuestion = getCurrentQuestion(game);
+  return Boolean(currentQuestion && currentQuestion.type === "bonus");
+}
+
 function applyScoring(game) {
   if (game.currentScored) {
     return;
@@ -309,18 +347,83 @@ function applyScoring(game) {
     return;
   }
 
+  if (currentQuestion.type === "bonus") {
+    applyBonusScoring(game, currentQuestion);
+    game.currentScored = true;
+    return;
+  }
+
+  const firstCorrectToken = getFirstCorrectToken(game, currentQuestion);
+
   for (const player of game.players.values()) {
     const answer = game.currentAnswers.get(player.token);
     const isCorrect = Boolean(answer && answer.answerIndex === currentQuestion.answerIndex);
+    const speedBonus = Boolean(isCorrect && player.token === firstCorrectToken);
+    const points = isCorrect ? 1 + (speedBonus ? 1 : 0) : 0;
+
     player.lastAnswerCorrect = isCorrect;
+    player.lastAnswerPoints = points;
+    player.lastSpeedBonus = speedBonus;
+    player.lastBonusAwarded = false;
 
     if (isCorrect) {
-      player.score += 1;
+      player.score += points;
       player.correctCount += 1;
     }
   }
 
   game.currentScored = true;
+}
+
+function getFirstCorrectToken(game, currentQuestion) {
+  let firstCorrect = null;
+
+  for (const [token, answer] of game.currentAnswers.entries()) {
+    if (answer.answerIndex !== currentQuestion.answerIndex) {
+      continue;
+    }
+    if (!firstCorrect || answer.answeredAt < firstCorrect.answeredAt) {
+      firstCorrect = { token, answeredAt: answer.answeredAt };
+    }
+  }
+
+  return firstCorrect ? firstCorrect.token : null;
+}
+
+function applyBonusScoring(game, currentQuestion) {
+  const counts = Array(currentQuestion.choices.length).fill(0);
+
+  for (const player of game.players.values()) {
+    player.lastAnswerCorrect = null;
+    player.lastAnswerPoints = 0;
+    player.lastSpeedBonus = false;
+    player.lastBonusAwarded = false;
+  }
+
+  for (const answer of game.currentAnswers.values()) {
+    if (answer.answerIndex >= 0 && answer.answerIndex < counts.length) {
+      counts[answer.answerIndex] += 1;
+    }
+  }
+
+  const maxVotes = Math.max(0, ...counts);
+  const winningAnswerIndexes = maxVotes > 0
+    ? counts.flatMap((count, index) => (count === maxVotes ? [index] : []))
+    : [];
+
+  currentQuestion.winningAnswerIndexes = winningAnswerIndexes;
+  currentQuestion.answerIndex = winningAnswerIndexes.length === 1 ? winningAnswerIndexes[0] : null;
+
+  for (const index of winningAnswerIndexes) {
+    const token = currentQuestion.choicePlayerTokens[index];
+    const winner = game.players.get(token);
+    if (!winner) {
+      continue;
+    }
+    winner.score += 2;
+    winner.lastAnswerPoints = 2;
+    winner.lastBonusAwarded = true;
+  }
 }
 
 function resetRoundAnswers(game) {
@@ -331,6 +434,9 @@ function resetRoundAnswers(game) {
     player.hasAnswered = false;
     player.selectedAnswerIndex = null;
     player.lastAnswerCorrect = null;
+    player.lastAnswerPoints = 0;
+    player.lastSpeedBonus = false;
+    player.lastBonusAwarded = false;
   }
 }
 
@@ -348,10 +454,18 @@ function sanitizeQuestion(question, includeAnswer = false) {
     theme: question.theme
   };
 
+  if (question.type) {
+    sanitized.type = question.type;
+  }
+
   if (includeAnswer) {
     sanitized.answerIndex = question.answerIndex;
-    sanitized.answerText = question.choices[question.answerIndex];
+    sanitized.answerText = question.answerIndex === null ? null : question.choices[question.answerIndex];
     sanitized.explanation = question.explanation;
+    if (question.type === "bonus") {
+      sanitized.winningAnswerIndexes = question.winningAnswerIndexes || [];
+      sanitized.winningAnswerTexts = sanitized.winningAnswerIndexes.map((index) => question.choices[index]);
+    }
   }
 
   return sanitized;
@@ -370,7 +484,10 @@ function publicPlayer(player) {
     connected: Boolean(player.connected),
     hasAnswered: Boolean(player.hasAnswered),
     selectedAnswerIndex: player.selectedAnswerIndex,
-    lastAnswerCorrect: player.lastAnswerCorrect
+    lastAnswerCorrect: player.lastAnswerCorrect,
+    lastAnswerPoints: player.lastAnswerPoints || 0,
+    lastSpeedBonus: Boolean(player.lastSpeedBonus),
+    lastBonusAwarded: Boolean(player.lastBonusAwarded)
   };
 }
 
@@ -389,22 +506,46 @@ function getAnswerDistribution(game) {
     return [];
   }
 
-  const counts = [0, 0, 0, 0];
+  const counts = Array(currentQuestion.choices.length).fill(0);
   for (const answer of game.currentAnswers.values()) {
-    counts[answer.answerIndex] += 1;
+    if (answer.answerIndex >= 0 && answer.answerIndex < counts.length) {
+      counts[answer.answerIndex] += 1;
+    }
   }
+
+  const includeResults = game.status === "revealed" || game.status === "finished";
+  const winningAnswerIndexes = new Set(currentQuestion.winningAnswerIndexes || []);
 
   return currentQuestion.choices.map((choice, index) => ({
     choice,
     index,
     count: counts[index],
-    correct: game.status === "revealed" || game.status === "finished" ? index === currentQuestion.answerIndex : null
+    correct: includeResults
+      ? currentQuestion.type === "bonus"
+        ? winningAnswerIndexes.has(index)
+        : index === currentQuestion.answerIndex
+      : null
   }));
 }
 
 function buildAnswerReveal(game, player, currentQuestion) {
-  if (!player || !currentQuestion || game.status !== "revealed") {
+  if (!player || !currentQuestion || (game.status !== "revealed" && game.status !== "finished")) {
     return null;
+  }
+
+  if (currentQuestion.type === "bonus") {
+    const winningAnswerIndexes = currentQuestion.winningAnswerIndexes || [];
+    return {
+      type: "bonus",
+      selectedAnswerIndex: player.selectedAnswerIndex,
+      selectedAnswerText:
+        player.selectedAnswerIndex === null ? null : currentQuestion.choices[player.selectedAnswerIndex],
+      winningAnswerIndexes,
+      winningAnswerTexts: winningAnswerIndexes.map((index) => currentQuestion.choices[index]),
+      explanation: currentQuestion.explanation,
+      pointsEarned: player.lastAnswerPoints || 0,
+      bonusAwarded: Boolean(player.lastBonusAwarded)
+    };
   }
 
   return {
@@ -412,7 +553,9 @@ function buildAnswerReveal(game, player, currentQuestion) {
     correctAnswerIndex: currentQuestion.answerIndex,
     correctAnswerText: currentQuestion.choices[currentQuestion.answerIndex],
     explanation: currentQuestion.explanation,
-    wasCorrect: player.lastAnswerCorrect
+    wasCorrect: player.lastAnswerCorrect,
+    pointsEarned: player.lastAnswerPoints || 0,
+    speedBonus: Boolean(player.lastSpeedBonus)
   };
 }
 

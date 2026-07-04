@@ -55,6 +55,9 @@ window.CassosUI = (() => {
     if (!state || !state.totalQuestions) {
       return "Lobby";
     }
+    if (state.currentQuestion && state.currentQuestion.type === "bonus") {
+      return `Question bonus ${state.currentQuestionNumber}/${state.totalQuestions}`;
+    }
     return `Question ${state.currentQuestionNumber}/${state.totalQuestions}`;
   }
 

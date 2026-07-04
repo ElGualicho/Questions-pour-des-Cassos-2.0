@@ -321,6 +321,13 @@ form label {
   gap: clamp(8px, 1.2vw, 12px);
 }
 
+.answer-grid.many-answers {
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  max-height: min(42vh, 390px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
 .answer-card {
   display: grid;
   gap: 8px;
@@ -405,6 +412,12 @@ form label {
   gap: clamp(7px, 1.2vh, 12px);
 }
 
+.player-view.is-bonus .answer-stack {
+  max-height: min(44vh, 390px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
 .answer-button {
   width: 100%;
   min-height: clamp(48px, 8.2vh, 68px);
@@ -417,6 +430,10 @@ form label {
   font-weight: 900;
   line-height: 1.14;
   text-align: left;
+}
+
+.player-view.is-bonus .answer-button {
+  min-height: 46px;
 }
 
 .answer-button.selected {

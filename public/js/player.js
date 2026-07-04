@@ -85,6 +85,10 @@ function render() {
   document.body.classList.toggle("status-question", joined && playerState.status === "question");
   document.body.classList.toggle("status-revealed", joined && playerState.status === "revealed");
   document.body.classList.toggle("status-finished", joined && playerState.status === "finished");
+  document.body.classList.toggle(
+    "is-bonus",
+    joined && playerState.currentQuestion && playerState.currentQuestion.type === "bonus"
+  );
   playerUI.setHidden(joinPanel, joined);
   playerUI.setHidden(playerGame, !joined);
 
@@ -145,23 +149,53 @@ function renderQuestion() {
 
 function renderFeedback(question) {
   if (playerState.status === "question" && playerState.me.hasAnswered) {
-    feedbackPanel.textContent = "Réponse verrouillée, plus moyen de faire le malin.";
+    feedbackPanel.textContent =
+      question.type === "bonus"
+        ? "Vote verrouillé, impossible de changer de daronne."
+        : "Réponse verrouillée, plus moyen de faire le malin.";
     playerUI.setHidden(feedbackPanel, false);
     return;
   }
 
   if (playerState.answerReveal) {
+    if (playerState.answerReveal.type === "bonus") {
+      renderBonusFeedback();
+      return;
+    }
+
     feedbackPanel.replaceChildren();
+    const points = playerState.answerReveal.pointsEarned || 0;
     const title = playerUI.createElement(
       "strong",
       playerState.answerReveal.wasCorrect ? "good" : "bad",
-      playerState.answerReveal.wasCorrect ? "Bien vu le sang." : "Terrible choix."
+      playerState.answerReveal.wasCorrect
+        ? playerState.answerReveal.speedBonus
+          ? `Bien vu le sang. +${points} avec bonus vitesse.`
+          : `Bien vu le sang. +${points}.`
+        : "Terrible choix."
     );
     const answer = playerUI.createElement("span", "", `Bonne réponse : ${question.answerText}`);
     const explanation = playerUI.createElement("p", "", playerState.answerReveal.explanation);
     feedbackPanel.append(title, answer, explanation);
     playerUI.setHidden(feedbackPanel, false);
   }
+}
+
+function renderBonusFeedback() {
+  const reveal = playerState.answerReveal;
+  const winners = reveal.winningAnswerTexts.length ? reveal.winningAnswerTexts.join(", ") : "aucun joueur";
+  const selected = reveal.selectedAnswerText || "aucun vote";
+  feedbackPanel.replaceChildren();
+  const title = playerUI.createElement(
+    "strong",
+    reveal.bonusAwarded ? "good" : "",
+    reveal.bonusAwarded ? "Tu prends +2 sur le bonus." : "Vote final révélé."
+  );
+  const vote = playerUI.createElement("span", "", `Ton vote : ${selected}`);
+  const result = playerUI.createElement("p", "", `Joueur(s) désigné(s) : ${winners}.`);
+  const explanation = playerUI.createElement("p", "", reveal.explanation);
+  feedbackPanel.append(title, vote, result, explanation);
+  playerUI.setHidden(feedbackPanel, false);
 }
 
 function renderLeaderboard() {
