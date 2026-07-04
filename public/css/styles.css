@@ -289,6 +289,14 @@ form label {
   min-height: clamp(62px, 12vh, 92px);
 }
 
+.player-view.in-game .player-header {
+  display: none;
+}
+
+.player-view.in-game .theme-strip.compact {
+  background-size: cover;
+}
+
 .round-meta,
 .section-title {
   display: flex;
@@ -534,21 +542,6 @@ form label {
   .player-view.in-game .mobile-shell {
     height: 100dvh;
     overflow: hidden;
-  }
-
-  .player-view.in-game .player-header {
-    margin-bottom: clamp(8px, 1.4vh, 12px);
-  }
-
-  .player-view.in-game .player-header img {
-    width: 132px;
-    height: 42px;
-  }
-
-  .player-view.in-game .player-header span {
-    min-height: 30px;
-    padding: 5px 10px;
-    font-size: 0.86rem;
   }
 
   .player-view.in-game .round-meta {
