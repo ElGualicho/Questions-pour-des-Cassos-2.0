@@ -59,29 +59,29 @@
     "id": "pop-005",
     "category": "Pop culture déglinguée",
     "difficulty": "moyen",
-    "question": "Dans The Boys, quel super-héros blond incarne une figure patriotique américaine ?",
+    "question": "Quel acteur américain, connu pour avoir incarné Iron Man, a connu des problèmes de drogue et un séjour en prison avant son retour au premier plan ?",
     "choices": [
-      "A-Train",
-      "Homelander",
-      "The Deep",
-      "Soldier Boy"
+      "Robert Downey Jr",
+      "Chris Evans",
+      "Mark Ruffalo",
+      "Ryan Reynolds"
     ],
-    "answerIndex": 1,
-    "explanation": "Homelander est la parodie cauchemardesque du super-héros américain parfait."
+    "answerIndex": 0,
+    "explanation": "Robert Downey Jr a connu des problèmes d’addiction et des démêlés judiciaires avant son retour au premier plan avec Iron Man."
   },
   {
     "id": "pop-006",
     "category": "Pop culture déglinguée",
     "difficulty": "moyen",
-    "question": "Dans Fight Club, quelle est la première règle du Fight Club ?",
+    "question": "Quelle chanteuse française, dont le nom de scène est inspiré de la série Heroes, a connu un succès international avec Pookie ?",
     "choices": [
-      "Toujours venir torse nu",
-      "Ne pas parler du Fight Club",
-      "Ne jamais frapper le visage",
-      "Payer sa cotisation"
+      "Aya Nakamura",
+      "Yseult",
+      "Angèle",
+      "Shay"
     ],
-    "answerIndex": 1,
-    "explanation": "La première règle est de ne pas parler du Fight Club."
+    "answerIndex": 0,
+    "explanation": "Aya Nakamura a choisi son nom de scène en référence au personnage Hiro Nakamura de la série Heroes."
   },
   {
     "id": "pop-007",
@@ -157,15 +157,15 @@
     "id": "tox-002",
     "category": "Alcool, drogues & fictions",
     "difficulty": "moyen",
-    "question": "Quel film, connu en France sous le titre Las Vegas Parano, suit un voyage hallucinatoire à Las Vegas ?",
+    "question": "Dans le film Limitless, quel est le nom de la drogue qui augmente fortement les capacités mentales du personnage principal ?",
     "choices": [
-      "Requiem for a Dream",
-      "Very Bad Trip",
-      "Fear and Loathing in Las Vegas",
-      "Pulp Fiction"
+      "NZT",
+      "THC",
+      "DMT",
+      "LSD"
     ],
-    "answerIndex": 2,
-    "explanation": "Las Vegas Parano est le titre français de Fear and Loathing in Las Vegas."
+    "answerIndex": 0,
+    "explanation": "Dans Limitless, le NZT permet au personnage principal d’accéder à des capacités cognitives hors norme."
   },
   {
     "id": "tox-003",
@@ -226,16 +226,16 @@
   {
     "id": "tox-007",
     "category": "Alcool, drogues & fictions",
-    "difficulty": "simple",
-    "question": "Comment appelle-t-on l'état de malaise ressenti le lendemain d'une consommation excessive d'alcool ?",
+    "difficulty": "moyen",
+    "question": "Quelle boisson à base de sirop contre la toux codéiné et de soda est aussi appelée purple drank ou dirty sprite ?",
     "choices": [
-      "Une insolation",
-      "Une gueule de bois",
-      "Une crise de foi",
-      "Une mise à jour système"
+      "La lean",
+      "L’ayahuasca",
+      "L’absinthe",
+      "Le saké"
     ],
-    "answerIndex": 1,
-    "explanation": "La gueule de bois désigne les symptômes ressentis après une consommation excessive d'alcool."
+    "answerIndex": 0,
+    "explanation": "La lean, aussi appelée purple drank ou dirty sprite, mélange notamment sirop codéiné et soda."
   },
   {
     "id": "tox-008",
@@ -254,16 +254,16 @@
   {
     "id": "tox-009",
     "category": "Alcool, drogues & fictions",
-    "difficulty": "hardcore",
-    "question": "Quel terme désigne le fait de ne plus consommer d'alcool ou de substances addictives ?",
+    "difficulty": "moyen",
+    "question": "En France, à partir de quel taux d’alcool dans le sang est-il interdit de prendre le volant pour un conducteur standard ?",
     "choices": [
-      "Tolérance",
-      "Sobriété",
-      "Ivresse",
-      "Sevrage inversé"
+      "0,5 g/L",
+      "0,2 g/L",
+      "1 g/L",
+      "1,5 g/L"
     ],
-    "answerIndex": 1,
-    "explanation": "La sobriété désigne l'état d'une personne qui ne consomme pas ou plus de substance intoxicante."
+    "answerIndex": 0,
+    "explanation": "Pour un conducteur standard, la limite légale en France est de 0,5 gramme d’alcool par litre de sang."
   },
   {
     "id": "tox-010",
@@ -282,30 +282,30 @@
   {
     "id": "body-001",
     "category": "Corps, cul & malaise poli",
-    "difficulty": "simple",
-    "question": "Quel contraceptif masculin se place sur le pénis avant un rapport sexuel ?",
+    "difficulty": "moyen",
+    "question": "Quel médicament, initialement étudié pour l’angine de poitrine, est aujourd’hui utilisé contre les troubles de l’érection ?",
     "choices": [
-      "Le préservatif",
-      "Le stérilet",
-      "La pilule",
-      "Le thermomètre"
+      "Le Viagra",
+      "Le Doliprane",
+      "La Ventoline",
+      "Le Xanax"
     ],
     "answerIndex": 0,
-    "explanation": "Le préservatif aide à prévenir les IST et les grossesses non désirées."
+    "explanation": "Le Viagra a d’abord été étudié par Pfizer pour des troubles cardiaques avant son usage contre les troubles de l’érection."
   },
   {
     "id": "body-002",
     "category": "Corps, cul & malaise poli",
-    "difficulty": "simple",
-    "question": "Quel organe du plaisir féminin est souvent résumé à tort à un petit bouton, alors qu'il est en réalité plus étendu ?",
+    "difficulty": "hardcore",
+    "question": "Quelle position sexuelle porte le nom de l’épouse d’Hector dans la mythologie liée à la guerre de Troie ?",
     "choices": [
-      "Le clitoris",
-      "L'utérus",
-      "Le rein",
-      "L'appendice"
+      "L’Andromaque",
+      "Le missionnaire",
+      "La levrette",
+      "Le lotus"
     ],
     "answerIndex": 0,
-    "explanation": "Le clitoris possède une partie externe visible et des structures internes."
+    "explanation": "Andromaque est l’épouse d’Hector dans la mythologie grecque et donne aussi son nom à une position sexuelle."
   },
   {
     "id": "body-003",
@@ -338,16 +338,16 @@
   {
     "id": "body-005",
     "category": "Corps, cul & malaise poli",
-    "difficulty": "simple",
-    "question": "Comment appelle-t-on l'envoi de messages, photos ou sous-entendus sexuels par téléphone ?",
+    "difficulty": "hardcore",
+    "question": "Quelle pathologie correspond à l’extériorisation du rectum à travers l’anus, parfois appelée descente d’organe ?",
     "choices": [
-      "Le phishing",
-      "Le sexting",
-      "Le streaming",
-      "Le composting"
+      "Le prolapsus rectal",
+      "L’appendicite",
+      "La cystite",
+      "La hernie discale"
     ],
-    "answerIndex": 1,
-    "explanation": "Le sexting désigne l'échange de contenus sexuels par messagerie."
+    "answerIndex": 0,
+    "explanation": "Le prolapsus rectal correspond à une extériorisation du rectum, souvent décrite comme une forme de descente d’organe."
   },
   {
     "id": "body-006",
@@ -395,29 +395,29 @@
     "id": "body-009",
     "category": "Corps, cul & malaise poli",
     "difficulty": "moyen",
-    "question": "Quel terme médical désigne un bleu ?",
+    "question": "Quel dessert donne aussi son nom anglais à une pratique sexuelle appelée creampie ?",
     "choices": [
-      "Une ecchymose",
-      "Une otite",
-      "Une mycose",
-      "Une scoliose"
+      "La tarte à la crème",
+      "Le tiramisu",
+      "La crème brûlée",
+      "Le flan"
     ],
     "answerIndex": 0,
-    "explanation": "Une ecchymose est une marque bleutée due à un saignement sous la peau."
+    "explanation": "Creampie se traduit littéralement par tarte à la crème et désigne aussi une pratique sexuelle."
   },
   {
     "id": "body-010",
     "category": "Corps, cul & malaise poli",
-    "difficulty": "hardcore",
-    "question": "Quel réflexe corporel consiste à contracter brusquement le diaphragme et produit un son caractéristique ?",
+    "difficulty": "moyen",
+    "question": "Dans Le Déjeuner sur l’herbe d’Édouard Manet, quelle particularité distingue la femme assise au centre de la scène ?",
     "choices": [
-      "Le hoquet",
-      "La syncope",
-      "La fièvre",
-      "Le strabisme"
+      "Elle est nue",
+      "Elle porte une armure",
+      "Elle joue du violon",
+      "Elle tient un masque"
     ],
     "answerIndex": 0,
-    "explanation": "Le hoquet est lié à des contractions involontaires du diaphragme."
+    "explanation": "Le tableau de Manet a notamment marqué les esprits par la présence d’une femme nue parmi des personnages habillés."
   },
   {
     "id": "death-001",
@@ -674,16 +674,16 @@
   {
     "id": "weird-009",
     "category": "Culture générale chelou",
-    "difficulty": "simple",
-    "question": "Quel liquide noir un poulpe ou une seiche peut projeter pour fuir ?",
+    "difficulty": "hardcore",
+    "question": "Dans quel État américain le mariage entre cousins germains peut-il être autorisé sous certaines conditions d’âge ou de stérilité ?",
     "choices": [
-      "De l'encre",
-      "Du pétrole",
-      "Du venin",
-      "Du café"
+      "L’Utah",
+      "Le Texas",
+      "La Floride",
+      "Le Nevada"
     ],
     "answerIndex": 0,
-    "explanation": "Les céphalopodes peuvent projeter de l'encre pour se défendre ou s'échapper."
+    "explanation": "L’Utah autorise ce cas sous certaines conditions, notamment liées à l’âge ou à la stérilité."
   },
   {
     "id": "weird-010",
@@ -702,141 +702,141 @@
   {
     "id": "net-001",
     "category": "Internet, memes & numérique",
-    "difficulty": "simple",
-    "question": "Quel chien japonais est devenu le visage du meme Doge ?",
+    "difficulty": "moyen",
+    "question": "Quel mot japonais de quatre lettres signifie souvent « quoi ? » dans les animés et est devenu un mème récurrent ?",
     "choices": [
-      "Shiba Inu",
-      "Akita Inu",
-      "Corgi",
-      "Husky"
+      "Nani",
+      "Kuso",
+      "Baka",
+      "Sushi"
     ],
     "answerIndex": 0,
-    "explanation": "Le meme Doge utilise l'image d'un Shiba Inu."
+    "explanation": "Nani signifie quoi en japonais et a été popularisé comme mème par de nombreux extraits d’animés."
   },
   {
     "id": "net-002",
     "category": "Internet, memes & numérique",
-    "difficulty": "simple",
-    "question": "Que signifie généralement une erreur 404 sur un site web ?",
+    "difficulty": "moyen",
+    "question": "Quel personnage de dessin animé, apparu en 1940, est un pivert connu pour son rire caractéristique ?",
     "choices": [
-      "Page introuvable",
-      "Mot de passe faux",
-      "Virus détecté",
-      "Batterie faible"
+      "Woody Woodpecker",
+      "Bugs Bunny",
+      "Daffy Duck",
+      "Titi"
     ],
     "answerIndex": 0,
-    "explanation": "Une erreur 404 indique généralement qu'une page est introuvable."
+    "explanation": "Woody Woodpecker est un pivert de dessin animé connu pour son rire très reconnaissable."
   },
   {
     "id": "net-003",
     "category": "Internet, memes & numérique",
-    "difficulty": "simple",
-    "question": "Sur Windows, quelle touche permet souvent de rafraîchir une page web ?",
+    "difficulty": "moyen",
+    "question": "Quel mammifère marin surnommé canari des mers a inspiré le nom d’un avion Airbus à cause de sa forme blanche et de son front proéminent ?",
     "choices": [
-      "F5",
-      "F1",
-      "Échap",
-      "Alt"
+      "Le béluga",
+      "Le narval",
+      "Le dauphin",
+      "Le marsouin"
     ],
     "answerIndex": 0,
-    "explanation": "F5 sert généralement à actualiser une page dans un navigateur."
+    "explanation": "Le béluga est surnommé canari des mers et a inspiré le nom de l’Airbus Beluga."
   },
   {
     "id": "net-004",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "Quel meme montre un homme âgé souriant alors que son expression semble cacher une douleur intérieure ?",
+    "question": "Comment appelle-t-on un mot ou une expression qui peut se lire dans les deux sens en gardant le même ordre de lettres ?",
     "choices": [
-      "Hide the Pain Harold",
-      "Bad Luck Brian",
-      "Success Kid",
-      "Disaster Girl"
+      "Un palindrome",
+      "Un acronyme",
+      "Une anagramme",
+      "Un homonyme"
     ],
     "answerIndex": 0,
-    "explanation": "Hide the Pain Harold est un meme basé sur un homme âgé au sourire crispé."
+    "explanation": "Un palindrome se lit de gauche à droite comme de droite à gauche, comme radar ou kayak."
   },
   {
     "id": "net-005",
     "category": "Internet, memes & numérique",
-    "difficulty": "simple",
-    "question": "Quel format d'image est souvent utilisé pour un visuel avec fond transparent ?",
+    "difficulty": "hardcore",
+    "question": "Quelle plateforme française de financement participatif créée en 2010 porte un nom proche du cri de la chouette ?",
     "choices": [
-      "PNG",
-      "MP3",
-      "TXT",
-      "DOCX"
+      "Ulule",
+      "Tipeee",
+      "KissKissBankBank",
+      "Leetchi"
     ],
     "answerIndex": 0,
-    "explanation": "Le PNG peut gérer la transparence."
+    "explanation": "Ulule est une plateforme française de financement participatif dont le nom évoque le cri de la chouette."
   },
   {
     "id": "net-006",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "Comment appelle-t-on un faux compte ou programme qui agit automatiquement en ligne ?",
+    "question": "Quel phénomène de danse des années 2000 était associé à des mouvements de bras rapides, des crêtes et des vêtements bariolés ?",
     "choices": [
-      "Un bot",
-      "Un cookie",
-      "Un modem",
-      "Un pare-feu"
+      "La tecktonik",
+      "Le jumpstyle",
+      "La macarena",
+      "La tectonique des plaques"
     ],
     "answerIndex": 0,
-    "explanation": "Un bot est un programme qui effectue des actions automatisées."
+    "explanation": "La tecktonik a marqué les années 2000 avec une danse très codifiée et une esthétique reconnaissable."
   },
   {
     "id": "net-007",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "À quoi sert principalement un CAPTCHA ?",
+    "question": "Quel rappeur français a sorti Je ne me vois pas briller et s’est imposé par un rythme de sorties très soutenu ?",
     "choices": [
-      "Distinguer humain et robot",
-      "Augmenter la luminosité",
-      "Compresser une vidéo",
-      "Créer un mot de passe"
+      "Jul",
+      "Ninho",
+      "Booba",
+      "Kaaris"
     ],
     "answerIndex": 0,
-    "explanation": "Un CAPTCHA sert à vérifier qu'une action est réalisée par un humain plutôt qu'un bot."
+    "explanation": "Jul a sorti Je ne me vois pas briller et est connu pour sa discographie particulièrement abondante."
   },
   {
     "id": "net-008",
     "category": "Internet, memes & numérique",
-    "difficulty": "simple",
-    "question": "Quel réseau social chinois est devenu célèbre pour ses vidéos courtes ?",
+    "difficulty": "hardcore",
+    "question": "Quel rappeur français dit « j’prends pas d’bouteille en boîte, à Carrefour c’est 20 balles » dans le titre Christophe ?",
     "choices": [
-      "TikTok",
-      "LinkedIn",
-      "Pinterest",
-      "Twitch"
+      "Orelsan",
+      "Vald",
+      "Nekfeu",
+      "Damso"
     ],
     "answerIndex": 0,
-    "explanation": "TikTok est une plateforme de vidéos courtes appartenant à ByteDance."
+    "explanation": "Cette phrase vient du titre Christophe d’Orelsan."
   },
   {
     "id": "net-009",
     "category": "Internet, memes & numérique",
-    "difficulty": "moyen",
-    "question": "Comment appelle-t-on le fait de révéler la fin d'un film ou d'une série à quelqu'un ?",
+    "difficulty": "hardcore",
+    "question": "Quel rappeur français déclare « que le hip-hop français repose en paix » dans un album sorti en 2001 ?",
     "choices": [
-      "Spoiler",
-      "Uploader",
-      "Scroller",
-      "Streamer"
+      "Booba",
+      "Rohff",
+      "Akhenaton",
+      "MC Solaar"
     ],
     "answerIndex": 0,
-    "explanation": "Spoiler signifie révéler un élément important d'une intrigue."
+    "explanation": "Booba prononce cette phrase dans la période de son album Temps mort, sorti en 2001."
   },
   {
     "id": "net-010",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
-    "question": "Quel terme désigne un appât numérique destiné à voler des identifiants ?",
+    "question": "Quel dieu grec, lié aux Enfers et à Cerbère, donne son nom à un jeu vidéo sorti en 2018 ?",
     "choices": [
-      "Phishing",
-      "Streaming",
-      "Caching",
-      "Cropping"
+      "Hadès",
+      "Hermès",
+      "Arès",
+      "Apollon"
     ],
     "answerIndex": 0,
-    "explanation": "Le phishing consiste à piéger une personne pour récupérer des informations sensibles."
+    "explanation": "Hadès est le dieu grec des Enfers et donne son nom au jeu vidéo Hades, sorti en accès anticipé en 2018."
   }
 ]
