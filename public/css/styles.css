@@ -542,15 +542,65 @@ form label {
   .player-view.in-game .mobile-shell {
     height: 100dvh;
     overflow: hidden;
+    padding: 8px 10px;
+  }
+
+  .player-view.status-revealed,
+  .player-view.status-finished {
+    overflow: auto;
+  }
+
+  .player-view.status-revealed .mobile-shell,
+  .player-view.status-finished .mobile-shell {
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+    padding-bottom: 18px;
+  }
+
+  .player-view.in-game .player-game {
+    gap: 7px;
+  }
+
+  .player-view.in-game .theme-strip.compact {
+    min-height: clamp(46px, 9vh, 70px);
+    margin-bottom: 6px;
   }
 
   .player-view.in-game .round-meta {
+    margin-bottom: 5px;
     font-size: 0.86rem;
   }
 
   .player-view.in-game .eyebrow {
     margin-bottom: 5px;
     font-size: 0.72rem;
+  }
+
+  .player-view.in-game .question-block {
+    margin-bottom: 7px;
+  }
+
+  .player-view.in-game .question-block h1 {
+    font-size: clamp(1.08rem, 4.55vw, 1.55rem);
+    line-height: 1.05;
+  }
+
+  .player-view.in-game .answer-stack {
+    gap: 7px;
+  }
+
+  .player-view.in-game .answer-button {
+    min-height: clamp(42px, 6.7vh, 56px);
+    padding: 8px 12px;
+    font-size: clamp(0.82rem, 3.45vw, 0.96rem);
+    line-height: 1.08;
+  }
+
+  .player-view.in-game .feedback-panel {
+    gap: 4px;
+    padding: 10px 12px;
+    line-height: 1.12;
   }
 
   .player-view.status-question .mini-leaderboard,
