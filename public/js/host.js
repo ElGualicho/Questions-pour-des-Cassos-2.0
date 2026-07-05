@@ -97,6 +97,9 @@ function receiveHostState(payload) {
 function render() {
   const hasGame = Boolean(hostState);
   document.body.classList.toggle("game-active", hasGame);
+  document.body.classList.toggle("host-empty", !hasGame);
+  document.body.classList.toggle("host-lobby", hasGame && hostState.status === "lobby");
+  document.body.classList.toggle("host-round", hasGame && hostState.status !== "lobby");
   hostUI.setHidden(gamePanel, !hasGame);
   hostUI.setHidden(finalPanel, !hasGame || hostState.status !== "finished");
   createButton.disabled = hasGame;
