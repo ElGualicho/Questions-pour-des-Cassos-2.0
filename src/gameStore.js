@@ -2,10 +2,11 @@ const crypto = require("crypto");
 const { getThemeForCategory } = require("./themes");
 
 const DEFAULT_QUESTION_COUNT = 10;
+const QUESTION_DURATION_MS = 10000;
 const VALID_COUNTS = new Set([10, 20, "all"]);
 const BONUS_QUESTION_ID = "bonus-daronne-finale";
 const BONUS_QUESTION_TEXT =
-  "De quel joueur la daronne m\u00e9rite-t-elle le titre de plus grosse salope ?";
+  "De quel joueur la daronne m\u00e9rite-t-elle le titre de daronne la plus ind\u00e9fendable ?";
 const BONUS_QUESTION_EXPLANATION =
   "Le joueur dont le nom re\u00e7oit le plus de votes remporte 2 points bonus.";
 const BONUS_THEME_CATEGORY = "Corps, cul & malaise poli";
@@ -26,6 +27,8 @@ function createGameStore(rawQuestions) {
       currentQuestionIndex: -1,
       currentAnswers: new Map(),
       currentScored: false,
+      questionStartedAt: null,
+      questionDeadlineAt: null,
       settings: {
         questionCount: DEFAULT_QUESTION_COUNT
       },
@@ -76,6 +79,8 @@ function createGameStore(rawQuestions) {
     if (game.currentQuestionIndex + 1 >= game.deck.length) {
       applyScoring(game);
       game.status = "finished";
+      game.questionStartedAt = null;
+      game.questionDeadlineAt = null;
       return game;
     }
 
@@ -93,6 +98,9 @@ function createGameStore(rawQuestions) {
     if (!getCurrentQuestion(game)) {
       throw new Error("Aucune question active.");
     }
+    if (game.status === "question" && !canRevealQuestion(game)) {
+      throw new Error("La question est encore en cours.");
+    }
 
     applyScoring(game);
     game.status = "revealed";
@@ -106,6 +114,8 @@ function createGameStore(rawQuestions) {
     game.currentQuestionIndex = -1;
     game.currentAnswers.clear();
     game.currentScored = false;
+    game.questionStartedAt = null;
+    game.questionDeadlineAt = null;
 
     for (const player of game.players.values()) {
       player.score = 0;
@@ -157,8 +167,8 @@ function createGameStore(rawQuestions) {
       throw new Error("La question n'accepte plus de réponse.");
     }
 
-    if (player.hasAnswered) {
-      throw new Error("Réponse déjà envoyée.");
+    if (isQuestionExpired(game)) {
+      throw new Error("Le temps est écoulé.");
     }
 
     const parsedAnswer = Number(answerIndex);
@@ -225,7 +235,12 @@ function createGameStore(rawQuestions) {
       currentQuestionNumber: currentQuestion ? game.currentQuestionIndex + 1 : 0,
       totalQuestions: game.deck.length,
       responsesCount: game.currentAnswers.size,
-      allAnswered: game.players.size > 0 && game.currentAnswers.size >= game.players.size,
+      allAnswered: allPlayersAnswered(game),
+      canReveal: canRevealQuestion(game),
+      questionDurationMs: QUESTION_DURATION_MS,
+      questionStartedAt: game.questionStartedAt,
+      questionDeadlineAt: game.questionDeadlineAt,
+      questionTimeRemainingMs: getQuestionTimeRemainingMs(game),
       answerDistribution: getAnswerDistribution(game),
       leaderboard: getLeaderboard(game)
     };
@@ -247,6 +262,11 @@ function createGameStore(rawQuestions) {
       currentQuestionNumber: currentQuestion ? game.currentQuestionIndex + 1 : 0,
       totalQuestions: game.deck.length,
       responsesCount: game.currentAnswers.size,
+      questionDurationMs: QUESTION_DURATION_MS,
+      questionStartedAt: game.questionStartedAt,
+      questionDeadlineAt: game.questionDeadlineAt,
+      questionTimeRemainingMs: getQuestionTimeRemainingMs(game),
+      answerLocked: game.status !== "question" || isQuestionExpired(game),
       answerReveal: buildAnswerReveal(game, player, currentQuestion),
       leaderboard: getLeaderboard(game).map(({ token: _token, ...publicFields }) => publicFields)
     };
@@ -429,6 +449,8 @@ function applyBonusScoring(game, currentQuestion) {
 function resetRoundAnswers(game) {
   game.currentAnswers.clear();
   game.currentScored = false;
+  game.questionStartedAt = Date.now();
+  game.questionDeadlineAt = game.questionStartedAt + QUESTION_DURATION_MS;
 
   for (const player of game.players.values()) {
     player.hasAnswered = false;
@@ -438,6 +460,25 @@ function resetRoundAnswers(game) {
     player.lastSpeedBonus = false;
     player.lastBonusAwarded = false;
   }
+}
+
+function allPlayersAnswered(game) {
+  return game.players.size > 0 && game.currentAnswers.size >= game.players.size;
+}
+
+function isQuestionExpired(game, now = Date.now()) {
+  return Boolean(game.questionDeadlineAt && now >= game.questionDeadlineAt);
+}
+
+function canRevealQuestion(game) {
+  return game.status === "question" && (allPlayersAnswered(game) || isQuestionExpired(game));
+}
+
+function getQuestionTimeRemainingMs(game, now = Date.now()) {
+  if (game.status !== "question" || !game.questionDeadlineAt) {
+    return 0;
+  }
+  return Math.max(0, game.questionDeadlineAt - now);
 }
 
 function getCurrentQuestion(game) {

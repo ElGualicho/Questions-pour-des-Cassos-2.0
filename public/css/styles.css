@@ -481,6 +481,21 @@ button:disabled {
   font-size: clamp(0.95rem, 1.5vw, 1.2rem);
 }
 
+.host-view.host-round .host-question-meta {
+  justify-content: center;
+  gap: clamp(8px, 1.2vw, 16px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.host-view.host-round .host-question-meta #question-category {
+  color: var(--theme-ink);
+}
+
+.host-view.host-round .host-question-meta .meta-separator {
+  opacity: 0.42;
+}
+
 .host-view.host-round .question-block {
   width: min(1120px, 100%);
   margin: 0 auto;

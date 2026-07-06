@@ -81,6 +81,8 @@ nextButton.addEventListener("click", () => {
 
 hostSocket.on("host:state", receiveHostState);
 
+window.setInterval(renderLiveQuestionState, 250);
+
 hostSocket.on("connect", () => {
   const code = localStorage.getItem("cassos.hostCode");
   if (!code) {
@@ -101,6 +103,13 @@ function receiveHostState(payload) {
   hostState = payload.state;
   joinUrl = payload.joinUrl || (hostState ? `/join/${hostState.code}` : "");
   render();
+}
+
+function renderLiveQuestionState() {
+  if (!hostState || hostState.status !== "question") {
+    return;
+  }
+  renderControls();
 }
 
 function render() {
@@ -208,10 +217,12 @@ function renderControls() {
   const isRevealed = hostState.status === "revealed";
   const isFinished = hostState.status === "finished";
   const isLastReveal = isRevealed && hostState.currentQuestionNumber >= hostState.totalQuestions;
+  const canReveal = isQuestion && canRevealCurrentQuestion();
 
   startButton.disabled = !isLobby;
   questionCount.disabled = !isLobby;
-  revealButton.disabled = !isQuestion;
+  revealButton.disabled = !canReveal;
+  revealButton.title = isQuestion && !canReveal ? "Disponible après 10 secondes ou quand tout le monde a répondu." : "";
   nextButton.disabled = !isRevealed;
   newGameButton.disabled = !(isLastReveal || isFinished);
   hostUI.setHidden(newGameButton, !(isLastReveal || isFinished));
@@ -223,6 +234,13 @@ function renderControls() {
     revealButton.disabled = true;
     nextButton.disabled = true;
   }
+}
+
+function canRevealCurrentQuestion() {
+  return Boolean(
+    hostState &&
+      (hostState.canReveal || hostState.allAnswered || hostUI.questionTimeRemainingMs(hostState) <= 0)
+  );
 }
 
 function renderLeaderboard() {

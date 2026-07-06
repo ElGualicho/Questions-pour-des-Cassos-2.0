@@ -76,12 +76,26 @@ window.CassosUI = (() => {
     return `${count} réponse${count > 1 ? "s" : ""}`;
   }
 
+  function questionTimeRemainingMs(state, now = Date.now()) {
+    if (!state || state.status !== "question" || !state.questionDeadlineAt) {
+      return 0;
+    }
+    return Math.max(0, state.questionDeadlineAt - now);
+  }
+
+  function countdownLabel(state) {
+    const seconds = Math.ceil(questionTimeRemainingMs(state) / 1000);
+    return `${seconds}s`;
+  }
+
   return {
     $,
     applyTheme,
     categoryLabel,
+    countdownLabel,
     createElement,
     pointsLabel,
+    questionTimeRemainingMs,
     responseLabel,
     roundLabel,
     setHidden,

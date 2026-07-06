@@ -2,6 +2,7 @@ import QRCode from "qrcode";
 import questions from "../data/questions.json" with { type: "json" };
 
 const DEFAULT_QUESTION_COUNT = 10;
+const QUESTION_DURATION_MS = 10000;
 const VALID_COUNTS = new Set([10, 20, "all"]);
 const BONUS_QUESTION_ID = "bonus-daronne-finale";
 const BONUS_QUESTION_TEXT =
@@ -273,6 +274,8 @@ export class GameRoom {
       currentQuestionIndex: -1,
       currentAnswers: new Map(),
       currentScored: false,
+      questionStartedAt: null,
+      questionDeadlineAt: null,
       settings: { questionCount: DEFAULT_QUESTION_COUNT },
       createdAt: Date.now()
     };
@@ -308,6 +311,8 @@ export class GameRoom {
     if (game.currentQuestionIndex + 1 >= game.deck.length) {
       applyScoring(game);
       game.status = "finished";
+      game.questionStartedAt = null;
+      game.questionDeadlineAt = null;
       return game;
     }
     game.currentQuestionIndex += 1;
@@ -324,6 +329,9 @@ export class GameRoom {
     if (!getCurrentQuestion(game)) {
       throw new Error("Aucune question active.");
     }
+    if (game.status === "question" && !canRevealQuestion(game)) {
+      throw new Error("La question est encore en cours.");
+    }
     applyScoring(game);
     game.status = "revealed";
     return game;
@@ -336,6 +344,8 @@ export class GameRoom {
     game.currentQuestionIndex = -1;
     game.currentAnswers.clear();
     game.currentScored = false;
+    game.questionStartedAt = null;
+    game.questionDeadlineAt = null;
     for (const player of game.players.values()) {
       player.score = 0;
       player.correctCount = 0;
@@ -383,8 +393,8 @@ export class GameRoom {
     if (game.status !== "question" || !currentQuestion) {
       throw new Error("La question n'accepte plus de réponse.");
     }
-    if (player.hasAnswered) {
-      throw new Error("Réponse déjà envoyée.");
+    if (isQuestionExpired(game)) {
+      throw new Error("Le temps est écoulé.");
     }
 
     const parsedAnswer = Number(answerIndex);
@@ -421,7 +431,12 @@ export class GameRoom {
       currentQuestionNumber: currentQuestion ? game.currentQuestionIndex + 1 : 0,
       totalQuestions: game.deck.length,
       responsesCount: game.currentAnswers.size,
-      allAnswered: game.players.size > 0 && game.currentAnswers.size >= game.players.size,
+      allAnswered: allPlayersAnswered(game),
+      canReveal: canRevealQuestion(game),
+      questionDurationMs: QUESTION_DURATION_MS,
+      questionStartedAt: game.questionStartedAt,
+      questionDeadlineAt: game.questionDeadlineAt,
+      questionTimeRemainingMs: getQuestionTimeRemainingMs(game),
       answerDistribution: getAnswerDistribution(game),
       leaderboard: getLeaderboard(game)
     };
@@ -442,6 +457,11 @@ export class GameRoom {
       currentQuestionNumber: currentQuestion ? game.currentQuestionIndex + 1 : 0,
       totalQuestions: game.deck.length,
       responsesCount: game.currentAnswers.size,
+      questionDurationMs: QUESTION_DURATION_MS,
+      questionStartedAt: game.questionStartedAt,
+      questionDeadlineAt: game.questionDeadlineAt,
+      questionTimeRemainingMs: getQuestionTimeRemainingMs(game),
+      answerLocked: game.status !== "question" || isQuestionExpired(game),
       answerReveal: buildAnswerReveal(game, player, currentQuestion),
       leaderboard: getLeaderboard(game).map(({ token: _token, ...publicFields }) => publicFields)
     };
@@ -601,6 +621,8 @@ function applyBonusScoring(game, currentQuestion) {
 function resetRoundAnswers(game) {
   game.currentAnswers.clear();
   game.currentScored = false;
+  game.questionStartedAt = Date.now();
+  game.questionDeadlineAt = game.questionStartedAt + QUESTION_DURATION_MS;
   for (const player of game.players.values()) {
     player.hasAnswered = false;
     player.selectedAnswerIndex = null;
@@ -609,6 +631,25 @@ function resetRoundAnswers(game) {
     player.lastSpeedBonus = false;
     player.lastBonusAwarded = false;
   }
+}
+
+function allPlayersAnswered(game) {
+  return game.players.size > 0 && game.currentAnswers.size >= game.players.size;
+}
+
+function isQuestionExpired(game, now = Date.now()) {
+  return Boolean(game.questionDeadlineAt && now >= game.questionDeadlineAt);
+}
+
+function canRevealQuestion(game) {
+  return game.status === "question" && (allPlayersAnswered(game) || isQuestionExpired(game));
+}
+
+function getQuestionTimeRemainingMs(game, now = Date.now()) {
+  if (game.status !== "question" || !game.questionDeadlineAt) {
+    return 0;
+  }
+  return Math.max(0, game.questionDeadlineAt - now);
 }
 
 function getCurrentQuestion(game) {

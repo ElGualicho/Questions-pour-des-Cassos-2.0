@@ -49,18 +49,31 @@ test("game flow hides answers until reveal and scores once", () => {
   assert.equal(playerState.currentQuestion.answerText, correctAnswerText);
 });
 
-test("a player cannot answer twice during the same question", () => {
+test("a player can change answer while the timer is running", () => {
   const store = createGameStore(questions);
   const game = store.createGame("host-1");
   const joined = store.joinPlayer(game.code, "Alex", null, "socket-1");
 
   store.startGame(game.code, { questionCount: 10 });
   store.submitAnswer(game.code, joined.player.token, 0);
+  store.submitAnswer(game.code, joined.player.token, 1);
 
-  assert.throws(
-    () => store.submitAnswer(game.code, joined.player.token, 1),
-    /Réponse déjà envoyée/
-  );
+  const playerState = store.getPlayerState(game.code, joined.player.token);
+  assert.equal(playerState.me.hasAnswered, true);
+  assert.equal(playerState.me.selectedAnswerIndex, 1);
+  assert.equal(playerState.responsesCount, 1);
+});
+
+test("a player cannot change answer after the timer has ended", () => {
+  const store = createGameStore(questions);
+  const game = store.createGame("host-1");
+  const joined = store.joinPlayer(game.code, "Alex", null, "socket-1");
+
+  store.startGame(game.code, { questionCount: 10 });
+  store.submitAnswer(game.code, joined.player.token, 0);
+  game.questionDeadlineAt = Date.now() - 1;
+
+  assert.throws(() => store.submitAnswer(game.code, joined.player.token, 1), /temps/);
 });
 
 test("the first correct answer gets the speed bonus", () => {
@@ -96,6 +109,7 @@ test("the final bonus question uses player names and awards the most voted playe
 
   store.startGame(game.code, { questionCount: "all" });
   for (let index = 0; index < questions.length; index += 1) {
+    game.questionDeadlineAt = Date.now() - 1;
     store.revealAnswer(game.code);
     store.nextQuestion(game.code);
   }

@@ -32,6 +32,8 @@ playerSocket.on("player:state", (payload) => {
   render();
 });
 
+window.setInterval(renderLiveQuestionState, 250);
+
 playerSocket.on("connect", () => {
   if (codeInput.value && nameInput.value) {
     joinGame();
@@ -60,7 +62,7 @@ function joinGame() {
 }
 
 function submitAnswer(answerIndex) {
-  if (!playerState || !playerState.me || playerState.me.hasAnswered) {
+  if (!playerState || !playerState.me || isAnswerLocked()) {
     return;
   }
 
@@ -99,9 +101,23 @@ function render() {
 
   statusLabel.textContent = statusText(playerState.status);
   scoreLabel.textContent = playerUI.pointsLabel(playerState.me.score);
-  roundLabel.textContent = playerUI.roundLabel(playerState);
+  roundLabel.textContent = playerRoundLabel();
   renderQuestion();
   renderLeaderboard();
+}
+
+function renderLiveQuestionState() {
+  if (!playerState || playerState.status !== "question") {
+    return;
+  }
+  roundLabel.textContent = playerRoundLabel();
+  const locked = isAnswerLocked();
+  for (const button of answers.querySelectorAll(".answer-button")) {
+    button.disabled = locked;
+  }
+  if (playerState.me && playerState.me.hasAnswered && playerState.currentQuestion) {
+    renderFeedback(playerState.currentQuestion);
+  }
 }
 
 function renderQuestion() {
@@ -129,11 +145,14 @@ function renderQuestion() {
   question.choices.forEach((choice, index) => {
     const button = playerUI.createElement("button", "answer-button", choice);
     button.type = "button";
-    button.disabled = playerState.status !== "question" || playerState.me.hasAnswered;
+    button.disabled = isAnswerLocked();
     button.addEventListener("click", () => submitAnswer(index));
 
     if (playerState.me.selectedAnswerIndex === index) {
       button.classList.add("selected");
+      button.setAttribute("aria-pressed", "true");
+    } else {
+      button.setAttribute("aria-pressed", "false");
     }
     if (question.answerIndex !== undefined && question.answerIndex === index) {
       button.classList.add("correct");
@@ -170,10 +189,15 @@ function renderFinishedQuestion() {
 
 function renderFeedback(question) {
   if (playerState.status === "question" && playerState.me.hasAnswered) {
+    const locked = isAnswerLocked();
     feedbackPanel.textContent =
       question.type === "bonus"
-        ? "Vote verrouillé, impossible de changer de daronne."
-        : "Réponse verrouillée, plus moyen de faire le malin.";
+        ? locked
+          ? "Temps écoulé, vote verrouillé."
+          : "Vote enregistré, tu peux encore changer tant que le chrono tourne."
+        : locked
+          ? "Temps écoulé, réponse verrouillée."
+          : "Réponse enregistrée, tu peux encore changer tant que le chrono tourne.";
     playerUI.setHidden(feedbackPanel, false);
     return;
   }
@@ -241,6 +265,22 @@ function getWinners() {
   }
   const topScore = playerState.leaderboard[0].score;
   return playerState.leaderboard.filter((player) => player.score === topScore);
+}
+
+function playerRoundLabel() {
+  if (!playerState || playerState.status !== "question") {
+    return playerUI.roundLabel(playerState);
+  }
+  return `${playerUI.roundLabel(playerState)} · ${playerUI.countdownLabel(playerState)}`;
+}
+
+function isAnswerLocked() {
+  return Boolean(
+    !playerState ||
+      playerState.status !== "question" ||
+      playerState.answerLocked ||
+      playerUI.questionTimeRemainingMs(playerState) <= 0
+  );
 }
 
 function codeFromUrl() {
