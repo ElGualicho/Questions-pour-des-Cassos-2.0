@@ -100,6 +100,9 @@ function render() {
   document.body.classList.toggle("host-empty", !hasGame);
   document.body.classList.toggle("host-lobby", hasGame && hostState.status === "lobby");
   document.body.classList.toggle("host-round", hasGame && hostState.status !== "lobby");
+  document.body.classList.toggle("host-question", hasGame && hostState.status === "question");
+  document.body.classList.toggle("host-revealed", hasGame && hostState.status === "revealed");
+  document.body.classList.toggle("host-finished", hasGame && hostState.status === "finished");
   hostUI.setHidden(gamePanel, !hasGame);
   hostUI.setHidden(finalPanel, !hasGame || hostState.status !== "finished");
   createButton.disabled = hasGame;

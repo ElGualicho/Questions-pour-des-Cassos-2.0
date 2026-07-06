@@ -162,11 +162,26 @@ button:disabled {
     #d7bf2a;
 }
 
+.host-view.host-round {
+  color: var(--theme-ink);
+  background:
+    radial-gradient(circle at 18% 14%, rgba(255, 255, 255, 0.18), transparent 32rem),
+    linear-gradient(305deg, rgba(0, 0, 0, 0.16), transparent 42%),
+    var(--theme-accent);
+  transition: background-color 700ms ease;
+}
+
 .host-view.host-empty .app-shell,
 .host-view.host-lobby .app-shell {
   width: 100%;
   min-height: 100dvh;
   padding: 0;
+}
+
+.host-view.host-round .app-shell {
+  width: 100%;
+  min-height: 100dvh;
+  padding: clamp(22px, 4vh, 50px) clamp(24px, 5vw, 96px);
 }
 
 .host-view.host-empty .hero-band,
@@ -221,10 +236,6 @@ button:disabled {
   }
 }
 
-.host-view.host-round .hero-band {
-  display: none;
-}
-
 .host-view.host-empty #create-game,
 .host-view.host-lobby #create-game {
   min-width: min(390px, calc(100vw - 48px));
@@ -254,6 +265,27 @@ button:disabled {
   pointer-events: none;
   opacity: 0;
   transform: translateY(-12px);
+}
+
+.host-view.host-round .hero-band {
+  justify-content: center;
+  min-height: clamp(138px, 23vh, 248px);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.host-view.host-round .host-home-logo {
+  width: min(32vw, 540px);
+  height: min(18vh, 220px);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.host-view.host-round #create-game {
+  display: none;
 }
 
 .host-view.host-lobby .layout-grid {
@@ -416,6 +448,103 @@ button:disabled {
 .host-view.host-lobby .player-row .pill,
 .host-view.host-lobby .player-row .icon-action {
   display: none;
+}
+
+.host-view.host-round .layout-grid {
+  display: block;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.host-view.host-round .layout-grid > .side-panel {
+  display: none;
+}
+
+.host-view.host-round .play-panel {
+  display: grid;
+  gap: clamp(14px, 2.1vh, 24px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--theme-ink);
+}
+
+.host-view.host-round .theme-strip {
+  display: none;
+}
+
+.host-view.host-round .round-meta {
+  width: min(900px, 100%);
+  margin: 0 auto clamp(4px, 0.8vh, 10px);
+  color: color-mix(in srgb, var(--theme-ink) 72%, transparent);
+  font-size: clamp(0.95rem, 1.5vw, 1.2rem);
+}
+
+.host-view.host-round .question-block {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.host-view.host-round .question-block .eyebrow {
+  margin-bottom: clamp(10px, 1.4vh, 18px);
+  color: color-mix(in srgb, var(--theme-ink) 76%, transparent);
+  font-size: clamp(0.9rem, 1.5vw, 1.18rem);
+}
+
+.host-view.host-round .question-block h2 {
+  color: var(--theme-ink);
+  font-size: clamp(2rem, 4.4vw, 5rem);
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.host-view.host-round .answer-grid {
+  width: min(940px, 100%);
+  margin: clamp(8px, 1vh, 12px) auto 0;
+}
+
+.host-view.host-round .answer-card {
+  min-height: clamp(62px, 8vh, 86px);
+  color: var(--theme-ink);
+  border-color: color-mix(in srgb, var(--theme-ink) 26%, transparent);
+  background: color-mix(in srgb, var(--theme-ink) 9%, transparent);
+}
+
+.host-view.host-round .answer-card.correct {
+  border-color: color-mix(in srgb, #52d273 78%, var(--theme-ink));
+  background: rgba(82, 210, 115, 0.18);
+}
+
+.host-view.host-round .answer-bar {
+  background: color-mix(in srgb, var(--theme-ink) 18%, transparent);
+}
+
+.host-view.host-round .answer-bar span {
+  background: var(--theme-ink);
+}
+
+.host-view.host-round .host-controls {
+  justify-content: center;
+  margin-top: clamp(4px, 1vh, 10px);
+}
+
+.host-view.host-round .host-controls .primary-action {
+  min-width: 190px;
+  color: var(--theme-accent);
+  border-radius: 999px;
+  background: #050505;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+.host-view.host-round .final-panel {
+  width: min(760px, 100%);
+  margin: clamp(18px, 3vh, 34px) auto 0;
+  color: var(--theme-ink);
+  border: 0;
+  background: color-mix(in srgb, var(--theme-ink) 9%, transparent);
 }
 
 .join-panel h1 {
@@ -812,6 +941,23 @@ form label {
     grid-row: 5;
     width: min(100%, 430px);
   }
+
+  .host-view.host-round .app-shell {
+    padding: clamp(18px, 3vh, 32px) 18px;
+  }
+
+  .host-view.host-round .hero-band {
+    min-height: clamp(112px, 18vh, 180px);
+  }
+
+  .host-view.host-round .host-home-logo {
+    width: min(68vw, 420px);
+    height: min(15vh, 160px);
+  }
+
+  .host-view.host-round .question-block h2 {
+    font-size: clamp(1.65rem, 7vw, 3rem);
+  }
 }
 
 @media (max-width: 720px) {
@@ -919,24 +1065,24 @@ form label {
 }
 
 @media (max-height: 840px) and (min-width: 1041px) {
-  .host-view.game-active:not(.host-lobby) .topbar {
+  .host-view.game-active:not(.host-lobby):not(.host-round) .topbar {
     margin-bottom: 8px;
   }
 
-  .host-view.game-active:not(.host-lobby) .brand {
+  .host-view.game-active:not(.host-lobby):not(.host-round) .brand {
     width: 154px;
     height: 48px;
   }
 
-  .host-view.game-active:not(.host-lobby) .hero-band {
+  .host-view.game-active:not(.host-lobby):not(.host-round) .hero-band {
     padding: 12px 20px;
   }
 
-  .host-view.game-active:not(.host-lobby) .hero-band h1 {
+  .host-view.game-active:not(.host-lobby):not(.host-round) .hero-band h1 {
     font-size: clamp(1.8rem, 3.4vw, 2.8rem);
   }
 
-  .host-view.game-active:not(.host-lobby) .question-block h2 {
+  .host-view.game-active:not(.host-lobby):not(.host-round) .question-block h2 {
     font-size: clamp(1.45rem, 2.35vw, 2.15rem);
   }
 }
