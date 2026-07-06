@@ -10,6 +10,7 @@ const joinForm = playerUI.$("#join-form");
 const codeInput = playerUI.$("#join-code");
 const nameInput = playerUI.$("#player-name");
 const statusLabel = playerUI.$("#player-status");
+const colorModeToggle = playerUI.$("#color-mode-toggle");
 const themeStrip = playerUI.$("#player-theme-strip");
 const roundLabel = playerUI.$("#player-round-label");
 const scoreLabel = playerUI.$("#player-score");
@@ -21,10 +22,17 @@ const miniLeaderboard = playerUI.$("#mini-leaderboard");
 
 codeInput.value = codeFromUrl() || localStorage.getItem("cassos.lastCode") || "";
 nameInput.value = localStorage.getItem("cassos.playerName") || "";
+applyColorMode(localStorage.getItem("cassos.playerColorMode") === "light");
 
 joinForm.addEventListener("submit", (event) => {
   event.preventDefault();
   joinGame();
+});
+
+colorModeToggle.addEventListener("click", () => {
+  const lightMode = !document.body.classList.contains("light-mode");
+  applyColorMode(lightMode);
+  localStorage.setItem("cassos.playerColorMode", lightMode ? "light" : "dark");
 });
 
 playerSocket.on("player:state", (payload) => {
@@ -281,6 +289,12 @@ function isAnswerLocked() {
       playerState.answerLocked ||
       playerUI.questionTimeRemainingMs(playerState) <= 0
   );
+}
+
+function applyColorMode(lightMode) {
+  document.body.classList.toggle("light-mode", lightMode);
+  colorModeToggle.textContent = lightMode ? "Dark mode" : "Light mode";
+  colorModeToggle.setAttribute("aria-pressed", String(lightMode));
 }
 
 function codeFromUrl() {

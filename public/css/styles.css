@@ -100,6 +100,74 @@ button:disabled {
   background: rgba(255, 255, 255, 0.06);
 }
 
+.mode-toggle {
+  position: fixed;
+  top: max(8px, env(safe-area-inset-top));
+  right: 10px;
+  z-index: 12;
+  min-height: 34px;
+  padding: 0 12px;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(21, 21, 29, 0.82);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  font-size: 0.74rem;
+  font-weight: 900;
+}
+
+.player-view:not(.in-game) .mode-toggle {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  margin: -6px 0 12px auto;
+  box-shadow: none;
+}
+
+.player-view.light-mode {
+  --bg: #f5f0e4;
+  --panel: #fffaf0;
+  --panel-soft: #ffffff;
+  --text: #101010;
+  --muted: #5f594c;
+  --line: rgba(0, 0, 0, 0.18);
+  --shadow: 0 18px 50px rgba(57, 47, 22, 0.16);
+  background:
+    radial-gradient(circle at top left, rgba(217, 189, 40, 0.2), transparent 28rem),
+    linear-gradient(135deg, #f8f3e7 0%, #ede4d0 100%);
+  color: var(--text);
+}
+
+.player-view.light-mode .join-panel,
+.player-view.light-mode .feedback-panel,
+.player-view.light-mode .player-row,
+.player-view.light-mode .leader-row,
+.player-view.light-mode .mode-toggle,
+.player-view.light-mode .player-header span {
+  color: var(--text);
+  border-color: var(--line);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.player-view.light-mode input,
+.player-view.light-mode select,
+.player-view.light-mode .answer-button {
+  color: var(--text);
+  border-color: var(--line);
+  background: #fffaf0;
+}
+
+.player-view.light-mode .answer-button.selected {
+  background: color-mix(in srgb, var(--theme-accent) 22%, #fffaf0);
+}
+
+.player-view.light-mode .toast {
+  color: var(--text);
+  background: #fffaf0;
+}
+
 .host-panel-status {
   width: 100%;
   justify-content: center;
@@ -456,8 +524,66 @@ button:disabled {
   padding: 0;
 }
 
-.host-view.host-round .layout-grid > .side-panel {
+.host-view.host-round .layout-grid > .side-panel:last-child {
   display: none;
+}
+
+.host-view.host-round .layout-grid > .side-panel:first-child {
+  position: fixed;
+  top: clamp(14px, 2.2vh, 28px);
+  right: clamp(14px, 2.4vw, 34px);
+  z-index: 8;
+  display: grid;
+  width: clamp(118px, 10vw, 156px);
+  gap: 8px;
+  padding: 10px;
+  color: #050505;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
+}
+
+.host-view.host-round .layout-grid > .side-panel:first-child .settings-row,
+.host-view.host-round .layout-grid > .side-panel:first-child #start-game,
+.host-view.host-round .layout-grid > .side-panel:first-child #reset-game {
+  display: none;
+}
+
+.host-view.host-round .layout-grid > .side-panel:first-child .code-box {
+  justify-items: center;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  color: #050505;
+  background: transparent;
+  text-align: center;
+}
+
+.host-view.host-round .layout-grid > .side-panel:first-child .code-box span {
+  color: rgba(5, 5, 5, 0.68);
+  font-size: 0.68rem;
+}
+
+.host-view.host-round .layout-grid > .side-panel:first-child .code-box strong {
+  color: #050505;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+}
+
+.host-view.host-round .layout-grid > .side-panel:first-child #copy-link {
+  min-height: 30px;
+  padding: 0 10px;
+  color: #f6f3ef;
+  border: 0;
+  border-radius: 999px;
+  background: #050505;
+  font-size: 0.72rem;
+}
+
+.host-view.host-round .layout-grid > .side-panel:first-child .qr-code {
+  width: min(100%, 104px);
+  max-height: none;
+  margin: 0 auto;
 }
 
 .host-view.host-round .play-panel {
@@ -982,6 +1108,23 @@ form label {
   .host-view.host-round .host-home-logo {
     width: min(68vw, 420px);
     height: min(15vh, 160px);
+  }
+
+  .host-view.host-round .layout-grid > .side-panel:first-child {
+    top: 12px;
+    right: 12px;
+    width: 104px;
+    padding: 8px;
+  }
+
+  .host-view.host-round .layout-grid > .side-panel:first-child .qr-code {
+    width: 74px;
+  }
+
+  .host-view.host-round .layout-grid > .side-panel:first-child #copy-link {
+    min-height: 28px;
+    padding: 0 8px;
+    font-size: 0.66rem;
   }
 
   .host-view.host-round .question-block h2 {

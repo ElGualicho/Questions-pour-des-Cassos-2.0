@@ -216,7 +216,6 @@ function renderControls() {
   const isQuestion = hostState.status === "question";
   const isRevealed = hostState.status === "revealed";
   const isFinished = hostState.status === "finished";
-  const isLastReveal = isRevealed && hostState.currentQuestionNumber >= hostState.totalQuestions;
   const canReveal = isQuestion && canRevealCurrentQuestion();
 
   startButton.disabled = !isLobby;
@@ -224,8 +223,8 @@ function renderControls() {
   revealButton.disabled = !canReveal;
   revealButton.title = isQuestion && !canReveal ? "Disponible après 10 secondes ou quand tout le monde a répondu." : "";
   nextButton.disabled = !isRevealed;
-  newGameButton.disabled = !(isLastReveal || isFinished);
-  hostUI.setHidden(newGameButton, !(isLastReveal || isFinished));
+  newGameButton.disabled = isLobby;
+  hostUI.setHidden(newGameButton, isLobby);
   resetButton.disabled = false;
   nextButton.textContent =
     hostState.currentQuestionNumber >= hostState.totalQuestions ? "Voir le classement" : "Question suivante";
