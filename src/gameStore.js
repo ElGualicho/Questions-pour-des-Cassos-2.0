@@ -109,6 +109,13 @@ function createGameStore(rawQuestions) {
 
   function resetGame(code) {
     const game = requireGame(code);
+    const previousCode = game.code;
+    const newCode = createUniqueCode(games);
+
+    games.delete(previousCode);
+    game.code = newCode;
+    games.set(newCode, game);
+
     game.status = "lobby";
     game.deck = [];
     game.currentQuestionIndex = -1;

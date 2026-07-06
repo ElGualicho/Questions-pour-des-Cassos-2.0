@@ -62,7 +62,10 @@ function resetCurrentGame() {
   if (!hostState) {
     return;
   }
-  hostSocket.emit("host:resetGame", { code: hostState.code }, handleReply(receiveHostState));
+  hostSocket.emit("host:resetGame", { code: hostState.code }, handleReply((payload) => {
+    persistGame(payload.state.code);
+    receiveHostState(payload);
+  }));
 }
 
 revealButton.addEventListener("click", () => {

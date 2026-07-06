@@ -164,3 +164,24 @@ test("the final bonus question uses player names and awards the most voted playe
   assert.equal(alexState.answerReveal.bonusAwarded, true);
   assert.equal(alexState.answerReveal.pointsEarned, 2);
 });
+
+test("resetting a game issues a new code and retires the old one", () => {
+  const store = createGameStore(questions);
+  const game = store.createGame("host-1");
+  const originalCode = game.code;
+  const player = store.joinPlayer(game.code, "Thomas", null, "socket-1").player;
+
+  store.startGame(game.code, { questionCount: "all" });
+  store.submitAnswer(game.code, player.token, 0);
+
+  const resetGame = store.resetGame(originalCode);
+
+  assert.notEqual(resetGame.code, originalCode);
+  assert.equal(resetGame.status, "lobby");
+  assert.equal(store.getGame(originalCode), null);
+  assert.equal(store.getGame(resetGame.code), resetGame);
+
+  const resetPlayer = resetGame.players.get(player.token);
+  assert.equal(resetPlayer.score, 0);
+  assert.equal(resetPlayer.hasAnswered, false);
+});

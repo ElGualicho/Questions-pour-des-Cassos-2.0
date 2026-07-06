@@ -339,6 +339,19 @@ export class GameRoom {
 
   resetGame(code) {
     const game = this.requireGame(code);
+    const previousCode = game.code;
+    const newCode = createUniqueCode(this.games);
+
+    this.games.delete(previousCode);
+    game.code = newCode;
+    this.games.set(newCode, game);
+
+    for (const trackedSession of this.sessions.values()) {
+      if (trackedSession.code === previousCode) {
+        trackedSession.code = newCode;
+      }
+    }
+
     game.status = "lobby";
     game.deck = [];
     game.currentQuestionIndex = -1;

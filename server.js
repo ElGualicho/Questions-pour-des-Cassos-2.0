@@ -110,9 +110,17 @@ io.on("connection", (socket) => {
 
   socket.on("host:resetGame", (payload, reply) => {
     handleSocket(reply, () => {
-      const game = store.resetGame(payload && payload.code);
+      const previousCode = payload && payload.code;
+      const game = store.resetGame(previousCode);
+      if (previousCode) {
+        socket.leave(hostRoom(previousCode));
+      }
+      socket.join(hostRoom(game.code));
       emitGame(game);
-      return { state: store.getHostState(game) };
+      return {
+        state: store.getHostState(game),
+        joinUrl: joinPath(game.code)
+      };
     });
   });
 
