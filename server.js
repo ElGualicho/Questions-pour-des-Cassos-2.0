@@ -40,14 +40,14 @@ app.get("/api/health", (_request, response) => {
 app.get("/api/games/:code/qr.svg", async (request, response, next) => {
   try {
     const code = String(request.params.code || "").trim().toUpperCase();
-    const joinUrl = `${request.protocol}://${request.get("host")}/join/${encodeURIComponent(code)}`;
+    const joinUrl = `${request.protocol}://${request.get("host")}${joinPath(code)}`;
     const svg = await QRCode.toString(joinUrl, {
       type: "svg",
-      margin: 1,
+      margin: 0,
       width: 280,
       color: {
-        dark: "#111111",
-        light: "#ffffff"
+        dark: "#000000",
+        light: "#00000000"
       }
     });
 
@@ -196,7 +196,7 @@ function playerRoom(code) {
 }
 
 function joinPath(code) {
-  return `/join/${encodeURIComponent(code)}`;
+  return `/play?code=${encodeURIComponent(code)}`;
 }
 
 server.listen(port, () => {

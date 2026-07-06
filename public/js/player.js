@@ -19,7 +19,7 @@ const answers = playerUI.$("#player-answers");
 const feedbackPanel = playerUI.$("#feedback-panel");
 const miniLeaderboard = playerUI.$("#mini-leaderboard");
 
-codeInput.value = params.get("code") || localStorage.getItem("cassos.lastCode") || "";
+codeInput.value = codeFromUrl() || localStorage.getItem("cassos.lastCode") || "";
 nameInput.value = localStorage.getItem("cassos.playerName") || "";
 
 joinForm.addEventListener("submit", (event) => {
@@ -109,6 +109,11 @@ function renderQuestion() {
   answers.replaceChildren();
   playerUI.setHidden(feedbackPanel, true);
 
+  if (playerState.status === "finished") {
+    renderFinishedQuestion();
+    return;
+  }
+
   if (!question) {
     categoryLabel.textContent = "Lobby";
     questionText.textContent =
@@ -118,7 +123,7 @@ function renderQuestion() {
 
   playerUI.applyTheme(question.theme);
   playerUI.setThemeStrip(themeStrip, question.theme);
-  categoryLabel.textContent = `${question.category} · ${question.difficulty}`;
+  categoryLabel.textContent = playerUI.categoryLabel(question);
   questionText.textContent = question.question;
 
   question.choices.forEach((choice, index) => {
@@ -145,6 +150,22 @@ function renderQuestion() {
   });
 
   renderFeedback(question);
+}
+
+function renderFinishedQuestion() {
+  categoryLabel.textContent = "Classement final";
+  const winners = getWinners();
+  if (!winners.length) {
+    questionText.textContent = "Partie terminée.";
+    return;
+  }
+
+  const names = winners.map((player) => player.name).join(", ");
+  const score = winners[0].score;
+  questionText.textContent =
+    winners.length === 1
+      ? `${names} gagne avec ${playerUI.pointsLabel(score)}.`
+      : `Égalité entre ${names} avec ${playerUI.pointsLabel(score)}.`;
 }
 
 function renderFeedback(question) {
@@ -212,6 +233,24 @@ function renderLeaderboard() {
     );
     miniLeaderboard.append(row);
   }
+}
+
+function getWinners() {
+  if (!playerState.leaderboard.length) {
+    return [];
+  }
+  const topScore = playerState.leaderboard[0].score;
+  return playerState.leaderboard.filter((player) => player.score === topScore);
+}
+
+function codeFromUrl() {
+  const queryCode = params.get("code");
+  if (queryCode) {
+    return queryCode;
+  }
+
+  const joinMatch = window.location.pathname.match(/\/join\/([^/]+)/);
+  return joinMatch ? decodeURIComponent(joinMatch[1]) : "";
 }
 
 function statusText(status) {

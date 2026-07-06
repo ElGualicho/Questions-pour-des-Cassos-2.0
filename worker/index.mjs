@@ -5,7 +5,7 @@ const DEFAULT_QUESTION_COUNT = 10;
 const VALID_COUNTS = new Set([10, 20, "all"]);
 const BONUS_QUESTION_ID = "bonus-daronne-finale";
 const BONUS_QUESTION_TEXT =
-  "De quel joueur la daronne m\u00e9rite-t-elle le titre de plus grosse salope ?";
+  "De quel joueur la daronne m\u00e9rite-t-elle le titre de daronne la plus ind\u00e9fendable ?";
 const BONUS_QUESTION_EXPLANATION =
   "Le joueur dont le nom re\u00e7oit le plus de votes remporte 2 points bonus.";
 const BONUS_THEME_CATEGORY = "Corps, cul & malaise poli";
@@ -77,12 +77,12 @@ export default {
     const qrMatch = url.pathname.match(/^\/api\/games\/([^/]+)\/qr\.svg$/);
     if (qrMatch) {
       const code = decodeURIComponent(qrMatch[1]).trim().toUpperCase();
-      const joinUrl = `${url.origin}/join/${encodeURIComponent(code)}`;
+      const joinUrl = `${url.origin}${joinPath(code)}`;
       const svg = await QRCode.toString(joinUrl, {
         type: "svg",
-        margin: 1,
+        margin: 0,
         width: 280,
-        color: { dark: "#111111", light: "#ffffff" }
+        color: { dark: "#000000", light: "#00000000" }
       });
       return new Response(svg, {
         headers: { "Content-Type": "image/svg+xml; charset=utf-8" }
@@ -761,7 +761,7 @@ function shuffle(items) {
 }
 
 function joinPath(code) {
-  return `/join/${encodeURIComponent(code)}`;
+  return `/play?code=${encodeURIComponent(code)}`;
 }
 
 function json(payload, init = {}) {

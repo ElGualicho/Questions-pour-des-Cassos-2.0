@@ -21,7 +21,7 @@
 
 body {
   min-height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   background:
     radial-gradient(circle at top left, rgba(98, 203, 234, 0.18), transparent 34rem),
     linear-gradient(135deg, #09090d 0%, #17131b 52%, #0d1618 100%);
@@ -294,8 +294,11 @@ button:disabled {
   align-items: start;
   column-gap: clamp(42px, 4.2vw, 74px);
   row-gap: 14px;
-  margin: 0;
+  width: max-content;
+  max-width: calc(100% - 96px);
+  margin: 0 auto;
   padding: 0 clamp(28px, 6vw, 82px) clamp(30px, 5vh, 60px);
+  transform: translateX(clamp(16px, 2vw, 36px));
 }
 
 .host-view.host-lobby .play-panel {
@@ -350,7 +353,8 @@ button:disabled {
   max-height: none;
   margin: 0;
   border-radius: 0;
-  box-shadow: 0 0 32px rgba(255, 255, 255, 0.16);
+  background: transparent;
+  box-shadow: none;
 }
 
 .host-view.host-lobby .settings-row {
@@ -406,12 +410,7 @@ button:disabled {
 }
 
 .host-view.host-lobby .host-panel-status {
-  width: max-content;
-  margin: 0 0 14px;
-  color: #d7bf2a;
-  border: 0;
-  background: #050505;
-  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.18);
+  display: none;
 }
 
 .host-view.host-lobby .section-title {
@@ -496,7 +495,7 @@ button:disabled {
 
 .host-view.host-round .question-block h2 {
   color: var(--theme-ink);
-  font-size: clamp(2rem, 4.4vw, 5rem);
+  font-size: clamp(1.75rem, 3.6vw, 4rem);
   line-height: 1.02;
   text-wrap: balance;
 }
@@ -531,20 +530,32 @@ button:disabled {
   margin-top: clamp(4px, 1vh, 10px);
 }
 
-.host-view.host-round .host-controls .primary-action {
+.host-view.host-round .host-controls .primary-action,
+.host-view.host-round .host-controls .secondary-action {
   min-width: 190px;
   color: var(--theme-accent);
+  border: 0;
   border-radius: 999px;
   background: #050505;
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
 }
 
+.host-view.host-round .host-controls .secondary-action {
+  color: #050505;
+  background: color-mix(in srgb, var(--theme-ink) 16%, transparent);
+  box-shadow: none;
+}
+
 .host-view.host-round .final-panel {
   width: min(760px, 100%);
   margin: clamp(18px, 3vh, 34px) auto 0;
-  color: var(--theme-ink);
+  color: #050505;
   border: 0;
   background: color-mix(in srgb, var(--theme-ink) 9%, transparent);
+}
+
+.host-view.host-round .final-panel .eyebrow {
+  color: #050505;
 }
 
 .join-panel h1 {
@@ -609,8 +620,8 @@ button:disabled {
   max-height: 25vh;
   aspect-ratio: 1;
   margin: 0 auto clamp(10px, 1.6vh, 16px);
-  border-radius: 8px;
-  background: #ffffff;
+  border-radius: 0;
+  background: transparent;
 }
 
 .settings-row {
@@ -908,7 +919,10 @@ form label {
   .host-view.host-lobby .layout-grid {
     grid-template-columns: minmax(0, 1fr);
     justify-items: center;
+    width: 100%;
+    max-width: 100%;
     row-gap: 22px;
+    transform: none;
   }
 
   .host-view.host-lobby .code-box,

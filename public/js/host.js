@@ -15,6 +15,7 @@ const startButton = hostUI.$("#start-game");
 const resetButton = hostUI.$("#reset-game");
 const revealButton = hostUI.$("#reveal-answer");
 const nextButton = hostUI.$("#next-question");
+const newGameButton = hostUI.$("#new-game");
 const playerCount = hostUI.$("#player-count");
 const playerList = hostUI.$("#player-list");
 const themeStrip = hostUI.$("#theme-strip");
@@ -50,11 +51,19 @@ startButton.addEventListener("click", () => {
 });
 
 resetButton.addEventListener("click", () => {
+  resetCurrentGame();
+});
+
+newGameButton.addEventListener("click", () => {
+  resetCurrentGame();
+});
+
+function resetCurrentGame() {
   if (!hostState) {
     return;
   }
   hostSocket.emit("host:resetGame", { code: hostState.code }, handleReply(receiveHostState));
-});
+}
 
 revealButton.addEventListener("click", () => {
   if (!hostState) {
@@ -173,7 +182,7 @@ function renderQuestion() {
   hostUI.applyTheme(question.theme);
   hostUI.setThemeStrip(themeStrip, question.theme);
   hostAnswers.classList.toggle("many-answers", question.type === "bonus");
-  questionCategory.textContent = `${question.category} · ${question.difficulty}`;
+  questionCategory.textContent = hostUI.categoryLabel(question);
   questionText.textContent = question.question;
 
   for (const answer of hostState.answerDistribution) {
@@ -198,11 +207,14 @@ function renderControls() {
   const isQuestion = hostState.status === "question";
   const isRevealed = hostState.status === "revealed";
   const isFinished = hostState.status === "finished";
+  const isLastReveal = isRevealed && hostState.currentQuestionNumber >= hostState.totalQuestions;
 
   startButton.disabled = !isLobby;
   questionCount.disabled = !isLobby;
   revealButton.disabled = !isQuestion;
   nextButton.disabled = !isRevealed;
+  newGameButton.disabled = !(isLastReveal || isFinished);
+  hostUI.setHidden(newGameButton, !(isLastReveal || isFinished));
   resetButton.disabled = false;
   nextButton.textContent =
     hostState.currentQuestionNumber >= hostState.totalQuestions ? "Voir le classement" : "Question suivante";

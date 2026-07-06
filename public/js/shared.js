@@ -1,4 +1,11 @@
 window.CassosUI = (() => {
+  const categoryLabels = {
+    "Pop culture déglinguée": "Pop culture",
+    "Culture générale chelou": "Culture générale",
+    "Internet, memes & numérique": "Internet, memes",
+    "Corps, cul & malaise poli": "Corps et sexualité"
+  };
+
   function $(selector) {
     return document.querySelector(selector);
   }
@@ -61,6 +68,10 @@ window.CassosUI = (() => {
     return `Question ${state.currentQuestionNumber}/${state.totalQuestions}`;
   }
 
+  function categoryLabel(question) {
+    return categoryLabels[question.category] || question.category;
+  }
+
   function responseLabel(count) {
     return `${count} réponse${count > 1 ? "s" : ""}`;
   }
@@ -68,6 +79,7 @@ window.CassosUI = (() => {
   return {
     $,
     applyTheme,
+    categoryLabel,
     createElement,
     pointsLabel,
     responseLabel,
