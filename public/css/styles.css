@@ -196,19 +196,19 @@ button:disabled {
   width: min(60vw, 1153px);
   height: min(53.3vh, 575px);
   object-fit: contain;
-  filter: drop-shadow(0 28px 42px rgba(0, 0, 0, 0.18));
+  filter: none;
   transition:
     width 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
     height 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
     transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1),
-    filter 700ms ease;
+    opacity 700ms ease;
 }
 
 .host-view.host-lobby .host-home-logo {
   width: min(60vw, 1153px);
   height: min(53.3vh, 575px);
   animation: hostLogoLift 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
-  filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.16));
+  opacity: 0.98;
 }
 
 @keyframes hostLogoLift {
@@ -257,10 +257,11 @@ button:disabled {
 }
 
 .host-view.host-lobby .layout-grid {
-  grid-template-columns: minmax(380px, 560px) minmax(300px, 430px);
+  grid-template-columns: minmax(208px, 244px) 244px minmax(280px, 430px);
   justify-content: center;
   align-items: start;
-  gap: clamp(28px, 3vw, 50px);
+  column-gap: clamp(42px, 4.2vw, 74px);
+  row-gap: 14px;
   margin: 0;
   padding: 0 clamp(28px, 6vw, 82px) clamp(30px, 5vh, 60px);
 }
@@ -277,18 +278,20 @@ button:disabled {
 }
 
 .host-view.host-lobby .layout-grid > .side-panel:first-child {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(170px, 230px) minmax(180px, 244px);
-  align-items: start;
-  gap: clamp(32px, 4.5vw, 73px);
-  min-height: 244px;
+  display: contents;
+}
+
+.host-view.host-lobby .layout-grid > .side-panel:last-child {
+  grid-column: 3;
+  grid-row: 1 / span 4;
+  align-self: start;
   padding: 0;
 }
 
 .host-view.host-lobby .code-box {
   grid-column: 1;
   grid-row: 1;
+  align-self: start;
   gap: 2px;
   margin: 0;
   padding: 0;
@@ -308,8 +311,10 @@ button:disabled {
 
 .host-view.host-lobby .qr-code {
   grid-column: 2;
-  grid-row: 1 / span 4;
-  width: min(100%, 244px);
+  grid-row: 1 / span 3;
+  align-self: start;
+  justify-self: center;
+  width: 244px;
   max-height: none;
   margin: 0;
   border-radius: 0;
@@ -338,27 +343,27 @@ button:disabled {
 .host-view.host-lobby #copy-link {
   width: max-content;
   min-height: 38px;
-  margin-top: 10px;
+  margin-top: 12px;
   padding: 0 18px;
   border-radius: 999px;
 }
 
 .host-view.host-lobby #start-game,
 .host-view.host-lobby #reset-game {
-  position: absolute;
-  top: 168px;
+  grid-column: 1;
   width: max-content;
-  min-width: 150px;
+  min-width: 152px;
   justify-self: start;
   border-radius: 999px;
 }
 
 .host-view.host-lobby #start-game {
-  left: 0;
+  grid-row: 2;
+  margin-top: 2px;
 }
 
 .host-view.host-lobby #reset-game {
-  left: 164px;
+  grid-row: 3;
   color: #050505;
   background: rgba(0, 0, 0, 0.13);
   box-shadow: none;
@@ -370,6 +375,7 @@ button:disabled {
 
 .host-view.host-lobby .host-panel-status {
   width: max-content;
+  margin: 0 0 14px;
   color: #d7bf2a;
   border: 0;
   background: #050505;
@@ -379,7 +385,7 @@ button:disabled {
 .host-view.host-lobby .section-title {
   justify-content: flex-start;
   gap: 18px;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   color: #050505;
 }
 
@@ -768,6 +774,43 @@ form label {
 
   .side-panel {
     align-self: stretch;
+  }
+
+  .host-view.host-lobby .layout-grid {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    row-gap: 22px;
+  }
+
+  .host-view.host-lobby .code-box,
+  .host-view.host-lobby .qr-code,
+  .host-view.host-lobby #start-game,
+  .host-view.host-lobby #reset-game,
+  .host-view.host-lobby .layout-grid > .side-panel:last-child {
+    grid-column: 1;
+  }
+
+  .host-view.host-lobby .code-box {
+    grid-row: 1;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .host-view.host-lobby .qr-code {
+    grid-row: 2;
+  }
+
+  .host-view.host-lobby #start-game {
+    grid-row: 3;
+  }
+
+  .host-view.host-lobby #reset-game {
+    grid-row: 4;
+  }
+
+  .host-view.host-lobby .layout-grid > .side-panel:last-child {
+    grid-row: 5;
+    width: min(100%, 430px);
   }
 }
 
