@@ -1,4 +1,5 @@
 const assert = require("node:assert/strict");
+const crypto = require("crypto");
 const test = require("node:test");
 const { createGameStore } = require("../src/gameStore");
 
@@ -22,6 +23,31 @@ const questions = [
     explanation: "Parce que A."
   }
 ];
+
+test("starting a game shuffles question order and answer choices", () => {
+  const store = createGameStore(questions);
+  const game = store.createGame("host-1");
+  const originalRandomInt = crypto.randomInt;
+
+  try {
+    crypto.randomInt = (min) => min;
+    store.startGame(game.code, { questionCount: "all" });
+  } finally {
+    crypto.randomInt = originalRandomInt;
+  }
+
+  assert.notDeepEqual(
+    game.deck.slice(0, questions.length).map((question) => question.id),
+    questions.map((question) => question.id)
+  );
+
+  const sourceQuestion = questions[0];
+  const preparedQuestion = game.deck.find((question) => question.id === sourceQuestion.id);
+  const correctAnswerText = sourceQuestion.choices[sourceQuestion.answerIndex];
+
+  assert.notDeepEqual(preparedQuestion.choices, sourceQuestion.choices);
+  assert.equal(preparedQuestion.choices[preparedQuestion.answerIndex], correctAnswerText);
+});
 
 test("game flow hides answers until reveal and scores once", () => {
   const store = createGameStore(questions);

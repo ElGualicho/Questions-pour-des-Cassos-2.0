@@ -5,12 +5,12 @@
     "difficulty": "simple",
     "question": "Dans South Park, quel personnage meurt de façon récurrente au fil des épisodes ?",
     "choices": [
+      "Kenny",
       "Kyle",
       "Cartman",
-      "Kenny",
       "Stan"
     ],
-    "answerIndex": 2,
+    "answerIndex": 0,
     "explanation": "Kenny meurt de manière récurrente dans les premières saisons de South Park."
   },
   {
@@ -34,11 +34,11 @@
     "question": "Dans Le Seigneur des anneaux, comment Gollum appelle-t-il l'anneau ?",
     "choices": [
       "Mon bijou",
-      "Mon précieux",
       "Mon bébé",
+      "Mon précieux",
       "Mon petit cercle"
     ],
-    "answerIndex": 1,
+    "answerIndex": 2,
     "explanation": "Gollum appelle l'Anneau Unique “mon précieux”."
   },
   {
@@ -48,11 +48,11 @@
     "question": "Dans Pokémon, quel Pokémon poisson évolue en Léviator ?",
     "choices": [
       "Poissirène",
-      "Magicarpe",
       "Barpau",
-      "Remoraid"
+      "Remoraid",
+      "Magicarpe"
     ],
-    "answerIndex": 1,
+    "answerIndex": 3,
     "explanation": "Magicarpe évolue en Léviator."
   },
   {
@@ -75,12 +75,12 @@
     "difficulty": "moyen",
     "question": "Quelle chanteuse française, dont le nom de scène est inspiré de la série Heroes, a connu un succès international avec Pookie ?",
     "choices": [
-      "Aya Nakamura",
       "Yseult",
+      "Aya Nakamura",
       "Angèle",
       "Shay"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Aya Nakamura a choisi son nom de scène en référence au personnage Hiro Nakamura de la série Heroes."
   },
   {
@@ -89,12 +89,12 @@
     "difficulty": "moyen",
     "question": "Dans Kill Bill, quelle arme Beatrix Kiddo utilise-t-elle principalement ?",
     "choices": [
-      "Un katana",
       "Une tronçonneuse",
       "Un nunchaku",
+      "Un katana",
       "Un revolver doré"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Beatrix Kiddo utilise notamment un katana forgé par Hattori Hanzō."
   },
   {
@@ -105,10 +105,10 @@
     "choices": [
       "Jim Halpert",
       "Dwight Schrute",
-      "Michael Scott",
-      "Kevin Malone"
+      "Kevin Malone",
+      "Michael Scott"
     ],
-    "answerIndex": 2,
+    "answerIndex": 3,
     "explanation": "Michael Scott dirige Dunder Mifflin Scranton avec une compétence émotionnelle approximative."
   },
   {
@@ -131,12 +131,12 @@
     "difficulty": "moyen",
     "question": "Quel film met en scène un présentateur météo revivant sans cesse la même journée ?",
     "choices": [
-      "Un jour sans fin",
       "Retour vers le futur",
+      "Un jour sans fin",
       "The Truman Show",
       "Big Fish"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Un jour sans fin est connu pour sa boucle temporelle autour du Jour de la marmotte."
   },
   {
@@ -146,11 +146,11 @@
     "question": "Dans Toy Story, quel jouet prononce la phrase « Vers l’infini et au-delà » ?",
     "choices": [
       "Woody",
-      "Buzz l’Éclair",
       "Monsieur Patate",
+      "Buzz l’Éclair",
       "Zigzag"
     ],
-    "answerIndex": 1,
+    "answerIndex": 2,
     "explanation": "Buzz l’Éclair utilise cette phrase comme devise dans Toy Story."
   },
   {
@@ -161,10 +161,10 @@
     "choices": [
       "Timon",
       "Pumbaa",
-      "Rafiki",
-      "Zazu"
+      "Zazu",
+      "Rafiki"
     ],
-    "answerIndex": 2,
+    "answerIndex": 3,
     "explanation": "Rafiki présente Simba aux animaux du royaume au début du film."
   },
   {
@@ -173,12 +173,12 @@
     "difficulty": "simple",
     "question": "Dans Harry Potter, quelle formule magique permet d’ouvrir une porte verrouillée ?",
     "choices": [
-      "Expelliarmus",
       "Alohomora",
+      "Expelliarmus",
       "Lumos",
       "Avada Kedavra"
     ],
-    "answerIndex": 1,
+    "answerIndex": 0,
     "explanation": "Alohomora est un sortilège utilisé pour déverrouiller des portes."
   },
   {
@@ -217,10 +217,10 @@
     "choices": [
       "Michael",
       "Franklin",
-      "Trevor",
-      "Lamar"
+      "Lamar",
+      "Trevor"
     ],
-    "answerIndex": 2,
+    "answerIndex": 3,
     "explanation": "Trevor Philips est l’un des trois protagonistes jouables de GTA V."
   },
   {
@@ -229,12 +229,12 @@
     "difficulty": "moyen",
     "question": "Dans Matrix, quelle pilule Néo choisit-il pour découvrir la réalité ?",
     "choices": [
-      "La bleue",
       "La rouge",
+      "La bleue",
       "La verte",
       "La blanche"
     ],
-    "answerIndex": 1,
+    "answerIndex": 0,
     "explanation": "Néo choisit la pilule rouge, qui le fait sortir de la simulation."
   },
   {
@@ -258,11 +258,11 @@
     "question": "Dans Trainspotting, quelle drogue occupe une place centrale dans l'histoire des personnages ?",
     "choices": [
       "Cocaïne",
-      "Héroïne",
       "MDMA",
+      "Héroïne",
       "Kétamine"
     ],
-    "answerIndex": 1,
+    "answerIndex": 2,
     "explanation": "Trainspotting suit notamment des personnages dépendants à l'héroïne."
   },
   {
@@ -271,12 +271,12 @@
     "difficulty": "moyen",
     "question": "Dans le film Limitless, quel est le nom de la drogue qui augmente fortement les capacités mentales du personnage principal ?",
     "choices": [
-      "NZT",
       "THC",
       "DMT",
-      "LSD"
+      "LSD",
+      "NZT"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Dans Limitless, le NZT permet au personnage principal d’accéder à des capacités cognitives hors norme."
   },
   {
@@ -300,11 +300,11 @@
     "question": "Quel alcool mexicain est fabriqué à partir d'agave bleu ?",
     "choices": [
       "Rhum",
-      "Vodka",
       "Tequila",
+      "Vodka",
       "Gin"
     ],
-    "answerIndex": 2,
+    "answerIndex": 1,
     "explanation": "La tequila est produite à partir d'agave bleu."
   },
   {
@@ -313,12 +313,12 @@
     "difficulty": "simple",
     "question": "Dans un mojito classique, quel alcool est utilisé ?",
     "choices": [
-      "Rhum",
       "Vodka",
       "Whisky",
+      "Rhum",
       "Pastis"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Le mojito classique est préparé avec du rhum."
   },
   {
@@ -327,12 +327,12 @@
     "difficulty": "moyen",
     "question": "Quel cocktail à base de vodka, ginger beer et citron vert est généralement servi dans un mug en cuivre ?",
     "choices": [
-      "Moscow Mule",
       "Bloody Mary",
       "Old Fashioned",
-      "Spritz"
+      "Spritz",
+      "Moscow Mule"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Le Moscow Mule est traditionnellement servi dans un mug en cuivre."
   },
   {
@@ -355,12 +355,12 @@
     "difficulty": "moyen",
     "question": "Dans Breaking Bad, quel avocat véreux devient ensuite le personnage principal de sa propre série ?",
     "choices": [
-      "Saul Goodman",
       "Gus Fring",
+      "Saul Goodman",
       "Hank Schrader",
       "Todd Alquist"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Saul Goodman est au centre du spin-off Better Call Saul."
   },
   {
@@ -369,12 +369,12 @@
     "difficulty": "moyen",
     "question": "En France, à partir de quel taux d’alcool dans le sang est-il interdit de prendre le volant pour un conducteur standard ?",
     "choices": [
-      "0,5 g/L",
       "0,2 g/L",
       "1 g/L",
+      "0,5 g/L",
       "1,5 g/L"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Pour un conducteur standard, la limite légale en France est de 0,5 gramme d’alcool par litre de sang."
   },
   {
@@ -383,12 +383,12 @@
     "difficulty": "moyen",
     "question": "Quel alcool anisé du sud de la France se boit généralement avec de l'eau ?",
     "choices": [
-      "Pastis",
       "Gin",
       "Cognac",
-      "Porto"
+      "Porto",
+      "Pastis"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Le pastis est un alcool anisé très associé au sud de la France."
   },
   {
@@ -411,12 +411,12 @@
     "difficulty": "simple",
     "question": "Dans Harry Potter, quelle potion est surnommée chance liquide ?",
     "choices": [
-      "Felix Felicis",
       "Polynectar",
+      "Felix Felicis",
       "Amortentia",
       "Veritaserum"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Felix Felicis est une potion qui donne temporairement de la chance à celui qui la boit."
   },
   {
@@ -425,12 +425,12 @@
     "difficulty": "simple",
     "question": "Dans Dune, quelle substance permet notamment les visions et rend possible la navigation spatiale ?",
     "choices": [
-      "L’Épice",
       "Le soma",
       "Le NZT",
+      "L’Épice",
       "La poussière rouge"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "L’Épice, aussi appelée mélange, est une substance centrale dans l’univers de Dune."
   },
   {
@@ -439,12 +439,12 @@
     "difficulty": "moyen",
     "question": "Dans Las Vegas Parano, quel duo traverse le Nevada sous l’effet de nombreuses drogues ?",
     "choices": [
-      "Raoul Duke et Dr Gonzo",
       "Jules et Vincent",
       "Jay et Silent Bob",
-      "Walter et Jesse"
+      "Walter et Jesse",
+      "Raoul Duke et Dr Gonzo"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Raoul Duke et Dr Gonzo sont les deux personnages principaux de Las Vegas Parano."
   },
   {
@@ -467,12 +467,12 @@
     "difficulty": "moyen",
     "question": "Dans James Bond, quelle boisson est souvent associée à la formule « shaken, not stirred » ?",
     "choices": [
-      "Vodka martini",
       "Mojito",
+      "Vodka martini",
       "Margarita",
       "White Russian"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "James Bond commande régulièrement un vodka martini « shaken, not stirred »."
   },
   {
@@ -481,12 +481,12 @@
     "difficulty": "hardcore",
     "question": "Dans Orange mécanique, quel traitement expérimental vise à conditionner Alex contre la violence ?",
     "choices": [
-      "Le traitement Ludovico",
       "Le protocole Tannhäuser",
       "Le sérum V",
+      "Le traitement Ludovico",
       "Le programme MKUltra"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Le traitement Ludovico est utilisé pour conditionner Alex dans Orange mécanique."
   },
   {
@@ -495,12 +495,12 @@
     "difficulty": "moyen",
     "question": "Quel médicament, initialement étudié pour l’angine de poitrine, est aujourd’hui utilisé contre les troubles de l’érection ?",
     "choices": [
-      "Le Viagra",
       "Le Doliprane",
       "La Ventoline",
-      "Le Xanax"
+      "Le Xanax",
+      "Le Viagra"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Le Viagra a d’abord été étudié par Pfizer pour des troubles cardiaques avant son usage contre les troubles de l’érection."
   },
   {
@@ -523,12 +523,12 @@
     "difficulty": "moyen",
     "question": "Quelle urgence médicale peut arriver lorsqu'un testicule effectue une rotation sur lui-même ?",
     "choices": [
-      "Une torsion testiculaire",
       "Une sinusite",
+      "Une torsion testiculaire",
       "Une tendinite",
       "Une rage de dents"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "La torsion testiculaire est une urgence médicale."
   },
   {
@@ -537,12 +537,12 @@
     "difficulty": "hardcore",
     "question": "Quel nom technique désigne les érections nocturnes ou matinales involontaires ?",
     "choices": [
-      "Tumescence pénienne nocturne",
       "Migraine vasculaire",
       "Réflexe rotulien",
+      "Tumescence pénienne nocturne",
       "Luxation du sommeil"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "La tumescence pénienne nocturne est un phénomène physiologique normal."
   },
   {
@@ -551,12 +551,12 @@
     "difficulty": "hardcore",
     "question": "Quelle pathologie correspond à l’extériorisation du rectum à travers l’anus, parfois appelée descente d’organe ?",
     "choices": [
-      "Le prolapsus rectal",
       "L’appendicite",
       "La cystite",
-      "La hernie discale"
+      "La hernie discale",
+      "Le prolapsus rectal"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Le prolapsus rectal correspond à une extériorisation du rectum, souvent décrite comme une forme de descente d’organe."
   },
   {
@@ -579,12 +579,12 @@
     "difficulty": "moyen",
     "question": "Quel objet réutilisable en silicone permet de recueillir les règles ?",
     "choices": [
-      "Une cup menstruelle",
       "Un diaphragme Wi-Fi",
+      "Une cup menstruelle",
       "Un stérilet jetable",
       "Un préservatif inversé"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "La cup menstruelle est un dispositif réutilisable de protection périodique."
   },
   {
@@ -593,12 +593,12 @@
     "difficulty": "moyen",
     "question": "Quel ensemble de muscles soutient les organes du bassin et peut être travaillé après un accouchement ?",
     "choices": [
-      "Le périnée",
       "Le biceps",
       "Le tympan",
+      "Le périnée",
       "La clavicule"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Le périnée correspond au plancher pelvien."
   },
   {
@@ -607,12 +607,12 @@
     "difficulty": "moyen",
     "question": "Quel dessert donne aussi son nom anglais à une pratique sexuelle appelée creampie ?",
     "choices": [
-      "La tarte à la crème",
       "Le tiramisu",
       "La crème brûlée",
-      "Le flan"
+      "Le flan",
+      "La tarte à la crème"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Creampie se traduit littéralement par tarte à la crème et désigne aussi une pratique sexuelle."
   },
   {
@@ -635,12 +635,12 @@
     "difficulty": "simple",
     "question": "Quel os est généralement le plus long du corps humain ?",
     "choices": [
-      "Le fémur",
       "Le tibia",
+      "Le fémur",
       "L’humérus",
       "La clavicule"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Le fémur, situé dans la cuisse, est généralement considéré comme l’os le plus long du corps humain."
   },
   {
@@ -649,12 +649,12 @@
     "difficulty": "simple",
     "question": "Quel muscle est principalement responsable du hoquet ?",
     "choices": [
-      "Le diaphragme",
       "Le biceps",
       "Le périnée",
+      "Le diaphragme",
       "Le trapèze"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Le hoquet est provoqué par une contraction involontaire du diaphragme."
   },
   {
@@ -663,12 +663,12 @@
     "difficulty": "simple",
     "question": "Quel petit organe pend au fond de la gorge ?",
     "choices": [
-      "La luette",
       "L’appendice",
       "Le tympan",
-      "La cornée"
+      "La cornée",
+      "La luette"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "La luette est la petite structure visible au fond du palais mou."
   },
   {
@@ -691,12 +691,12 @@
     "difficulty": "moyen",
     "question": "Comment appelle-t-on une érection persistante et douloureuse nécessitant une prise en charge médicale ?",
     "choices": [
-      "Priapisme",
       "Phimosis",
+      "Priapisme",
       "Varicocèle",
       "Endométriose"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Le priapisme est une érection prolongée et douloureuse qui peut constituer une urgence médicale."
   },
   {
@@ -705,12 +705,12 @@
     "difficulty": "moyen",
     "question": "Quel réflexe fait éternuer certaines personnes lorsqu’elles regardent une lumière forte ?",
     "choices": [
-      "Le réflexe photique",
       "Le réflexe rotulien",
       "Le réflexe vagal",
+      "Le réflexe photique",
       "Le réflexe nauséeux"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Le réflexe photique désigne l’éternuement déclenché par une lumière intense chez certaines personnes."
   },
   {
@@ -719,12 +719,12 @@
     "difficulty": "hardcore",
     "question": "Comment appelle-t-on l’écoulement de lait hors allaitement, parfois lié à un dérèglement hormonal ?",
     "choices": [
-      "Galactorrhée",
       "Gingivite",
       "Cystite",
-      "Sciatique"
+      "Sciatique",
+      "Galactorrhée"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "La galactorrhée correspond à un écoulement lacté en dehors d’une période d’allaitement."
   },
   {
@@ -747,12 +747,12 @@
     "difficulty": "hardcore",
     "question": "Quel nerf est impliqué dans le malaise vagal ?",
     "choices": [
-      "Le nerf vague",
       "Le nerf sciatique",
+      "Le nerf vague",
       "Le nerf optique",
       "Le nerf facial"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Le malaise vagal est lié à une stimulation du nerf vague."
   },
   {
@@ -761,12 +761,12 @@
     "difficulty": "moyen",
     "question": "Quelle chanteuse du groupe The Cranberries, connue notamment pour Zombie, est morte en 2018 ?",
     "choices": [
-      "Dolores O'Riordan",
       "Sinead O'Connor",
       "Alanis Morissette",
+      "Dolores O'Riordan",
       "Shirley Manson"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Dolores O'Riordan était la chanteuse de The Cranberries."
   },
   {
@@ -776,11 +776,11 @@
     "question": "Quel ancien Beatle a été assassiné devant le Dakota Building à New York en 1980 ?",
     "choices": [
       "Paul McCartney",
-      "John Lennon",
       "George Harrison",
-      "Ringo Starr"
+      "Ringo Starr",
+      "John Lennon"
     ],
-    "answerIndex": 1,
+    "answerIndex": 3,
     "explanation": "John Lennon a été assassiné à New York en décembre 1980."
   },
   {
@@ -803,12 +803,12 @@
     "difficulty": "moyen",
     "question": "Quel DJ suédois, connu pour Wake Me Up, est mort en 2018 ?",
     "choices": [
-      "Avicii",
       "David Guetta",
+      "Avicii",
       "Martin Garrix",
       "Calvin Harris"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Avicii, de son vrai nom Tim Bergling, est mort en 2018."
   },
   {
@@ -817,12 +817,12 @@
     "difficulty": "hardcore",
     "question": "Quel album posthume de Mac Miller, sorti en 2020, fait suite à Swimming ?",
     "choices": [
-      "Circles",
       "Legends Never Die",
       "Donda",
+      "Circles",
       "Shoot for the Stars"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Circles est l'album posthume de Mac Miller sorti en 2020."
   },
   {
@@ -831,12 +831,12 @@
     "difficulty": "simple",
     "question": "Quel groupe australien a continué après la mort de Bon Scott avec Brian Johnson au chant ?",
     "choices": [
-      "AC/DC",
       "Queen",
       "Metallica",
-      "Oasis"
+      "Oasis",
+      "AC/DC"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Brian Johnson devient chanteur d'AC/DC après la mort de Bon Scott."
   },
   {
@@ -859,12 +859,12 @@
     "difficulty": "moyen",
     "question": "Quel rappeur français est associé au tube Mwaka Moon ?",
     "choices": [
-      "Kalash",
       "Niska",
+      "Kalash",
       "Ninho",
       "Kaaris"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Mwaka Moon est un morceau de Kalash avec Damso."
   },
   {
@@ -873,12 +873,12 @@
     "difficulty": "hardcore",
     "question": "Quel guitariste fait partie du club des 27 et est mort en 1970 ?",
     "choices": [
-      "Jimi Hendrix",
       "Eric Clapton",
       "Jimmy Page",
+      "Jimi Hendrix",
       "Carlos Santana"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Jimi Hendrix est mort à 27 ans en 1970."
   },
   {
@@ -887,12 +887,12 @@
     "difficulty": "moyen",
     "question": "Quel rappeur américain, connu pour Jocelyn Flores et Sad!, a été tué en Floride en 2018 ?",
     "choices": [
-      "XXXTentacion",
       "Lil Peep",
       "Juice WRLD",
-      "Pop Smoke"
+      "Pop Smoke",
+      "XXXTentacion"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "XXXTentacion a été tué en Floride en 2018."
   },
   {
@@ -915,12 +915,12 @@
     "difficulty": "moyen",
     "question": "Quel chanteur de Joy Division, voix de Love Will Tear Us Apart, s’est suicidé en 1980 ?",
     "choices": [
-      "Ian Curtis",
       "Robert Smith",
+      "Ian Curtis",
       "Morrissey",
       "Peter Murphy"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Ian Curtis était le chanteur de Joy Division."
   },
   {
@@ -929,12 +929,12 @@
     "difficulty": "moyen",
     "question": "Quel rappeur américain, connu pour Lucid Dreams, a eu l’album posthume Legends Never Die ?",
     "choices": [
-      "Juice WRLD",
       "Pop Smoke",
       "Lil Peep",
+      "Juice WRLD",
       "Mac Miller"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Legends Never Die est un album posthume de Juice WRLD."
   },
   {
@@ -943,12 +943,12 @@
     "difficulty": "moyen",
     "question": "Quel chanteur de Motörhead est mort en 2015 ?",
     "choices": [
-      "Lemmy Kilmister",
       "Ozzy Osbourne",
       "Alice Cooper",
-      "Iggy Pop"
+      "Iggy Pop",
+      "Lemmy Kilmister"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Lemmy Kilmister était le chanteur et bassiste de Motörhead."
   },
   {
@@ -972,11 +972,11 @@
     "question": "Quel membre du groupe Migos a été tué à Houston en 2022 ?",
     "choices": [
       "Quavo",
-      "Offset",
       "Takeoff",
+      "Offset",
       "Metro Boomin"
     ],
-    "answerIndex": 2,
+    "answerIndex": 1,
     "explanation": "Takeoff, membre de Migos, est mort à Houston en 2022."
   },
   {
@@ -985,12 +985,12 @@
     "difficulty": "moyen",
     "question": "Quel artiste britannique, alter ego de Ziggy Stardust, est mort en 2016 après la sortie de Blackstar ?",
     "choices": [
-      "David Bowie",
       "George Michael",
       "Prince",
+      "David Bowie",
       "Mick Jagger"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "David Bowie est mort en janvier 2016, peu après la sortie de Blackstar."
   },
   {
@@ -999,12 +999,12 @@
     "difficulty": "moyen",
     "question": "Quel chanteur américain de Linkin Park a aussi chanté avec Stone Temple Pilots avant sa mort ?",
     "choices": [
-      "Chester Bennington",
       "Chris Cornell",
       "Scott Weiland",
-      "Layne Staley"
+      "Layne Staley",
+      "Chester Bennington"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Chester Bennington a chanté avec Linkin Park et Stone Temple Pilots."
   },
   {
@@ -1027,12 +1027,12 @@
     "difficulty": "hardcore",
     "question": "Quel chanteur de INXS a été retrouvé mort en 1997 dans une chambre d’hôtel à Sydney ?",
     "choices": [
-      "Michael Hutchence",
       "Bono",
+      "Michael Hutchence",
       "Nick Cave",
       "Michael Stipe"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Michael Hutchence était le chanteur du groupe INXS."
   },
   {
@@ -1041,12 +1041,12 @@
     "difficulty": "hardcore",
     "question": "Quel producteur et DJ français, moitié de Cassius, est mort accidentellement en 2019 à Paris ?",
     "choices": [
-      "Philippe Zdar",
       "DJ Mehdi",
       "Kavinsky",
+      "Philippe Zdar",
       "Étienne de Crécy"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Philippe Zdar formait le duo Cassius avec Boom Bass."
   },
   {
@@ -1055,12 +1055,12 @@
     "difficulty": "hardcore",
     "question": "Quel rappeur de Memphis, proche de Key Glock, a été assassiné devant une boulangerie en 2021 ?",
     "choices": [
-      "Young Dolph",
       "Lil Durk",
       "Moneybagg Yo",
-      "Yo Gotti"
+      "Yo Gotti",
+      "Young Dolph"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Young Dolph a été tué à Memphis en 2021."
   },
   {
@@ -1083,12 +1083,12 @@
     "difficulty": "simple",
     "question": "Quel animal aquatique conserve des caractéristiques juvéniles toute sa vie et peut régénérer certaines parties de son corps ?",
     "choices": [
-      "L'axolotl",
       "Le homard",
+      "L'axolotl",
       "Le blobfish",
       "Le lamantin"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "L'axolotl est connu pour sa néoténie et ses capacités de régénération."
   },
   {
@@ -1097,12 +1097,12 @@
     "difficulty": "moyen",
     "question": "Quel ancien site pénitentiaire situé dans la baie de San Francisco a accueilli des criminels célèbres avant de devenir un lieu touristique ?",
     "choices": [
-      "Alcatraz",
       "Guantanamo",
       "Rikers Island",
+      "Alcatraz",
       "Sing Sing"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Alcatraz est une ancienne prison située dans la baie de San Francisco."
   },
   {
@@ -1111,12 +1111,12 @@
     "difficulty": "hardcore",
     "question": "Quel lac camerounais a libéré en 1986 un nuage de CO2 meurtrier ?",
     "choices": [
-      "Le lac Nyos",
       "Le lac Victoria",
       "Le lac Titicaca",
-      "Le lac Baïkal"
+      "Le lac Baïkal",
+      "Le lac Nyos"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "La catastrophe du lac Nyos est liée à un dégazage massif de dioxyde de carbone."
   },
   {
@@ -1139,12 +1139,12 @@
     "difficulty": "moyen",
     "question": "Comment appelle-t-on la peur ou le dégoût des petits trous groupés ?",
     "choices": [
-      "Trypophobie",
       "Agoraphobie",
+      "Trypophobie",
       "Claustrophobie",
       "Arachnophobie"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "La trypophobie désigne le dégoût ou la peur des motifs de trous rapprochés."
   },
   {
@@ -1153,12 +1153,12 @@
     "difficulty": "hardcore",
     "question": "Quel mot désigne le fait de manger ses crottes de nez ?",
     "choices": [
-      "Mucophagie",
       "Coprophagie",
       "Onychophagie",
+      "Mucophagie",
       "Lithophagie"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "La mucophagie désigne le fait de manger du mucus nasal."
   },
   {
@@ -1167,12 +1167,12 @@
     "difficulty": "simple",
     "question": "Quel insecte est réputé pouvoir survivre un certain temps sans tête ?",
     "choices": [
-      "Le cafard",
       "Le moustique",
       "La fourmi",
-      "Le papillon"
+      "Le papillon",
+      "Le cafard"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Le cafard est connu pour sa résistance extrême, y compris après décapitation pendant un temps limité."
   },
   {
@@ -1195,12 +1195,12 @@
     "difficulty": "moyen",
     "question": "Quel animal pond des œufs, allaite ses petits et possède un bec ?",
     "choices": [
-      "L'ornithorynque",
       "Le castor",
+      "L'ornithorynque",
       "Le tatou",
       "Le furet"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "L'ornithorynque est un mammifère ovipare doté d'un bec."
   },
   {
@@ -1209,12 +1209,12 @@
     "difficulty": "simple",
     "question": "Quel métal est liquide à température ambiante ?",
     "choices": [
-      "Le mercure",
       "Le fer",
       "Le cuivre",
+      "Le mercure",
       "Le lithium"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Le mercure est un métal liquide à température ambiante."
   },
   {
@@ -1223,12 +1223,12 @@
     "difficulty": "simple",
     "question": "Quel phénomène consiste à voir des visages dans des objets ?",
     "choices": [
-      "La paréidolie",
       "La synesthésie",
       "La presbytie",
-      "La catalepsie"
+      "La catalepsie",
+      "La paréidolie"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "La paréidolie consiste à percevoir une forme familière, comme un visage, dans un stimulus ambigu."
   },
   {
@@ -1251,12 +1251,12 @@
     "difficulty": "moyen",
     "question": "Quel animal peut dormir avec une moitié du cerveau active ?",
     "choices": [
-      "Le dauphin",
       "Le panda",
+      "Le dauphin",
       "Le chat",
       "La poule"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Certains dauphins pratiquent le sommeil unihémisphérique."
   },
   {
@@ -1265,12 +1265,12 @@
     "difficulty": "moyen",
     "question": "Quel oiseau australien est capable d’imiter des sons comme des tronçonneuses ou des appareils photo ?",
     "choices": [
-      "Le ménure superbe",
       "Le casoar",
       "Le kiwi",
+      "Le ménure superbe",
       "Le pélican"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Le ménure superbe est connu pour ses capacités d’imitation sonore."
   },
   {
@@ -1279,12 +1279,12 @@
     "difficulty": "moyen",
     "question": "Quel poisson peut changer de sexe au cours de sa vie selon l’organisation du groupe ?",
     "choices": [
-      "Le poisson-clown",
       "Le piranha",
       "Le poisson-lune",
-      "Le saumon"
+      "Le saumon",
+      "Le poisson-clown"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Le poisson-clown peut changer de sexe selon la structure sociale du groupe."
   },
   {
@@ -1307,12 +1307,12 @@
     "difficulty": "moyen",
     "question": "Quel fruit est botaniquement une baie, contrairement à la fraise ?",
     "choices": [
-      "La banane",
       "La pomme",
+      "La banane",
       "La pêche",
       "La noix"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "La banane répond à la définition botanique d’une baie."
   },
   {
@@ -1321,12 +1321,12 @@
     "difficulty": "moyen",
     "question": "Quel volcan a enseveli Pompéi en 79 après J.-C. ?",
     "choices": [
-      "Le Vésuve",
       "L’Etna",
       "Le Stromboli",
+      "Le Vésuve",
       "Le Krakatoa"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "L’éruption du Vésuve a enseveli Pompéi en 79 après J.-C."
   },
   {
@@ -1335,12 +1335,12 @@
     "difficulty": "hardcore",
     "question": "Quel champignon parasite peut modifier le comportement de certaines fourmis ?",
     "choices": [
-      "Ophiocordyceps",
       "Pénicillium",
       "Amanite phalloïde",
-      "Truffe noire"
+      "Truffe noire",
+      "Ophiocordyceps"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Certains champignons du genre Ophiocordyceps parasitent des fourmis et modifient leur comportement."
   },
   {
@@ -1363,12 +1363,12 @@
     "difficulty": "hardcore",
     "question": "Quelle bactérie est responsable du botulisme ?",
     "choices": [
-      "Clostridium botulinum",
       "Yersinia pestis",
+      "Clostridium botulinum",
       "Escherichia coli",
       "Staphylococcus aureus"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Le botulisme est lié à la toxine produite par Clostridium botulinum."
   },
   {
@@ -1377,12 +1377,12 @@
     "difficulty": "moyen",
     "question": "Quel mot japonais de quatre lettres signifie souvent « quoi ? » dans les animés et est devenu un mème récurrent ?",
     "choices": [
-      "Nani",
       "Kuso",
       "Baka",
+      "Nani",
       "Sushi"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Nani signifie quoi en japonais et a été popularisé comme mème par de nombreux extraits d’animés."
   },
   {
@@ -1391,12 +1391,12 @@
     "difficulty": "moyen",
     "question": "Quel personnage de dessin animé, apparu en 1940, est un pivert connu pour son rire caractéristique ?",
     "choices": [
-      "Woody Woodpecker",
       "Bugs Bunny",
       "Daffy Duck",
-      "Titi"
+      "Titi",
+      "Woody Woodpecker"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Woody Woodpecker est un pivert de dessin animé connu pour son rire très reconnaissable."
   },
   {
@@ -1419,12 +1419,12 @@
     "difficulty": "moyen",
     "question": "Comment appelle-t-on un mot ou une expression qui peut se lire dans les deux sens en gardant le même ordre de lettres ?",
     "choices": [
-      "Un palindrome",
       "Un acronyme",
+      "Un palindrome",
       "Une anagramme",
       "Un homonyme"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Un palindrome se lit de gauche à droite comme de droite à gauche, comme radar ou kayak."
   },
   {
@@ -1433,12 +1433,12 @@
     "difficulty": "hardcore",
     "question": "Quelle plateforme française de financement participatif créée en 2010 porte un nom proche du cri de la chouette ?",
     "choices": [
-      "Ulule",
       "Tipeee",
       "KissKissBankBank",
+      "Ulule",
       "Leetchi"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Ulule est une plateforme française de financement participatif dont le nom évoque le cri de la chouette."
   },
   {
@@ -1447,12 +1447,12 @@
     "difficulty": "moyen",
     "question": "Quel phénomène de danse des années 2000 était associé à des mouvements de bras rapides, des crêtes et des vêtements bariolés ?",
     "choices": [
-      "La tecktonik",
       "Le jumpstyle",
       "La macarena",
-      "La tectonique des plaques"
+      "La tectonique des plaques",
+      "La tecktonik"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "La tecktonik a marqué les années 2000 avec une danse très codifiée et une esthétique reconnaissable."
   },
   {
@@ -1475,12 +1475,12 @@
     "difficulty": "hardcore",
     "question": "Quel rappeur français dit « j’prends pas d’bouteille en boîte, à Carrefour c’est 20 balles » dans le titre Christophe ?",
     "choices": [
-      "Orelsan",
       "Vald",
+      "Orelsan",
       "Nekfeu",
       "Damso"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Cette phrase vient du titre Christophe d’Orelsan."
   },
   {
@@ -1489,12 +1489,12 @@
     "difficulty": "hardcore",
     "question": "Quel rappeur français déclare « que le hip-hop français repose en paix » dans un album sorti en 2001 ?",
     "choices": [
-      "Booba",
       "Rohff",
       "Akhenaton",
+      "Booba",
       "MC Solaar"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Booba prononce cette phrase dans la période de son album Temps mort, sorti en 2001."
   },
   {
@@ -1503,12 +1503,12 @@
     "difficulty": "moyen",
     "question": "Quel dieu grec, lié aux Enfers et à Cerbère, donne son nom à un jeu vidéo sorti en 2018 ?",
     "choices": [
-      "Hadès",
       "Hermès",
       "Arès",
-      "Apollon"
+      "Apollon",
+      "Hadès"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Hadès est le dieu grec des Enfers et donne son nom au jeu vidéo Hades, sorti en accès anticipé en 2018."
   },
   {
@@ -1531,12 +1531,12 @@
     "difficulty": "moyen",
     "question": "Dans le brainrot italien, quel requin à baskets est devenu l’un des personnages les plus repris ?",
     "choices": [
-      "Tralalero Tralala",
       "Tung Tung Tung Sahur",
+      "Tralalero Tralala",
       "Brr Brr Patapim",
       "Lirili Larila"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Tralalero Tralala est représenté comme un requin portant des baskets."
   },
   {
@@ -1545,12 +1545,12 @@
     "difficulty": "moyen",
     "question": "Sur TikTok, que désigne globalement l’« aura farming » ?",
     "choices": [
-      "Construire une image de charisme sans effort",
       "Cultiver des plantes connectées",
       "Faire du minage crypto",
+      "Construire une image de charisme sans effort",
       "Farmer de l’XP sur FIFA"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "L’aura farming désigne la mise en scène d’une impression de charisme ou de présence."
   },
   {
@@ -1559,12 +1559,12 @@
     "difficulty": "moyen",
     "question": "Quel mème de stock photo représente un homme souriant semblant masquer son malaise ?",
     "choices": [
-      "Hide the Pain Harold",
       "Bad Luck Brian",
       "Overly Attached Girlfriend",
-      "Success Kid"
+      "Success Kid",
+      "Hide the Pain Harold"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Hide the Pain Harold est un mème issu de photos de stock montrant un homme au sourire crispé."
   },
   {
@@ -1587,12 +1587,12 @@
     "difficulty": "moyen",
     "question": "Quel joueur français est souvent comparé à une Tortue Ninja dans les mèmes football ?",
     "choices": [
-      "Kylian Mbappé",
       "Antoine Griezmann",
+      "Kylian Mbappé",
       "Olivier Giroud",
       "Paul Pogba"
     ],
-    "answerIndex": 0,
+    "answerIndex": 1,
     "explanation": "Kylian Mbappé est régulièrement comparé à une Tortue Ninja dans les mèmes."
   },
   {
@@ -1601,12 +1601,12 @@
     "difficulty": "hardcore",
     "question": "Complète la phrase culte de Didier Drogba après Chelsea-Barça 2009 : « It’s a ___ disgrace ».",
     "choices": [
-      "fucking",
       "massive",
       "total",
+      "fucking",
       "blue"
     ],
-    "answerIndex": 0,
+    "answerIndex": 2,
     "explanation": "Didier Drogba a prononcé cette phrase après la demi-finale de Ligue des champions Chelsea-Barça en 2009."
   },
   {
@@ -1615,12 +1615,12 @@
     "difficulty": "hardcore",
     "question": "Quel joueur suédois est connu pour parler fréquemment de lui à la troisième personne ?",
     "choices": [
-      "Zlatan Ibrahimović",
       "Henrik Larsson",
       "Alexander Isak",
-      "Dejan Kulusevski"
+      "Dejan Kulusevski",
+      "Zlatan Ibrahimović"
     ],
-    "answerIndex": 0,
+    "answerIndex": 3,
     "explanation": "Zlatan Ibrahimović est connu pour utiliser régulièrement son prénom à la troisième personne."
   }
 ]

@@ -11,12 +11,14 @@ test("question bank has the expected MVP shape", () => {
 
   const categories = new Map();
   const ids = new Set();
+  const answerPositions = [0, 0, 0, 0];
 
   for (const question of questions) {
     ids.add(question.id);
     categories.set(question.category, (categories.get(question.category) || 0) + 1);
     assert.equal(question.choices.length, 4);
     assert.ok(question.answerIndex >= 0 && question.answerIndex <= 3);
+    answerPositions[question.answerIndex] += 1;
   }
 
   assert.equal(ids.size, questions.length);
@@ -24,4 +26,6 @@ test("question bank has the expected MVP shape", () => {
   for (const category of expectedCategories) {
     assert.ok(categories.get(category) >= 10, `${category} should have at least 10 questions`);
   }
+
+  assert.ok(Math.max(...answerPositions) - Math.min(...answerPositions) <= 1);
 });
