@@ -140,6 +140,118 @@
     "explanation": "Un jour sans fin est connu pour sa boucle temporelle autour du Jour de la marmotte."
   },
   {
+    "id": "pop-011",
+    "category": "Pop culture déglinguée",
+    "difficulty": "simple",
+    "question": "Dans Toy Story, quel jouet prononce la phrase « Vers l’infini et au-delà » ?",
+    "choices": [
+      "Woody",
+      "Buzz l’Éclair",
+      "Monsieur Patate",
+      "Zigzag"
+    ],
+    "answerIndex": 1,
+    "explanation": "Buzz l’Éclair utilise cette phrase comme devise dans Toy Story."
+  },
+  {
+    "id": "pop-012",
+    "category": "Pop culture déglinguée",
+    "difficulty": "simple",
+    "question": "Dans Le Roi Lion, quel personnage soulève Simba au-dessus du Rocher des Lions ?",
+    "choices": [
+      "Timon",
+      "Pumbaa",
+      "Rafiki",
+      "Zazu"
+    ],
+    "answerIndex": 2,
+    "explanation": "Rafiki présente Simba aux animaux du royaume au début du film."
+  },
+  {
+    "id": "pop-013",
+    "category": "Pop culture déglinguée",
+    "difficulty": "simple",
+    "question": "Dans Harry Potter, quelle formule magique permet d’ouvrir une porte verrouillée ?",
+    "choices": [
+      "Expelliarmus",
+      "Alohomora",
+      "Lumos",
+      "Avada Kedavra"
+    ],
+    "answerIndex": 1,
+    "explanation": "Alohomora est un sortilège utilisé pour déverrouiller des portes."
+  },
+  {
+    "id": "pop-014",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Dans Kaamelott, quel roi dirige notamment Perceval et Karadoc ?",
+    "choices": [
+      "Lancelot",
+      "Arthur",
+      "Loth",
+      "Léodagan"
+    ],
+    "answerIndex": 1,
+    "explanation": "Arthur est le roi de Bretagne au centre de la série Kaamelott."
+  },
+  {
+    "id": "pop-015",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Dans Friends, quel personnage répète « Pivot » pendant le déménagement d’un canapé ?",
+    "choices": [
+      "Chandler",
+      "Joey",
+      "Ross",
+      "Gunther"
+    ],
+    "answerIndex": 2,
+    "explanation": "Ross répète « Pivot » dans une scène célèbre de déménagement."
+  },
+  {
+    "id": "pop-016",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Dans GTA V, quel personnage est connu pour son comportement particulièrement imprévisible et violent ?",
+    "choices": [
+      "Michael",
+      "Franklin",
+      "Trevor",
+      "Lamar"
+    ],
+    "answerIndex": 2,
+    "explanation": "Trevor Philips est l’un des trois protagonistes jouables de GTA V."
+  },
+  {
+    "id": "pop-017",
+    "category": "Pop culture déglinguée",
+    "difficulty": "moyen",
+    "question": "Dans Matrix, quelle pilule Néo choisit-il pour découvrir la réalité ?",
+    "choices": [
+      "La bleue",
+      "La rouge",
+      "La verte",
+      "La blanche"
+    ],
+    "answerIndex": 1,
+    "explanation": "Néo choisit la pilule rouge, qui le fait sortir de la simulation."
+  },
+  {
+    "id": "pop-018",
+    "category": "Pop culture déglinguée",
+    "difficulty": "hardcore",
+    "question": "Dans The Boys, quel super-héros patriote dirige les Sept et dissimule une personnalité violente ?",
+    "choices": [
+      "A-Train",
+      "Homelander",
+      "The Deep",
+      "Black Noir"
+    ],
+    "answerIndex": 1,
+    "explanation": "Homelander est le chef des Sept et l’un des principaux antagonistes de The Boys."
+  },
+  {
     "id": "tox-001",
     "category": "Alcool, drogues & fictions",
     "difficulty": "simple",
@@ -278,6 +390,104 @@
     ],
     "answerIndex": 0,
     "explanation": "Le pastis est un alcool anisé très associé au sud de la France."
+  },
+  {
+    "id": "tox-011",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "simple",
+    "question": "Dans Pirates des Caraïbes, quelle boisson est particulièrement associée à Jack Sparrow ?",
+    "choices": [
+      "Le rhum",
+      "Le saké",
+      "Le gin tonic",
+      "Le pastis"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le rhum est une boisson récurrente associée à Jack Sparrow dans la saga."
+  },
+  {
+    "id": "tox-012",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "simple",
+    "question": "Dans Harry Potter, quelle potion est surnommée chance liquide ?",
+    "choices": [
+      "Felix Felicis",
+      "Polynectar",
+      "Amortentia",
+      "Veritaserum"
+    ],
+    "answerIndex": 0,
+    "explanation": "Felix Felicis est une potion qui donne temporairement de la chance à celui qui la boit."
+  },
+  {
+    "id": "tox-013",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "simple",
+    "question": "Dans Dune, quelle substance permet notamment les visions et rend possible la navigation spatiale ?",
+    "choices": [
+      "L’Épice",
+      "Le soma",
+      "Le NZT",
+      "La poussière rouge"
+    ],
+    "answerIndex": 0,
+    "explanation": "L’Épice, aussi appelée mélange, est une substance centrale dans l’univers de Dune."
+  },
+  {
+    "id": "tox-014",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "moyen",
+    "question": "Dans Las Vegas Parano, quel duo traverse le Nevada sous l’effet de nombreuses drogues ?",
+    "choices": [
+      "Raoul Duke et Dr Gonzo",
+      "Jules et Vincent",
+      "Jay et Silent Bob",
+      "Walter et Jesse"
+    ],
+    "answerIndex": 0,
+    "explanation": "Raoul Duke et Dr Gonzo sont les deux personnages principaux de Las Vegas Parano."
+  },
+  {
+    "id": "tox-015",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "moyen",
+    "question": "Dans Alice au pays des merveilles, quel effet certains aliments et boissons ont-ils sur Alice ?",
+    "choices": [
+      "Changer de taille",
+      "Devenir invisible",
+      "Parler aux morts",
+      "Voir le futur"
+    ],
+    "answerIndex": 0,
+    "explanation": "Certains aliments et boissons font grandir ou rétrécir Alice."
+  },
+  {
+    "id": "tox-016",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "moyen",
+    "question": "Dans James Bond, quelle boisson est souvent associée à la formule « shaken, not stirred » ?",
+    "choices": [
+      "Vodka martini",
+      "Mojito",
+      "Margarita",
+      "White Russian"
+    ],
+    "answerIndex": 0,
+    "explanation": "James Bond commande régulièrement un vodka martini « shaken, not stirred »."
+  },
+  {
+    "id": "tox-017",
+    "category": "Alcool, drogues & fictions",
+    "difficulty": "hardcore",
+    "question": "Dans Orange mécanique, quel traitement expérimental vise à conditionner Alex contre la violence ?",
+    "choices": [
+      "Le traitement Ludovico",
+      "Le protocole Tannhäuser",
+      "Le sérum V",
+      "Le programme MKUltra"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le traitement Ludovico est utilisé pour conditionner Alex dans Orange mécanique."
   },
   {
     "id": "body-001",
@@ -420,6 +630,132 @@
     "explanation": "Le tableau de Manet a notamment marqué les esprits par la présence d’une femme nue parmi des personnages habillés."
   },
   {
+    "id": "body-011",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "simple",
+    "question": "Quel os est généralement le plus long du corps humain ?",
+    "choices": [
+      "Le fémur",
+      "Le tibia",
+      "L’humérus",
+      "La clavicule"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le fémur, situé dans la cuisse, est généralement considéré comme l’os le plus long du corps humain."
+  },
+  {
+    "id": "body-012",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "simple",
+    "question": "Quel muscle est principalement responsable du hoquet ?",
+    "choices": [
+      "Le diaphragme",
+      "Le biceps",
+      "Le périnée",
+      "Le trapèze"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le hoquet est provoqué par une contraction involontaire du diaphragme."
+  },
+  {
+    "id": "body-013",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "simple",
+    "question": "Quel petit organe pend au fond de la gorge ?",
+    "choices": [
+      "La luette",
+      "L’appendice",
+      "Le tympan",
+      "La cornée"
+    ],
+    "answerIndex": 0,
+    "explanation": "La luette est la petite structure visible au fond du palais mou."
+  },
+  {
+    "id": "body-014",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "simple",
+    "question": "Quel organe peut se régénérer partiellement après une ablation ?",
+    "choices": [
+      "Le foie",
+      "Le cœur",
+      "Le poumon",
+      "La rate"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le foie possède une capacité importante de régénération partielle."
+  },
+  {
+    "id": "body-015",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "moyen",
+    "question": "Comment appelle-t-on une érection persistante et douloureuse nécessitant une prise en charge médicale ?",
+    "choices": [
+      "Priapisme",
+      "Phimosis",
+      "Varicocèle",
+      "Endométriose"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le priapisme est une érection prolongée et douloureuse qui peut constituer une urgence médicale."
+  },
+  {
+    "id": "body-016",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "moyen",
+    "question": "Quel réflexe fait éternuer certaines personnes lorsqu’elles regardent une lumière forte ?",
+    "choices": [
+      "Le réflexe photique",
+      "Le réflexe rotulien",
+      "Le réflexe vagal",
+      "Le réflexe nauséeux"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le réflexe photique désigne l’éternuement déclenché par une lumière intense chez certaines personnes."
+  },
+  {
+    "id": "body-017",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "hardcore",
+    "question": "Comment appelle-t-on l’écoulement de lait hors allaitement, parfois lié à un dérèglement hormonal ?",
+    "choices": [
+      "Galactorrhée",
+      "Gingivite",
+      "Cystite",
+      "Sciatique"
+    ],
+    "answerIndex": 0,
+    "explanation": "La galactorrhée correspond à un écoulement lacté en dehors d’une période d’allaitement."
+  },
+  {
+    "id": "body-018",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "hardcore",
+    "question": "Quel trouble désigne une contraction involontaire du vagin pouvant rendre la pénétration douloureuse ou impossible ?",
+    "choices": [
+      "Vaginisme",
+      "Priapisme",
+      "Endométriose",
+      "Candidose"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le vaginisme se caractérise par une contraction involontaire des muscles du plancher pelvien."
+  },
+  {
+    "id": "body-019",
+    "category": "Corps, cul & malaise poli",
+    "difficulty": "hardcore",
+    "question": "Quel nerf est impliqué dans le malaise vagal ?",
+    "choices": [
+      "Le nerf vague",
+      "Le nerf sciatique",
+      "Le nerf optique",
+      "Le nerf facial"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le malaise vagal est lié à une stimulation du nerf vague."
+  },
+  {
     "id": "death-001",
     "category": "Mort, musique & destins claqués",
     "difficulty": "moyen",
@@ -558,6 +894,174 @@
     ],
     "answerIndex": 0,
     "explanation": "XXXTentacion a été tué en Floride en 2018."
+  },
+  {
+    "id": "death-011",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "simple",
+    "question": "Quelle chanteuse de R&B est morte dans un crash d’avion en 2001 après le tournage d’un clip ?",
+    "choices": [
+      "Aaliyah",
+      "Brandy",
+      "Ashanti",
+      "Ciara"
+    ],
+    "answerIndex": 0,
+    "explanation": "Aaliyah est morte dans un accident d’avion aux Bahamas en 2001."
+  },
+  {
+    "id": "death-012",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel chanteur de Joy Division, voix de Love Will Tear Us Apart, s’est suicidé en 1980 ?",
+    "choices": [
+      "Ian Curtis",
+      "Robert Smith",
+      "Morrissey",
+      "Peter Murphy"
+    ],
+    "answerIndex": 0,
+    "explanation": "Ian Curtis était le chanteur de Joy Division."
+  },
+  {
+    "id": "death-013",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel rappeur américain, connu pour Lucid Dreams, a eu l’album posthume Legends Never Die ?",
+    "choices": [
+      "Juice WRLD",
+      "Pop Smoke",
+      "Lil Peep",
+      "Mac Miller"
+    ],
+    "answerIndex": 0,
+    "explanation": "Legends Never Die est un album posthume de Juice WRLD."
+  },
+  {
+    "id": "death-014",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel chanteur de Motörhead est mort en 2015 ?",
+    "choices": [
+      "Lemmy Kilmister",
+      "Ozzy Osbourne",
+      "Alice Cooper",
+      "Iggy Pop"
+    ],
+    "answerIndex": 0,
+    "explanation": "Lemmy Kilmister était le chanteur et bassiste de Motörhead."
+  },
+  {
+    "id": "death-015",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel rappeur américain, connu pour Dior, a été tué en 2020 lors d’un cambriolage ?",
+    "choices": [
+      "Pop Smoke",
+      "Takeoff",
+      "Nipsey Hussle",
+      "DMX"
+    ],
+    "answerIndex": 0,
+    "explanation": "Pop Smoke est mort en 2020 lors d’une intrusion à son domicile."
+  },
+  {
+    "id": "death-016",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel membre du groupe Migos a été tué à Houston en 2022 ?",
+    "choices": [
+      "Quavo",
+      "Offset",
+      "Takeoff",
+      "Metro Boomin"
+    ],
+    "answerIndex": 2,
+    "explanation": "Takeoff, membre de Migos, est mort à Houston en 2022."
+  },
+  {
+    "id": "death-017",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel artiste britannique, alter ego de Ziggy Stardust, est mort en 2016 après la sortie de Blackstar ?",
+    "choices": [
+      "David Bowie",
+      "George Michael",
+      "Prince",
+      "Mick Jagger"
+    ],
+    "answerIndex": 0,
+    "explanation": "David Bowie est mort en janvier 2016, peu après la sortie de Blackstar."
+  },
+  {
+    "id": "death-018",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "moyen",
+    "question": "Quel chanteur américain de Linkin Park a aussi chanté avec Stone Temple Pilots avant sa mort ?",
+    "choices": [
+      "Chester Bennington",
+      "Chris Cornell",
+      "Scott Weiland",
+      "Layne Staley"
+    ],
+    "answerIndex": 0,
+    "explanation": "Chester Bennington a chanté avec Linkin Park et Stone Temple Pilots."
+  },
+  {
+    "id": "death-019",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "hardcore",
+    "question": "Quel guitariste des Rolling Stones est mort noyé dans sa piscine en 1969 ?",
+    "choices": [
+      "Brian Jones",
+      "Keith Richards",
+      "Ronnie Wood",
+      "Mick Taylor"
+    ],
+    "answerIndex": 0,
+    "explanation": "Brian Jones, membre fondateur des Rolling Stones, est mort en 1969."
+  },
+  {
+    "id": "death-020",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "hardcore",
+    "question": "Quel chanteur de INXS a été retrouvé mort en 1997 dans une chambre d’hôtel à Sydney ?",
+    "choices": [
+      "Michael Hutchence",
+      "Bono",
+      "Nick Cave",
+      "Michael Stipe"
+    ],
+    "answerIndex": 0,
+    "explanation": "Michael Hutchence était le chanteur du groupe INXS."
+  },
+  {
+    "id": "death-021",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "hardcore",
+    "question": "Quel producteur et DJ français, moitié de Cassius, est mort accidentellement en 2019 à Paris ?",
+    "choices": [
+      "Philippe Zdar",
+      "DJ Mehdi",
+      "Kavinsky",
+      "Étienne de Crécy"
+    ],
+    "answerIndex": 0,
+    "explanation": "Philippe Zdar formait le duo Cassius avec Boom Bass."
+  },
+  {
+    "id": "death-022",
+    "category": "Mort, musique & destins claqués",
+    "difficulty": "hardcore",
+    "question": "Quel rappeur de Memphis, proche de Key Glock, a été assassiné devant une boulangerie en 2021 ?",
+    "choices": [
+      "Young Dolph",
+      "Lil Durk",
+      "Moneybagg Yo",
+      "Yo Gotti"
+    ],
+    "answerIndex": 0,
+    "explanation": "Young Dolph a été tué à Memphis en 2021."
   },
   {
     "id": "weird-001",
@@ -700,6 +1204,174 @@
     "explanation": "L'ornithorynque est un mammifère ovipare doté d'un bec."
   },
   {
+    "id": "weird-011",
+    "category": "Culture générale chelou",
+    "difficulty": "simple",
+    "question": "Quel métal est liquide à température ambiante ?",
+    "choices": [
+      "Le mercure",
+      "Le fer",
+      "Le cuivre",
+      "Le lithium"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le mercure est un métal liquide à température ambiante."
+  },
+  {
+    "id": "weird-012",
+    "category": "Culture générale chelou",
+    "difficulty": "simple",
+    "question": "Quel phénomène consiste à voir des visages dans des objets ?",
+    "choices": [
+      "La paréidolie",
+      "La synesthésie",
+      "La presbytie",
+      "La catalepsie"
+    ],
+    "answerIndex": 0,
+    "explanation": "La paréidolie consiste à percevoir une forme familière, comme un visage, dans un stimulus ambigu."
+  },
+  {
+    "id": "weird-013",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel mammifère possède des empreintes digitales très proches de celles des humains ?",
+    "choices": [
+      "Le koala",
+      "Le hérisson",
+      "Le lama",
+      "Le castor"
+    ],
+    "answerIndex": 0,
+    "explanation": "Les empreintes digitales des koalas peuvent ressembler fortement à celles des humains."
+  },
+  {
+    "id": "weird-014",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel animal peut dormir avec une moitié du cerveau active ?",
+    "choices": [
+      "Le dauphin",
+      "Le panda",
+      "Le chat",
+      "La poule"
+    ],
+    "answerIndex": 0,
+    "explanation": "Certains dauphins pratiquent le sommeil unihémisphérique."
+  },
+  {
+    "id": "weird-015",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel oiseau australien est capable d’imiter des sons comme des tronçonneuses ou des appareils photo ?",
+    "choices": [
+      "Le ménure superbe",
+      "Le casoar",
+      "Le kiwi",
+      "Le pélican"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le ménure superbe est connu pour ses capacités d’imitation sonore."
+  },
+  {
+    "id": "weird-016",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel poisson peut changer de sexe au cours de sa vie selon l’organisation du groupe ?",
+    "choices": [
+      "Le poisson-clown",
+      "Le piranha",
+      "Le poisson-lune",
+      "Le saumon"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le poisson-clown peut changer de sexe selon la structure sociale du groupe."
+  },
+  {
+    "id": "weird-017",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel animal est célèbre pour ne pratiquement pas pouvoir vomir ?",
+    "choices": [
+      "Le cheval",
+      "Le chien",
+      "Le porc",
+      "Le singe"
+    ],
+    "answerIndex": 0,
+    "explanation": "Les chevaux vomissent très rarement en raison de particularités anatomiques et physiologiques."
+  },
+  {
+    "id": "weird-018",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel fruit est botaniquement une baie, contrairement à la fraise ?",
+    "choices": [
+      "La banane",
+      "La pomme",
+      "La pêche",
+      "La noix"
+    ],
+    "answerIndex": 0,
+    "explanation": "La banane répond à la définition botanique d’une baie."
+  },
+  {
+    "id": "weird-019",
+    "category": "Culture générale chelou",
+    "difficulty": "moyen",
+    "question": "Quel volcan a enseveli Pompéi en 79 après J.-C. ?",
+    "choices": [
+      "Le Vésuve",
+      "L’Etna",
+      "Le Stromboli",
+      "Le Krakatoa"
+    ],
+    "answerIndex": 0,
+    "explanation": "L’éruption du Vésuve a enseveli Pompéi en 79 après J.-C."
+  },
+  {
+    "id": "weird-020",
+    "category": "Culture générale chelou",
+    "difficulty": "hardcore",
+    "question": "Quel champignon parasite peut modifier le comportement de certaines fourmis ?",
+    "choices": [
+      "Ophiocordyceps",
+      "Pénicillium",
+      "Amanite phalloïde",
+      "Truffe noire"
+    ],
+    "answerIndex": 0,
+    "explanation": "Certains champignons du genre Ophiocordyceps parasitent des fourmis et modifient leur comportement."
+  },
+  {
+    "id": "weird-021",
+    "category": "Culture générale chelou",
+    "difficulty": "hardcore",
+    "question": "Quel phénomène optique donne parfois l’impression qu’un bateau flotte au-dessus de l’horizon ?",
+    "choices": [
+      "Fata Morgana",
+      "Aurore boréale",
+      "Mirage gravitationnel",
+      "Effet Doppler"
+    ],
+    "answerIndex": 0,
+    "explanation": "Une Fata Morgana est un mirage complexe pouvant déformer fortement les objets à l’horizon."
+  },
+  {
+    "id": "weird-022",
+    "category": "Culture générale chelou",
+    "difficulty": "hardcore",
+    "question": "Quelle bactérie est responsable du botulisme ?",
+    "choices": [
+      "Clostridium botulinum",
+      "Yersinia pestis",
+      "Escherichia coli",
+      "Staphylococcus aureus"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le botulisme est lié à la toxine produite par Clostridium botulinum."
+  },
+  {
     "id": "net-001",
     "category": "Internet, memes & numérique",
     "difficulty": "moyen",
@@ -838,5 +1510,117 @@
     ],
     "answerIndex": 0,
     "explanation": "Hadès est le dieu grec des Enfers et donne son nom au jeu vidéo Hades, sorti en accès anticipé en 2018."
+  },
+  {
+    "id": "net-011",
+    "category": "Internet, memes & numérique",
+    "difficulty": "simple",
+    "question": "Dans le mème du chien assis dans une pièce en feu, quelle phrase résume son déni ?",
+    "choices": [
+      "This is fine",
+      "I’m baby",
+      "We ball",
+      "No cap"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le mème « This is fine » montre un chien restant calme dans une pièce en feu."
+  },
+  {
+    "id": "net-012",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Dans le brainrot italien, quel requin à baskets est devenu l’un des personnages les plus repris ?",
+    "choices": [
+      "Tralalero Tralala",
+      "Tung Tung Tung Sahur",
+      "Brr Brr Patapim",
+      "Lirili Larila"
+    ],
+    "answerIndex": 0,
+    "explanation": "Tralalero Tralala est représenté comme un requin portant des baskets."
+  },
+  {
+    "id": "net-013",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Sur TikTok, que désigne globalement l’« aura farming » ?",
+    "choices": [
+      "Construire une image de charisme sans effort",
+      "Cultiver des plantes connectées",
+      "Faire du minage crypto",
+      "Farmer de l’XP sur FIFA"
+    ],
+    "answerIndex": 0,
+    "explanation": "L’aura farming désigne la mise en scène d’une impression de charisme ou de présence."
+  },
+  {
+    "id": "net-014",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Quel mème de stock photo représente un homme souriant semblant masquer son malaise ?",
+    "choices": [
+      "Hide the Pain Harold",
+      "Bad Luck Brian",
+      "Overly Attached Girlfriend",
+      "Success Kid"
+    ],
+    "answerIndex": 0,
+    "explanation": "Hide the Pain Harold est un mème issu de photos de stock montrant un homme au sourire crispé."
+  },
+  {
+    "id": "net-015",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Quel cri de célébration de Cristiano Ronaldo est devenu un mème sonore ?",
+    "choices": [
+      "Siuuu",
+      "Vamosss",
+      "Calma",
+      "Golazo"
+    ],
+    "answerIndex": 0,
+    "explanation": "Le « Siuuu » est associé aux célébrations de Cristiano Ronaldo."
+  },
+  {
+    "id": "net-016",
+    "category": "Internet, memes & numérique",
+    "difficulty": "moyen",
+    "question": "Quel joueur français est souvent comparé à une Tortue Ninja dans les mèmes football ?",
+    "choices": [
+      "Kylian Mbappé",
+      "Antoine Griezmann",
+      "Olivier Giroud",
+      "Paul Pogba"
+    ],
+    "answerIndex": 0,
+    "explanation": "Kylian Mbappé est régulièrement comparé à une Tortue Ninja dans les mèmes."
+  },
+  {
+    "id": "net-017",
+    "category": "Internet, memes & numérique",
+    "difficulty": "hardcore",
+    "question": "Complète la phrase culte de Didier Drogba après Chelsea-Barça 2009 : « It’s a ___ disgrace ».",
+    "choices": [
+      "fucking",
+      "massive",
+      "total",
+      "blue"
+    ],
+    "answerIndex": 0,
+    "explanation": "Didier Drogba a prononcé cette phrase après la demi-finale de Ligue des champions Chelsea-Barça en 2009."
+  },
+  {
+    "id": "net-018",
+    "category": "Internet, memes & numérique",
+    "difficulty": "hardcore",
+    "question": "Quel joueur suédois est connu pour parler fréquemment de lui à la troisième personne ?",
+    "choices": [
+      "Zlatan Ibrahimović",
+      "Henrik Larsson",
+      "Alexander Isak",
+      "Dejan Kulusevski"
+    ],
+    "answerIndex": 0,
+    "explanation": "Zlatan Ibrahimović est connu pour utiliser régulièrement son prénom à la troisième personne."
   }
 ]

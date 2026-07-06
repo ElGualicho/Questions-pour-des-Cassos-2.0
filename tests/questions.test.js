@@ -2,9 +2,11 @@ const assert = require("node:assert/strict");
 const test = require("node:test");
 const questions = require("../data/questions.json");
 const { validateQuestions } = require("../src/gameStore");
+const { themesByCategory } = require("../src/themes");
 
 test("question bank has the expected MVP shape", () => {
-  assert.equal(questions.length, 60);
+  const expectedCategories = Object.keys(themesByCategory);
+  assert.ok(questions.length >= expectedCategories.length * 10);
   assert.doesNotThrow(() => validateQuestions(questions));
 
   const categories = new Map();
@@ -18,6 +20,8 @@ test("question bank has the expected MVP shape", () => {
   }
 
   assert.equal(ids.size, questions.length);
-  assert.equal(categories.size, 6);
-  assert.deepEqual([...categories.values()].sort((a, b) => a - b), [10, 10, 10, 10, 10, 10]);
+  assert.equal(categories.size, expectedCategories.length);
+  for (const category of expectedCategories) {
+    assert.ok(categories.get(category) >= 10, `${category} should have at least 10 questions`);
+  }
 });
