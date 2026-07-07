@@ -85,7 +85,8 @@ io.on("connection", (socket) => {
   socket.on("host:startGame", (payload, reply) => {
     handleSocket(reply, () => {
       const game = store.startGame(payload && payload.code, {
-        questionCount: payload && payload.questionCount
+        questionCount: payload && payload.questionCount,
+        questionDurationMs: payload && payload.questionDurationMs
       });
       emitGame(game);
       return { state: store.getHostState(game) };

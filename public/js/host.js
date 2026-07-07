@@ -11,6 +11,7 @@ const codeLabel = hostUI.$("#game-code");
 const qrCode = hostUI.$("#qr-code");
 const copyLinkButton = hostUI.$("#copy-link");
 const questionCount = hostUI.$("#question-count");
+const questionDuration = hostUI.$("#question-duration");
 const startButton = hostUI.$("#start-game");
 const resetButton = hostUI.$("#reset-game");
 const revealButton = hostUI.$("#reveal-answer");
@@ -19,6 +20,7 @@ const newGameButton = hostUI.$("#new-game");
 const playerCount = hostUI.$("#player-count");
 const playerList = hostUI.$("#player-list");
 const themeStrip = hostUI.$("#theme-strip");
+const hostTimer = hostUI.$("#host-timer");
 const roundLabel = hostUI.$("#round-label");
 const responsesLabel = hostUI.$("#responses-label");
 const questionCategory = hostUI.$("#question-category");
@@ -45,7 +47,11 @@ startButton.addEventListener("click", () => {
   }
   hostSocket.emit(
     "host:startGame",
-    { code: hostState.code, questionCount: questionCount.value },
+    {
+      code: hostState.code,
+      questionCount: questionCount.value,
+      questionDurationMs: questionDuration.value
+    },
     handleReply(receiveHostState)
   );
 });
@@ -113,6 +119,7 @@ function renderLiveQuestionState() {
     return;
   }
   renderControls();
+  renderHostTimer();
 }
 
 function render() {
@@ -137,11 +144,13 @@ function render() {
   qrCode.src = `/api/games/${encodeURIComponent(hostState.code)}/qr.svg`;
   statusLabel.textContent = statusText(hostState.status);
   questionCount.value = String(hostState.settings.questionCount);
+  questionDuration.value = String(hostState.settings.questionDurationMs || hostState.questionDurationMs || 10000);
   playerCount.textContent = String(hostState.players.length);
 
   renderPlayers();
   renderQuestion();
   renderControls();
+  renderHostTimer();
   renderLeaderboard();
 }
 
@@ -186,6 +195,7 @@ function renderQuestion() {
   if (!question) {
     questionCategory.textContent = "Lobby";
     questionText.textContent = "Partage le code, laisse les joueurs entrer, puis lance la partie.";
+    hostUI.setHidden(hostTimer, true);
     themeStrip.style.backgroundImage = "";
     hostAnswers.classList.remove("many-answers");
     return;
@@ -223,8 +233,11 @@ function renderControls() {
 
   startButton.disabled = !isLobby;
   questionCount.disabled = !isLobby;
+  questionDuration.disabled = !isLobby;
   revealButton.disabled = !canReveal;
-  revealButton.title = isQuestion && !canReveal ? "Disponible après 10 secondes ou quand tout le monde a répondu." : "";
+  revealButton.title = isQuestion && !canReveal
+    ? `Disponible après ${Math.round((hostState.questionDurationMs || 10000) / 1000)} secondes ou quand tout le monde a répondu.`
+    : "";
   nextButton.disabled = !isRevealed;
   newGameButton.disabled = isLobby;
   hostUI.setHidden(newGameButton, isLobby);
@@ -236,6 +249,15 @@ function renderControls() {
     revealButton.disabled = true;
     nextButton.disabled = true;
   }
+}
+
+function renderHostTimer() {
+  const visible = Boolean(hostState && hostState.status === "question" && hostState.currentQuestion);
+  hostUI.setHidden(hostTimer, !visible);
+  if (!visible) {
+    return;
+  }
+  hostTimer.textContent = hostUI.countdownLabel(hostState);
 }
 
 function canRevealCurrentQuestion() {

@@ -424,15 +424,28 @@ button:disabled {
   box-shadow: none;
 }
 
-.host-view.host-lobby .settings-row {
-  display: none;
-}
-
 .host-view.host-lobby select {
-  min-height: 42px;
+  min-height: 38px;
   color: #050505;
   border-color: rgba(0, 0, 0, 0.22);
   background: rgba(255, 255, 255, 0.18);
+  font-weight: 900;
+}
+
+.host-view.host-lobby .settings-row {
+  grid-column: 1;
+  width: min(194px, 100%);
+  gap: 5px;
+  margin: 0;
+}
+
+.host-view.host-lobby .question-count-row {
+  grid-row: 2;
+  margin-top: 2px;
+}
+
+.host-view.host-lobby .question-duration-row {
+  grid-row: 3;
 }
 
 .host-view.host-lobby #copy-link,
@@ -461,12 +474,12 @@ button:disabled {
 }
 
 .host-view.host-lobby #start-game {
-  grid-row: 2;
+  grid-row: 4;
   margin-top: 2px;
 }
 
 .host-view.host-lobby #reset-game {
-  grid-row: 3;
+  grid-row: 5;
   color: #050505;
   background: rgba(0, 0, 0, 0.13);
   box-shadow: none;
@@ -868,6 +881,18 @@ form label {
   text-shadow: 0 2px 10px rgba(255, 255, 255, 0.42);
 }
 
+.host-timer {
+  display: grid;
+  place-items: center;
+  margin: 0 auto clamp(2px, 0.7vh, 8px);
+  color: var(--theme-ink);
+  font-size: clamp(2.4rem, 8vw, 5.2rem);
+  font-weight: 950;
+  line-height: 0.9;
+  text-shadow: 0 4px 18px color-mix(in srgb, var(--theme-accent) 38%, transparent);
+  font-variant-numeric: tabular-nums;
+}
+
 .player-view.in-game .player-header {
   display: none;
 }
@@ -1111,6 +1136,8 @@ form label {
 
   .host-view.host-lobby .code-box,
   .host-view.host-lobby .qr-code,
+  .host-view.host-lobby .question-count-row,
+  .host-view.host-lobby .question-duration-row,
   .host-view.host-lobby #start-game,
   .host-view.host-lobby #reset-game,
   .host-view.host-lobby .layout-grid > .side-panel:last-child {
@@ -1127,16 +1154,24 @@ form label {
     grid-row: 2;
   }
 
-  .host-view.host-lobby #start-game {
+  .host-view.host-lobby .question-count-row {
     grid-row: 3;
   }
 
-  .host-view.host-lobby #reset-game {
+  .host-view.host-lobby .question-duration-row {
     grid-row: 4;
   }
 
-  .host-view.host-lobby .layout-grid > .side-panel:last-child {
+  .host-view.host-lobby #start-game {
     grid-row: 5;
+  }
+
+  .host-view.host-lobby #reset-game {
+    grid-row: 6;
+  }
+
+  .host-view.host-lobby .layout-grid > .side-panel:last-child {
+    grid-row: 7;
     width: min(100%, 430px);
   }
 

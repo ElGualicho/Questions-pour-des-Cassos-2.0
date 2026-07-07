@@ -2,8 +2,9 @@ const crypto = require("crypto");
 const { getThemeForCategory } = require("./themes");
 
 const DEFAULT_QUESTION_COUNT = 10;
-const QUESTION_DURATION_MS = 10000;
-const VALID_COUNTS = new Set([10, 20, "all"]);
+const DEFAULT_QUESTION_DURATION_MS = 10000;
+const VALID_COUNTS = new Set([10, 20, 30, 40, "all"]);
+const VALID_QUESTION_DURATIONS_MS = new Set([10000, 15000, 20000]);
 const BONUS_QUESTION_ID = "bonus-daronne-finale";
 const BONUS_QUESTION_TEXT =
   "De quel joueur la daronne m\u00e9rite-t-elle le titre de daronne la plus ind\u00e9fendable ?";
@@ -30,7 +31,8 @@ function createGameStore(rawQuestions) {
       questionStartedAt: null,
       questionDeadlineAt: null,
       settings: {
-        questionCount: DEFAULT_QUESTION_COUNT
+        questionCount: DEFAULT_QUESTION_COUNT,
+        questionDurationMs: DEFAULT_QUESTION_DURATION_MS
       },
       createdAt: Date.now()
     };
@@ -61,7 +63,9 @@ function createGameStore(rawQuestions) {
   function startGame(code, settings = {}) {
     const game = requireGame(code);
     const questionCount = parseQuestionCount(settings.questionCount);
+    const questionDurationMs = parseQuestionDurationMs(settings.questionDurationMs);
     game.settings.questionCount = questionCount;
+    game.settings.questionDurationMs = questionDurationMs;
     game.deck = buildDeck(questions, questionCount);
     game.deck.push(buildBonusQuestion(game));
     game.currentQuestionIndex = 0;
@@ -244,7 +248,7 @@ function createGameStore(rawQuestions) {
       responsesCount: game.currentAnswers.size,
       allAnswered: allPlayersAnswered(game),
       canReveal: canRevealQuestion(game),
-      questionDurationMs: QUESTION_DURATION_MS,
+      questionDurationMs: game.settings.questionDurationMs || DEFAULT_QUESTION_DURATION_MS,
       questionStartedAt: game.questionStartedAt,
       questionDeadlineAt: game.questionDeadlineAt,
       questionTimeRemainingMs: getQuestionTimeRemainingMs(game),
@@ -269,7 +273,7 @@ function createGameStore(rawQuestions) {
       currentQuestionNumber: currentQuestion ? game.currentQuestionIndex + 1 : 0,
       totalQuestions: game.deck.length,
       responsesCount: game.currentAnswers.size,
-      questionDurationMs: QUESTION_DURATION_MS,
+      questionDurationMs: game.settings.questionDurationMs || DEFAULT_QUESTION_DURATION_MS,
       questionStartedAt: game.questionStartedAt,
       questionDeadlineAt: game.questionDeadlineAt,
       questionTimeRemainingMs: getQuestionTimeRemainingMs(game),
@@ -457,7 +461,7 @@ function resetRoundAnswers(game) {
   game.currentAnswers.clear();
   game.currentScored = false;
   game.questionStartedAt = Date.now();
-  game.questionDeadlineAt = game.questionStartedAt + QUESTION_DURATION_MS;
+  game.questionDeadlineAt = game.questionStartedAt + (game.settings.questionDurationMs || DEFAULT_QUESTION_DURATION_MS);
 
   for (const player of game.players.values()) {
     player.hasAnswered = false;
@@ -614,6 +618,11 @@ function parseQuestionCount(value) {
 
   const parsed = Number(value);
   return VALID_COUNTS.has(parsed) ? parsed : DEFAULT_QUESTION_COUNT;
+}
+
+function parseQuestionDurationMs(value) {
+  const parsed = Number(value);
+  return VALID_QUESTION_DURATIONS_MS.has(parsed) ? parsed : DEFAULT_QUESTION_DURATION_MS;
 }
 
 function normalizeCode(code) {

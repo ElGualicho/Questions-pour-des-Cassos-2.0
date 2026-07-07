@@ -90,6 +90,23 @@ test("a player can change answer while the timer is running", () => {
   assert.equal(playerState.responsesCount, 1);
 });
 
+test("starting a game accepts lobby question count and timer settings", () => {
+  const store = createGameStore(questions);
+
+  for (const questionCount of [10, 20, 30, 40]) {
+    const game = store.createGame(`host-${questionCount}`);
+    const player = store.joinPlayer(game.code, "Alex", null, `socket-${questionCount}`).player;
+
+    store.startGame(game.code, { questionCount, questionDurationMs: 15000 });
+
+    assert.equal(game.settings.questionCount, questionCount);
+    assert.equal(game.settings.questionDurationMs, 15000);
+    assert.equal(game.questionDeadlineAt - game.questionStartedAt, 15000);
+    assert.equal(store.getHostState(game.code).questionDurationMs, 15000);
+    assert.equal(store.getPlayerState(game.code, player.token).questionDurationMs, 15000);
+  }
+});
+
 test("a player cannot change answer after the timer has ended", () => {
   const store = createGameStore(questions);
   const game = store.createGame("host-1");

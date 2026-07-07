@@ -21,12 +21,21 @@
             <button class="ghost-action" id="copy-link" type="button">Copier le lien</button>
           </div>
           <img class="qr-code" id="qr-code" alt="QR code de la partie">
-          <div class="settings-row">
+          <div class="settings-row question-count-row">
             <label for="question-count">Questions</label>
             <select id="question-count">
-              <option value="10">10</option>
-              <option value="20">20</option>
-              <option value="all">Toutes</option>
+              <option value="10">10 + bonus</option>
+              <option value="20">20 + bonus</option>
+              <option value="30">30 + bonus</option>
+              <option value="40">40 + bonus</option>
+            </select>
+          </div>
+          <div class="settings-row question-duration-row">
+            <label for="question-duration">Temps</label>
+            <select id="question-duration">
+              <option value="10000">10 s</option>
+              <option value="15000">15 s</option>
+              <option value="20000">20 s</option>
             </select>
           </div>
           <button class="primary-action wide" id="start-game" type="button">Lancer</button>
@@ -35,6 +44,7 @@
 
         <section class="play-panel">
           <div class="theme-strip" id="theme-strip"></div>
+          <div class="host-timer hidden" id="host-timer">10s</div>
 
           <div class="round-meta host-question-meta">
             <span id="round-label">En attente</span>
