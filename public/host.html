@@ -21,23 +21,6 @@
             <button class="ghost-action" id="copy-link" type="button">Copier le lien</button>
           </div>
           <img class="qr-code" id="qr-code" alt="QR code de la partie">
-          <div class="settings-row question-count-row">
-            <label for="question-count">Questions</label>
-            <select id="question-count">
-              <option value="10">10 + bonus</option>
-              <option value="20">20 + bonus</option>
-              <option value="30">30 + bonus</option>
-              <option value="40">40 + bonus</option>
-            </select>
-          </div>
-          <div class="settings-row question-duration-row">
-            <label for="question-duration">Temps</label>
-            <select id="question-duration">
-              <option value="10000">10 s</option>
-              <option value="15000">15 s</option>
-              <option value="20000">20 s</option>
-            </select>
-          </div>
           <button class="primary-action wide" id="start-game" type="button">Lancer</button>
           <button class="secondary-action wide" id="reset-game" type="button">Réinitialiser</button>
         </aside>
@@ -72,6 +55,25 @@
           <div class="section-title">
             <h2>Joueurs</h2>
             <span id="player-count">0</span>
+          </div>
+          <div class="lobby-settings">
+            <div class="settings-row question-count-row">
+              <label for="question-count">Questions</label>
+              <select id="question-count">
+                <option value="10">10 + bonus</option>
+                <option value="20">20 + bonus</option>
+                <option value="30">30 + bonus</option>
+                <option value="40">40 + bonus</option>
+              </select>
+            </div>
+            <div class="settings-row question-duration-row">
+              <label for="question-duration">Temps</label>
+              <select id="question-duration">
+                <option value="10000">10 s</option>
+                <option value="15000">15 s</option>
+                <option value="20000">20 s</option>
+              </select>
+            </div>
           </div>
           <div class="player-list" id="player-list"></div>
         </aside>

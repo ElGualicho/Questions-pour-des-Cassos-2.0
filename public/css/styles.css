@@ -432,20 +432,17 @@ button:disabled {
   font-weight: 900;
 }
 
+.host-view.host-lobby .lobby-settings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  width: min(100%, 430px);
+  margin: -4px 0 18px;
+}
+
 .host-view.host-lobby .settings-row {
-  grid-column: 1;
-  width: min(194px, 100%);
   gap: 5px;
   margin: 0;
-}
-
-.host-view.host-lobby .question-count-row {
-  grid-row: 2;
-  margin-top: 2px;
-}
-
-.host-view.host-lobby .question-duration-row {
-  grid-row: 3;
 }
 
 .host-view.host-lobby #copy-link,
@@ -474,12 +471,12 @@ button:disabled {
 }
 
 .host-view.host-lobby #start-game {
-  grid-row: 4;
+  grid-row: 2;
   margin-top: 2px;
 }
 
 .host-view.host-lobby #reset-game {
-  grid-row: 5;
+  grid-row: 3;
   color: #050505;
   background: rgba(0, 0, 0, 0.13);
   box-shadow: none;
@@ -1136,8 +1133,6 @@ form label {
 
   .host-view.host-lobby .code-box,
   .host-view.host-lobby .qr-code,
-  .host-view.host-lobby .question-count-row,
-  .host-view.host-lobby .question-duration-row,
   .host-view.host-lobby #start-game,
   .host-view.host-lobby #reset-game,
   .host-view.host-lobby .layout-grid > .side-panel:last-child {
@@ -1154,24 +1149,16 @@ form label {
     grid-row: 2;
   }
 
-  .host-view.host-lobby .question-count-row {
+  .host-view.host-lobby #start-game {
     grid-row: 3;
   }
 
-  .host-view.host-lobby .question-duration-row {
+  .host-view.host-lobby #reset-game {
     grid-row: 4;
   }
 
-  .host-view.host-lobby #start-game {
-    grid-row: 5;
-  }
-
-  .host-view.host-lobby #reset-game {
-    grid-row: 6;
-  }
-
   .host-view.host-lobby .layout-grid > .side-panel:last-child {
-    grid-row: 7;
+    grid-row: 5;
     width: min(100%, 430px);
   }
 
