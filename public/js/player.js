@@ -11,6 +11,7 @@ const codeInput = playerUI.$("#join-code");
 const nameInput = playerUI.$("#player-name");
 const statusLabel = playerUI.$("#player-status");
 const colorModeToggle = playerUI.$("#color-mode-toggle");
+const timerLabel = playerUI.$("#player-timer");
 const themeStrip = playerUI.$("#player-theme-strip");
 const roundLabel = playerUI.$("#player-round-label");
 const scoreLabel = playerUI.$("#player-score");
@@ -20,9 +21,12 @@ const answers = playerUI.$("#player-answers");
 const feedbackPanel = playerUI.$("#feedback-panel");
 const miniLeaderboard = playerUI.$("#mini-leaderboard");
 
-codeInput.value = codeFromUrl() || localStorage.getItem("cassos.lastCode") || "";
+syncCodeFromUrl();
 nameInput.value = localStorage.getItem("cassos.playerName") || "";
 applyColorMode(localStorage.getItem("cassos.playerColorMode") === "light");
+
+window.addEventListener("pageshow", syncCodeFromUrl);
+window.setTimeout(syncCodeFromUrl, 0);
 
 joinForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -43,18 +47,21 @@ playerSocket.on("player:state", (payload) => {
 window.setInterval(renderLiveQuestionState, 250);
 
 playerSocket.on("connect", () => {
+  syncCodeFromUrl();
   if (codeInput.value && nameInput.value) {
     joinGame();
   }
 });
 
 function joinGame() {
-  const code = codeInput.value.trim();
+  const urlCode = codeFromUrl();
+  const code = (urlCode || codeInput.value).trim().toUpperCase();
   const name = nameInput.value.trim();
   if (!code || !name) {
     return;
   }
 
+  codeInput.value = code;
   playerSocket.emit("player:joinGame", { code, name, token: playerToken }, (response) => {
     if (!response || !response.ok) {
       playerUI.showToast((response && response.error) || "Impossible de rejoindre.");
@@ -103,13 +110,19 @@ function render() {
   playerUI.setHidden(playerGame, !joined);
 
   if (!joined) {
-    statusLabel.textContent = "Connexion";
+    if (statusLabel) {
+      statusLabel.textContent = "";
+    }
+    playerUI.setHidden(timerLabel, true);
     return;
   }
 
-  statusLabel.textContent = statusText(playerState.status);
+  if (statusLabel) {
+    statusLabel.textContent = statusText(playerState.status);
+  }
   scoreLabel.textContent = playerUI.pointsLabel(playerState.me.score);
   roundLabel.textContent = playerRoundLabel();
+  renderTimer();
   renderQuestion();
   renderLeaderboard();
 }
@@ -119,6 +132,7 @@ function renderLiveQuestionState() {
     return;
   }
   roundLabel.textContent = playerRoundLabel();
+  renderTimer();
   const locked = isAnswerLocked();
   for (const button of answers.querySelectorAll(".answer-button")) {
     button.disabled = locked;
@@ -134,19 +148,24 @@ function renderQuestion() {
   playerUI.setHidden(feedbackPanel, true);
 
   if (playerState.status === "finished") {
+    playerUI.setHidden(timerLabel, true);
+    playerUI.setHidden(themeStrip, true);
     renderFinishedQuestion();
     return;
   }
 
   if (!question) {
-    categoryLabel.textContent = "Lobby";
-    questionText.textContent =
-      playerState.status === "finished" ? "Classement final affiché." : "La partie va commencer.";
+    playerUI.setHidden(timerLabel, true);
+    playerUI.setHidden(themeStrip, true);
+    categoryLabel.textContent = "";
+    questionText.textContent = "La partie va commencer.";
     return;
   }
 
   playerUI.applyTheme(question.theme);
   playerUI.setThemeStrip(themeStrip, question.theme);
+  playerUI.setHidden(themeStrip, false);
+  renderTimer();
   categoryLabel.textContent = playerUI.categoryLabel(question);
   questionText.textContent = question.question;
 
@@ -276,10 +295,22 @@ function getWinners() {
 }
 
 function playerRoundLabel() {
-  if (!playerState || playerState.status !== "question") {
+  if (!playerState || playerState.status === "lobby") {
+    return "";
+  }
+  if (playerState.status !== "question") {
     return playerUI.roundLabel(playerState);
   }
-  return `${playerUI.roundLabel(playerState)} · ${playerUI.countdownLabel(playerState)}`;
+  return playerUI.roundLabel(playerState);
+}
+
+function renderTimer() {
+  const visible = Boolean(playerState && playerState.status === "question" && playerState.currentQuestion);
+  playerUI.setHidden(timerLabel, !visible);
+  if (!visible) {
+    return;
+  }
+  timerLabel.textContent = playerUI.countdownLabel(playerState);
 }
 
 function isAnswerLocked() {
@@ -293,8 +324,19 @@ function isAnswerLocked() {
 
 function applyColorMode(lightMode) {
   document.body.classList.toggle("light-mode", lightMode);
-  colorModeToggle.textContent = lightMode ? "Dark mode" : "Light mode";
+  colorModeToggle.textContent = lightMode ? "☾" : "☀";
+  colorModeToggle.setAttribute("aria-label", lightMode ? "Activer le mode nuit" : "Activer le mode clair");
   colorModeToggle.setAttribute("aria-pressed", String(lightMode));
+}
+
+function syncCodeFromUrl() {
+  const urlCode = codeFromUrl();
+  if (urlCode) {
+    codeInput.value = urlCode.trim().toUpperCase();
+    localStorage.setItem("cassos.lastCode", codeInput.value);
+    return;
+  }
+  codeInput.value = localStorage.getItem("cassos.lastCode") || "";
 }
 
 function codeFromUrl() {

@@ -160,7 +160,7 @@ function renderPlayers() {
       player.connected ? "pill" : "pill muted-pill",
       `${hostUI.pointsLabel(player.score)} · ${player.hasAnswered ? "répondu" : "attente"}`
     );
-    const remove = hostUI.createElement("button", "icon-action compact-action", "X");
+    const remove = hostUI.createElement("button", "icon-action compact-action", "×");
     remove.type = "button";
     remove.title = "Retirer";
     remove.setAttribute("aria-label", `Retirer ${player.name}`);

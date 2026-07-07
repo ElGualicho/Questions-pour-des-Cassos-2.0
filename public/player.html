@@ -10,9 +10,8 @@
     <main class="mobile-shell">
       <header class="player-header">
         <img src="/assets/themes/logo-questions-pour-des-cassos.png" alt="">
-        <span id="player-status">Connexion</span>
       </header>
-      <button class="mode-toggle" id="color-mode-toggle" type="button" aria-pressed="false">Light mode</button>
+      <button class="mode-toggle" id="color-mode-toggle" type="button" aria-pressed="false" aria-label="Activer le mode clair">☀</button>
 
       <section class="join-panel" id="join-panel">
         <p class="eyebrow">Joueur</p>
@@ -27,6 +26,7 @@
       </section>
 
       <section class="player-game hidden" id="player-game">
+        <div class="player-timer hidden" id="player-timer">10s</div>
         <div class="theme-strip compact" id="player-theme-strip"></div>
         <div class="round-meta">
           <span id="player-round-label">Lobby</span>
