@@ -188,13 +188,11 @@ function renderLiveScores() {
       hostState.leaderboard.length
   );
   hostUI.setHidden(liveScores, !visible);
-  liveScores.classList.toggle(
-    "is-compact",
-    visible && hostState.leaderboard.length <= 3
-  );
   if (!visible) {
     return;
   }
+
+  liveScores.append(hostUI.createElement("span", "live-scores-title", "Scores"));
 
   const speedLeaderCount = Math.max(
     0,
@@ -220,7 +218,7 @@ function renderLiveScores() {
     const speed = hostUI.createElement(
       "span",
       "live-speed-stat",
-      `Vitesse ${speedCount}${isSpeedLeader ? " · en tête" : ""}`
+      `Vitesse ${speedCount}${isSpeedLeader ? " · 1er" : ""}`
     );
     const answerState = hostUI.createElement(
       "span",
