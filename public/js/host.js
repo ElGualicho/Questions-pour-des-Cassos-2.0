@@ -218,7 +218,7 @@ function renderLiveScores() {
     const speed = hostUI.createElement(
       "span",
       "live-speed-stat",
-      `Vitesse ${speedCount}${isSpeedLeader ? " · 1er" : ""}`
+      `Vitesse ${speedCount}${isSpeedLeader ? " · en tête" : ""}`
     );
     const answerState = hostUI.createElement(
       "span",

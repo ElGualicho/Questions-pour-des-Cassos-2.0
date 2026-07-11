@@ -625,30 +625,37 @@ button:disabled {
 }
 
 .host-view.host-round .host-live-scores {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
   display: grid;
-  width: 100%;
-  gap: 5px;
+  width: clamp(260px, 17vw, 320px);
+  max-height: calc(100dvh - 240px);
+  gap: 8px;
   overflow-x: hidden;
   overflow-y: auto;
-  margin: 2px 0 0;
-  padding: 7px 0 0;
-  border-top: 1px solid rgba(5, 5, 5, 0.18);
+  margin: 0;
+  padding: 11px;
+  border: 1px solid rgba(5, 5, 5, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.18);
   scrollbar-width: thin;
   scrollbar-color: rgba(5, 5, 5, 0.34) transparent;
 }
 
 .live-scores-title {
   color: rgba(5, 5, 5, 0.66);
-  font-size: 0.58rem;
+  font-size: 0.86rem;
   font-weight: 950;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
 }
 
 .live-score-card {
   width: 100%;
   min-width: 0;
-  padding: 5px 6px;
+  padding: 10px 12px;
   color: #050505;
   border: 1px solid rgba(5, 5, 5, 0.22);
   border-radius: 8px;
@@ -668,7 +675,7 @@ button:disabled {
 .live-score-detail {
   display: grid;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
 }
 
 .live-score-main {
@@ -677,23 +684,23 @@ button:disabled {
 
 .live-score-detail {
   grid-template-columns: minmax(0, 1fr) auto;
-  margin-top: 2px;
-  padding-left: 18px;
+  margin-top: 5px;
+  padding-left: 28px;
   color: rgba(5, 5, 5, 0.68);
-  font-size: 0.55rem;
+  font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .live-score-rank {
   color: rgba(5, 5, 5, 0.62);
-  font-size: 0.62rem;
+  font-size: 0.9rem;
   font-weight: 900;
 }
 
 .live-score-name {
   overflow: hidden;
-  font-size: 0.72rem;
+  font-size: 1.05rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -705,7 +712,7 @@ button:disabled {
 }
 
 .live-score-points {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 950;
 }
 
@@ -1262,17 +1269,22 @@ form label {
     width: 74px;
   }
 
-  .host-view.host-round .live-score-detail {
-    grid-template-columns: minmax(0, 1fr);
-    padding-left: 16px;
+  .host-view.host-round .host-live-scores {
+    width: min(240px, calc(100vw - 24px));
   }
 
-  .host-view.host-round .live-answer-state {
-    display: none;
+  .host-view.host-round .live-score-detail {
+    padding-left: 24px;
   }
 
   .host-view.host-round .question-block h2 {
     font-size: clamp(1.65rem, 7vw, 3rem);
+  }
+}
+
+@media (min-width: 1041px) and (max-width: 1749px) {
+  .host-view.host-round .layout-grid {
+    padding-right: clamp(0px, calc(1750px - 100vw), 260px);
   }
 }
 
@@ -1417,28 +1429,25 @@ form label {
   }
 
   .host-view.host-round .round-meta {
-    width: min(900px, calc(100% - 280px));
     margin-bottom: 2px;
     font-size: 0.9rem;
   }
 
   .host-view.host-round .host-live-scores {
-    gap: 4px;
-    margin-top: 2px;
-    padding-top: 5px;
+    gap: 7px;
+    padding: 9px;
   }
 
   .host-view.host-round .live-score-card {
-    padding: 4px 5px;
+    padding: 9px 10px;
   }
 
   .host-view.host-round .live-score-detail {
-    margin-top: 1px;
-    font-size: 0.52rem;
+    margin-top: 4px;
+    font-size: 0.74rem;
   }
 
   .host-view.host-round .question-block {
-    width: min(1000px, calc(100% - 280px));
     margin-bottom: 2px;
   }
 
@@ -1448,7 +1457,6 @@ form label {
   }
 
   .host-view.host-round .answer-grid {
-    width: min(940px, calc(100% - 280px));
     gap: 8px;
     margin-top: 2px;
   }
