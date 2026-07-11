@@ -1,7 +1,6 @@
 const hostSocket = window.CassosRealtime.connect();
 const hostUI = window.CassosUI;
 let hostState = null;
-let joinUrl = "";
 
 const createButton = hostUI.$("#create-game");
 const gamePanel = hostUI.$("#game-panel");
@@ -9,7 +8,6 @@ const finalPanel = hostUI.$("#final-panel");
 const statusLabel = hostUI.$("#host-status");
 const codeLabel = hostUI.$("#game-code");
 const qrCode = hostUI.$("#qr-code");
-const copyLinkButton = hostUI.$("#copy-link");
 const questionCount = hostUI.$("#question-count");
 const questionDuration = hostUI.$("#question-duration");
 const startButton = hostUI.$("#start-game");
@@ -33,12 +31,6 @@ createButton.addEventListener("click", () => {
     persistGame(payload.state.code);
     receiveHostState(payload);
   }));
-});
-
-copyLinkButton.addEventListener("click", async () => {
-  const absoluteUrl = new URL(joinUrl, window.location.origin).toString();
-  await navigator.clipboard.writeText(absoluteUrl);
-  hostUI.showToast("Lien copié.");
 });
 
 startButton.addEventListener("click", () => {
@@ -110,7 +102,6 @@ hostSocket.on("connect", () => {
 
 function receiveHostState(payload) {
   hostState = payload.state;
-  joinUrl = payload.joinUrl || (hostState ? `/join/${hostState.code}` : "");
   render();
 }
 

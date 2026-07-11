@@ -445,20 +445,11 @@ button:disabled {
   margin: 0;
 }
 
-.host-view.host-lobby #copy-link,
 .host-view.host-lobby #start-game,
 .host-view.host-lobby #reset-game {
   color: #d7bf2a;
   background: #050505;
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.18);
-}
-
-.host-view.host-lobby #copy-link {
-  width: max-content;
-  min-height: 38px;
-  margin-top: 12px;
-  padding: 0 18px;
-  border-radius: 999px;
 }
 
 .host-view.host-lobby #start-game,
@@ -588,16 +579,6 @@ button:disabled {
 .host-view.host-round .layout-grid > .side-panel:first-child .code-box strong {
   color: #050505;
   font-size: clamp(1.45rem, 2vw, 2rem);
-}
-
-.host-view.host-round .layout-grid > .side-panel:first-child #copy-link {
-  min-height: 30px;
-  padding: 0 10px;
-  color: #f6f3ef;
-  border: 0;
-  border-radius: 999px;
-  background: #050505;
-  font-size: 0.72rem;
 }
 
 .host-view.host-round .layout-grid > .side-panel:first-child .qr-code {
@@ -1184,12 +1165,6 @@ form label {
 
   .host-view.host-round .layout-grid > .side-panel:first-child .qr-code {
     width: 74px;
-  }
-
-  .host-view.host-round .layout-grid > .side-panel:first-child #copy-link {
-    min-height: 28px;
-    padding: 0 8px;
-    font-size: 0.66rem;
   }
 
   .host-view.host-round .question-block h2 {
