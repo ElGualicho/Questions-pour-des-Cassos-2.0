@@ -7,7 +7,7 @@ const VALID_COUNTS = new Set([10, 20, 30, 40, "all"]);
 const VALID_QUESTION_DURATIONS_MS = new Set([10000, 15000, 20000]);
 const BONUS_QUESTION_ID = "bonus-daronne-finale";
 const BONUS_QUESTION_TEXT =
-  "De quel joueur la daronne m\u00e9rite-t-elle le titre de daronne la plus ind\u00e9fendable ?";
+  "Parmi les joueurs présents, quelle daronne m\u00e9rite le titre de plus grosse salope ?";
 const BONUS_QUESTION_EXPLANATION =
   "Le joueur dont le nom re\u00e7oit le plus de votes remporte 2 points bonus.";
 const BONUS_THEME_CATEGORY = "Corps, cul & malaise poli";
