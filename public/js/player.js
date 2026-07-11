@@ -3,7 +3,6 @@ const playerUI = window.CassosUI;
 let playerState = null;
 let playerToken = localStorage.getItem("cassos.playerToken") || "";
 
-const params = new URLSearchParams(window.location.search);
 const joinPanel = playerUI.$("#join-panel");
 const playerGame = playerUI.$("#player-game");
 const joinForm = playerUI.$("#join-form");
@@ -21,12 +20,20 @@ const answers = playerUI.$("#player-answers");
 const feedbackPanel = playerUI.$("#feedback-panel");
 const miniLeaderboard = playerUI.$("#mini-leaderboard");
 
-syncCodeFromUrl();
+syncCodeFromUrl(true);
 nameInput.value = localStorage.getItem("cassos.playerName") || "";
 applyColorMode(localStorage.getItem("cassos.playerColorMode") === "light");
 
-window.addEventListener("pageshow", syncCodeFromUrl);
-window.setTimeout(syncCodeFromUrl, 0);
+window.addEventListener("pageshow", () => syncCodeFromUrl());
+window.addEventListener("popstate", () => syncCodeFromUrl());
+window.addEventListener("hashchange", () => syncCodeFromUrl());
+window.addEventListener("focus", () => syncCodeFromUrl());
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    syncCodeFromUrl();
+  }
+});
+window.setTimeout(() => syncCodeFromUrl(), 250);
 
 joinForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -55,7 +62,7 @@ playerSocket.on("connect", () => {
 
 function joinGame() {
   const urlCode = codeFromUrl();
-  const code = (urlCode || codeInput.value).trim().toUpperCase();
+  const code = normalizeCode(urlCode || codeInput.value);
   const name = nameInput.value.trim();
   if (!code || !name) {
     return;
@@ -329,24 +336,52 @@ function applyColorMode(lightMode) {
   colorModeToggle.setAttribute("aria-pressed", String(lightMode));
 }
 
-function syncCodeFromUrl() {
-  const urlCode = codeFromUrl();
+function syncCodeFromUrl(allowStoredFallback = false) {
+  const urlCode = normalizeCode(codeFromUrl());
   if (urlCode) {
-    codeInput.value = urlCode.trim().toUpperCase();
-    localStorage.setItem("cassos.lastCode", codeInput.value);
-    return;
+    codeInput.value = urlCode;
+    codeInput.defaultValue = urlCode;
+    codeInput.setAttribute("value", urlCode);
+    codeInput.dataset.codeSource = "url";
+    localStorage.setItem("cassos.lastCode", urlCode);
+
+    if (playerState && playerState.code !== urlCode) {
+      playerState = null;
+      render();
+    }
+    return urlCode;
   }
-  codeInput.value = localStorage.getItem("cassos.lastCode") || "";
+
+  if (!allowStoredFallback) {
+    return "";
+  }
+
+  const storedCode = normalizeCode(localStorage.getItem("cassos.lastCode"));
+  codeInput.value = storedCode;
+  codeInput.defaultValue = storedCode;
+  codeInput.setAttribute("value", storedCode);
+  delete codeInput.dataset.codeSource;
+  return storedCode;
 }
 
 function codeFromUrl() {
-  const queryCode = params.get("code");
+  const currentUrl = new URL(window.location.href);
+  const queryCode = currentUrl.searchParams.get("code");
   if (queryCode) {
     return queryCode;
   }
 
-  const joinMatch = window.location.pathname.match(/\/join\/([^/]+)/);
-  return joinMatch ? decodeURIComponent(joinMatch[1]) : "";
+  const joinMatch = currentUrl.pathname.match(/\/(?:join|play)\/([^/]+)/i);
+  if (joinMatch) {
+    return decodeURIComponent(joinMatch[1]);
+  }
+
+  const hashParams = new URLSearchParams(currentUrl.hash.replace(/^#/, ""));
+  return hashParams.get("code") || "";
+}
+
+function normalizeCode(value) {
+  return String(value || "").trim().toUpperCase();
 }
 
 function statusText(status) {

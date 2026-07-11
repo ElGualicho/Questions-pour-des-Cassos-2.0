@@ -368,6 +368,7 @@ export class GameRoom {
     for (const player of game.players.values()) {
       player.score = 0;
       player.correctCount = 0;
+      player.speedBonusCount = 0;
       player.hasAnswered = false;
       player.selectedAnswerIndex = null;
       player.lastAnswerCorrect = null;
@@ -385,6 +386,7 @@ export class GameRoom {
       token: playerToken,
       score: 0,
       correctCount: 0,
+      speedBonusCount: 0,
       joinedAt: Date.now(),
       hasAnswered: false,
       selectedAnswerIndex: null,
@@ -581,6 +583,9 @@ function applyScoring(game) {
     if (isCorrect) {
       player.score += points;
       player.correctCount += 1;
+      if (speedBonus) {
+        player.speedBonusCount = (player.speedBonusCount || 0) + 1;
+      }
     }
   }
   game.currentScored = true;
@@ -709,6 +714,7 @@ function publicPlayer(player) {
     name: player.name,
     score: player.score,
     correctCount: player.correctCount,
+    speedBonusCount: player.speedBonusCount || 0,
     connected: Boolean(player.connected),
     hasAnswered: Boolean(player.hasAnswered),
     selectedAnswerIndex: player.selectedAnswerIndex,
@@ -721,7 +727,13 @@ function publicPlayer(player) {
 
 function getLeaderboard(game) {
   return getPlayers(game)
-    .sort((a, b) => b.score - a.score || b.correctCount - a.correctCount || a.name.localeCompare(b.name))
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        b.speedBonusCount - a.speedBonusCount ||
+        b.correctCount - a.correctCount ||
+        a.name.localeCompare(b.name)
+    )
     .map((player, index) => ({ ...player, rank: index + 1 }));
 }
 

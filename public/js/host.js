@@ -24,6 +24,7 @@ const responsesLabel = hostUI.$("#responses-label");
 const questionCategory = hostUI.$("#question-category");
 const questionText = hostUI.$("#question-text");
 const hostAnswers = hostUI.$("#host-answers");
+const liveScores = hostUI.$("#host-live-scores");
 const leaderboard = hostUI.$("#leaderboard");
 
 createButton.addEventListener("click", () => {
@@ -139,6 +140,7 @@ function render() {
   playerCount.textContent = String(hostState.players.length);
 
   renderPlayers();
+  renderLiveScores();
   renderQuestion();
   renderControls();
   renderHostTimer();
@@ -174,6 +176,60 @@ function renderPlayers() {
 
     row.append(name, meta, remove);
     playerList.append(row);
+  }
+}
+
+function renderLiveScores() {
+  liveScores.replaceChildren();
+  const visible = Boolean(
+    hostState &&
+      hostState.status !== "lobby" &&
+      hostState.status !== "finished" &&
+      hostState.leaderboard.length
+  );
+  hostUI.setHidden(liveScores, !visible);
+  liveScores.classList.toggle(
+    "is-compact",
+    visible && hostState.leaderboard.length <= 3
+  );
+  if (!visible) {
+    return;
+  }
+
+  const speedLeaderCount = Math.max(
+    0,
+    ...hostState.leaderboard.map((player) => player.speedBonusCount || 0)
+  );
+
+  for (const player of hostState.leaderboard) {
+    const speedCount = player.speedBonusCount || 0;
+    const isSpeedLeader = speedLeaderCount > 0 && speedCount === speedLeaderCount;
+    const card = hostUI.createElement("div", "live-score-card");
+    card.classList.toggle("is-score-leader", player.rank === 1);
+    card.classList.toggle("is-speed-leader", isSpeedLeader);
+    card.classList.toggle("just-won-speed", Boolean(player.lastSpeedBonus));
+
+    const main = hostUI.createElement("div", "live-score-main");
+    main.append(
+      hostUI.createElement("span", "live-score-rank", `#${player.rank}`),
+      hostUI.createElement("strong", "live-score-name", player.name),
+      hostUI.createElement("span", "live-score-points", hostUI.pointsLabel(player.score))
+    );
+
+    const detail = hostUI.createElement("div", "live-score-detail");
+    const speed = hostUI.createElement(
+      "span",
+      "live-speed-stat",
+      `Vitesse ${speedCount}${isSpeedLeader ? " · en tête" : ""}`
+    );
+    const answerState = hostUI.createElement(
+      "span",
+      player.hasAnswered ? "live-answer-state has-answered" : "live-answer-state",
+      player.connected ? (player.hasAnswered ? "répondu" : "attente") : "hors ligne"
+    );
+    detail.append(speed, answerState);
+    card.append(main, detail);
+    liveScores.append(card);
   }
 }
 

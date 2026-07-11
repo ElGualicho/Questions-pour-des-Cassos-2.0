@@ -139,7 +139,9 @@ test("the first correct answer gets the speed bonus", () => {
 
   const leaderboard = store.getHostState(game.code).leaderboard;
   assert.equal(leaderboard.find((player) => player.name === "Alex").score, 2);
+  assert.equal(leaderboard.find((player) => player.name === "Alex").speedBonusCount, 1);
   assert.equal(leaderboard.find((player) => player.name === "Sam").score, 1);
+  assert.equal(leaderboard.find((player) => player.name === "Sam").speedBonusCount, 0);
   assert.equal(leaderboard.find((player) => player.name === "Thomas").score, 0);
 });
 
@@ -190,6 +192,7 @@ test("resetting a game issues a new code and retires the old one", () => {
 
   store.startGame(game.code, { questionCount: "all" });
   store.submitAnswer(game.code, player.token, 0);
+  player.speedBonusCount = 3;
 
   const resetGame = store.resetGame(originalCode);
 
@@ -200,5 +203,6 @@ test("resetting a game issues a new code and retires the old one", () => {
 
   const resetPlayer = resetGame.players.get(player.token);
   assert.equal(resetPlayer.score, 0);
+  assert.equal(resetPlayer.speedBonusCount, 0);
   assert.equal(resetPlayer.hasAnswered, false);
 });

@@ -623,6 +623,95 @@ button:disabled {
   opacity: 0.42;
 }
 
+.host-live-scores {
+  display: flex;
+  width: min(980px, 100%);
+  gap: 8px;
+  overflow-x: auto;
+  margin: -4px auto 0;
+  padding: 2px 2px 6px;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--theme-ink) 38%, transparent) transparent;
+}
+
+.host-live-scores.is-compact {
+  justify-content: center;
+}
+
+.live-score-card {
+  flex: 1 0 210px;
+  min-width: 0;
+  max-width: 280px;
+  padding: 7px 10px;
+  color: var(--theme-ink);
+  border: 1px solid color-mix(in srgb, var(--theme-ink) 22%, transparent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--theme-ink) 8%, transparent);
+}
+
+.live-score-card.is-score-leader {
+  border-color: color-mix(in srgb, var(--theme-ink) 52%, transparent);
+  box-shadow: inset 3px 0 0 var(--theme-ink);
+}
+
+.live-score-card.just-won-speed {
+  background: color-mix(in srgb, var(--theme-ink) 15%, transparent);
+}
+
+.live-score-main,
+.live-score-detail {
+  display: grid;
+  align-items: center;
+  gap: 7px;
+}
+
+.live-score-main {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.live-score-detail {
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin-top: 3px;
+  padding-left: 30px;
+  color: color-mix(in srgb, var(--theme-ink) 68%, transparent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.live-score-rank {
+  color: color-mix(in srgb, var(--theme-ink) 62%, transparent);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.live-score-name {
+  overflow: hidden;
+  font-size: 0.86rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.live-score-points,
+.live-speed-stat,
+.live-answer-state {
+  white-space: nowrap;
+}
+
+.live-score-points {
+  font-size: 0.82rem;
+  font-weight: 950;
+}
+
+.live-score-card.is-speed-leader .live-speed-stat {
+  color: var(--theme-ink);
+  font-weight: 950;
+}
+
+.live-answer-state.has-answered {
+  color: var(--theme-ink);
+}
+
 .host-view.host-round .question-block {
   width: min(1120px, 100%);
   margin: 0 auto;
@@ -1286,6 +1375,80 @@ form label {
 }
 
 @media (max-height: 840px) and (min-width: 1041px) {
+  .host-view.host-round .app-shell {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    padding: 10px clamp(24px, 4vw, 58px);
+  }
+
+  .host-view.host-round .hero-band {
+    min-height: 82px;
+    height: 82px;
+  }
+
+  .host-view.host-round .host-home-logo {
+    width: min(28vw, 360px);
+    height: 82px;
+  }
+
+  .host-view.host-round .play-panel {
+    gap: 6px;
+  }
+
+  .host-view.host-round .host-timer {
+    margin-bottom: 0;
+    font-size: clamp(2.25rem, 7vh, 3.4rem);
+  }
+
+  .host-view.host-round .round-meta {
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+  }
+
+  .host-view.host-round .host-live-scores {
+    margin-top: 0;
+    padding-bottom: 3px;
+  }
+
+  .host-view.host-round .live-score-card {
+    padding: 4px 8px;
+  }
+
+  .host-view.host-round .live-score-detail {
+    margin-top: 1px;
+    font-size: 0.62rem;
+  }
+
+  .host-view.host-round .question-block {
+    margin-bottom: 2px;
+  }
+
+  .host-view.host-round .question-block h2 {
+    font-size: clamp(1.55rem, 3vw, 2.55rem);
+    line-height: 1;
+  }
+
+  .host-view.host-round .answer-grid {
+    gap: 8px;
+    margin-top: 2px;
+  }
+
+  .host-view.host-round .answer-card {
+    min-height: 58px;
+    gap: 4px;
+    padding: 7px 9px;
+  }
+
+  .host-view.host-round .host-controls {
+    margin-top: 3px;
+  }
+
+  .host-view.host-round .host-controls .primary-action,
+  .host-view.host-round .host-controls .secondary-action {
+    min-height: 40px;
+  }
+
   .host-view.game-active:not(.host-lobby):not(.host-round) .topbar {
     margin-bottom: 8px;
   }
